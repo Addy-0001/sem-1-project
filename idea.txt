@@ -2,5 +2,5 @@
     * Productivity Application
     * Make an application that has note taking, pomodoro timer, 
       and todo features. 
-    * We'll store the data in sqlite3 as the database doesn't need
-      as much scalability. 
+    * We'll store the data in sqlite3/mongodb as the database can be used in django project as well
+   .
