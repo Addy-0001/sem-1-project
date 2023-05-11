@@ -1,0 +1,6 @@
+-----------------Adamya's Idea------------------------------
+    * Productivity Application
+    * Make an application that has note taking, pomodoro timer, 
+      and todo features. 
+    * We'll store the data in sqlite3 as the database doesn't need
+      as much scalability. 
