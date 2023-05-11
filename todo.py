@@ -57,7 +57,7 @@ def main():
     root.title('To-Do List')
     root.geometry('400x400')
     root.resizable(False, False)
-    root.iconbitmap('todo.ico')
+    # root.iconbitmap('todo.ico')
 
     entry = Entry(root, width=50)
     entry.pack(pady=10)
