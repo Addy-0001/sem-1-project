@@ -3,3 +3,11 @@
     * Make an application that has note taking, pomodoro timer, 
       and todo features. 
     * We'll store the data in sqlite3/mongodb as the database can be used in django project as well
+    
+    
+   -----------------Sangit's Ideas------------------------
+   
+   * Music Appication
+   * I am planning to make music player app using tkinter for gui and  yt api for music player and db to story metadata of the music.
+   * Tikinter can be used to make guis.
+   
