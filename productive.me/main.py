@@ -1,12 +1,9 @@
-from . import timer
-from .models import Model 
-
-# #make the timer module
-
-def timer():
-    timer1 = 25
-    timer2 = 5
-    timer3 = 15
-    timer4 = 30
-    timer5 = 60
-    
+#this is the starting of the application 
+#this is the main file of the application
+from login import * 
+def main():
+    root = Tk()
+    Login(root)
+    root.mainloop()
+if __name__ == "__main__":
+    main()
