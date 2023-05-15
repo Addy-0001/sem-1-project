@@ -11,3 +11,9 @@
    * I am planning to make music player app using tkinter for gui and  yt api for music player and db to story metadata of the music.
    * Tikinter can be used to make guis.
    
+ -----------------Subas's Ideas------------------------
+   
+   * Fried Rice
+   * something will coming soon
+  
+   
