@@ -37,9 +37,10 @@ class Login:
 
 #create a function to login
     def login(self):
+        from tkinter import messagebox
         if self.txt_pass.get()=="" or self.txt_user.get()=="":
             messagebox.showerror("Error","All fields are required",parent=self.root)
-        elif self.txt_pass.get()!="123456" or self.txt_user.get()!="sagar":
+        elif self.txt_pass.get()!="Pass1234" or self.txt_user.get()!="Adamya":
             messagebox.showerror("Error","Invalid Username/Password",parent=self.root)
         else:
             messagebox.showinfo("Welcome",f"Welcome {self.txt_user.get()}\nYour Password:{self.txt_pass.get()}",parent=self.root)
