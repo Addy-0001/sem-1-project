@@ -14,7 +14,11 @@
    
  -----------------Subas's Ideas------------------------
    
-   * Fried Rice
-   * something will coming soon
-  
-   
+   * Course student management system
+   * 3 levels of login - User, Teacher, Login
+   * Teacher can add course
+   * User can enroll in Course
+   * 
+
+ -------------------FINAL-------------------------------
+ The team will be making a course management application. The application will fetch API from a django based web application. It will allow students to log in and check the status of their courses, their teachers and all other data. For further improvements, we will be making a video based course section. 
