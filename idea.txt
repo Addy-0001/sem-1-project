@@ -21,4 +21,6 @@
    * 
 
  -------------------FINAL-------------------------------
- The team will be making a course management application. The application will fetch API from a django based web application. It will allow students to log in and check the status of their courses, their teachers and all other data. For further improvements, we will be making a video based course section. 
+ The team will be making a course management application. The application will fetch API from a django based web application.
+ It will allow students to log in and check the status of their courses, their teachers and all other data. 
+ For further improvements, we will be making a video based course section. 
