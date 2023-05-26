@@ -1,4 +1,5 @@
 from django.db import models
+from modules.models import Module
 from courses.models import Course
 # Create your models here.
 
@@ -9,6 +10,7 @@ class Student(models.Model):
     password = models.CharField(max_length=100)
     phone = models.IntegerField()
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    models = models.ManyToManyField(Module)
 
     def __str__(self):
-        return self.name
+        return self.name + " (" + self.student_id + ")"

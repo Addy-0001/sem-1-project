@@ -10,4 +10,4 @@ class Module(models.Model):
     teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.name
+        return self.name + " (" + self.module_id + ")"
