@@ -1,4 +1,4 @@
-#!/home/adamya-pop/Desktop/Github_Files/sem-1-project/env/bin/python
+#!/home/adamya-pop/Desktop/django-api-project/env/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
