@@ -1,6 +1,6 @@
 # Setting all environment variables for the venv
 let path-name = (if ((sys).host.name == "Windows") { "Path" } { "PATH" })
-let virtual-env = "/home/adamya-pop/Desktop/django-api-project/env"
+let virtual-env = "/home/adamya-pop/Desktop/Github_Files/sem-1-project/env"
 let bin = "bin"
 let path-sep = ":"
 
@@ -38,4 +38,4 @@ let-env PROMPT_COMMAND = $new_prompt
 # We are using alias as the function definitions because only aliases can be
 # removed from the scope
 alias pydoc = python -m pydoc
-alias deactivate = source "/home/adamya-pop/Desktop/django-api-project/env/bin/deactivate.nu"
+alias deactivate = source "/home/adamya-pop/Desktop/Github_Files/sem-1-project/env/bin/deactivate.nu"
