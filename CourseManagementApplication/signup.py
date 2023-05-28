@@ -10,9 +10,9 @@ import subprocess
 window = Tk()
 window.geometry("1280x800")
 window.configure(bg = "#EEEFF3")
-window.title("Sign In")
+window.title("Sign Up")
 just = os.getcwd().replace("\\","\\\\")
-pathset = just+"\\\\imagessignin\\\\"
+pathset = just+"\\\\imagessignup\\\\"
 logo = PhotoImage(file=pathset+"logo.png")
 window.iconphoto(True, logo)
 
@@ -34,7 +34,7 @@ canvas.create_rectangle(
     1280.0,
     832.0,
     fill="#3532A7",
-    outline=""
+    outline="",
 )
 
 canvas.create_text(
@@ -54,15 +54,26 @@ canvas.create_text(
     fill="#EAE7ED",
     font=("Poppins Regular", 15 * -1)
 )
-
-canvas.create_text(
-    897.0,
-    611.0,
+newto = Label(
+    window,
     anchor="nw",
-    text="Already Have an Account? Sign In",
-    fill="#EAE7ED",
-    font=("Poppins Regular", 15 * -1)
+    text="New to VirtuEdu? Sign Up",
+    cursor="hand2",
+    font=("lexend deca", 15 * -1),
+    
+    
+    
+
 )
+newto.place(x=930.0,y=615.0)
+# canvas.create_text(
+#     897.0,
+#     611.0,
+#     anchor="nw",
+#     text="Already Have an Account? Sign In",
+#     fill="#EAE7ED",
+#     font=("Poppins Regular", 15 * -1)
+# )
 
 # button_image_1 = PhotoImage(
 #     file=(pathset+"button_1.png"))
@@ -258,15 +269,36 @@ entry_bg_4 = canvas.create_image(
     514.0,
     image=entry_image_4
 )
-def passwordfunhction(*args):
+def passwordfunction(*args):
     password.delete(0, END)
-def show():
-    a = password.get()
-    password.config(show="")
-def hide():
-    a = password.get()
-    password.config(show="*")   
+eyeclose = PhotoImage(
+    file=(pathset+"eyeclose.png"))
+eyeopen = PhotoImage(
+    file=(pathset+"eyeopen.png"))
+
+def toggle_password():
     
+    if password.cget('show') == '':
+        password.config(show='*')
+        # toggle_btn.config(text='Show Password')
+    else:
+        password.config(show='')
+        eye.config(image=eyeclose,command=eyeopenfunction)
+       
+def eyeopenfunction():
+    password.config(show='')
+    eye.config(image=eyeopen, command=toggle_password)    
+    password.config(show='*')      
+        # toggle_btn.config(text='Hide Password')  
+      
+canvas.create_text(
+    842.8570556640625,
+    507.0,
+    anchor="nw",
+    text="Enter your password",
+    fill="#888888",
+    font=("OpenSans Bold", 11 * -1)
+)    
 password = Entry(
     bd=0,
     bg="#FFFFFF",
@@ -282,25 +314,17 @@ password.place(
     height=38.0
 )
 # password.insert(0, "Enter Your Password Here")
-password.bind("<Button-1>", passwordfunhction)
-canvas.create_text(
-    842.8570556640625,
-    507.0,
-    anchor="nw",
-    text="Enter your password",
-    fill="#888888",
-    font=("OpenSans Bold", 11 * -1)
-)
+password.bind("<Button-1>", passwordfunction)
+
 
     
-button_image_2 = PhotoImage(
-    file=(pathset+"button_2.png"))
+
 
 eye = Button(
-    image=button_image_2,
+    image=eyeopen,
     borderwidth=0,
     highlightthickness=0,
-    command=show,
+    command=toggle_password,
     relief="flat"
 )
 
