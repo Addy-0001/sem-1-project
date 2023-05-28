@@ -1,11 +1,7 @@
 from tkinter import *
 
-import html
 import os
-from PIL import Image, ImageFilter
 
-import sys
-import subprocess
 
 window = Tk()
 window.geometry("1280x800")

@@ -1,12 +1,10 @@
 from tkinter import *
 
-import html
 import os
-from PIL import Image, ImageFilter
 
-import sys
-import subprocess
-import signup
+
+
+
 window = Tk()
 window.geometry("1280x800")
 window.configure(bg = "#EEEFF3")
@@ -171,12 +169,24 @@ entry_bg_2 = canvas.create_image(
     451.0,
     image=entry_image_2
 )
-def show():
-    a = password.get()
-    password.config(show="")
-def hide():
-    a = password.get()
-    password.config(show="*")   
+eyeclose = PhotoImage(
+    file=(pathset+"eyeclose.png"))
+eyeopen = PhotoImage(
+    file=(pathset+"eyeopen.png"))
+
+def toggle_password():
+    
+    if password.cget('show') == '':
+        password.config(show='*')
+        # toggle_btn.config(text='Show Password')
+    else:
+        password.config(show='')
+        eye.config(image=eyeclose,command=eyeopenfunction)
+       
+def eyeopenfunction():
+    password.config(show='')
+    eye.config(image=eyeopen, command=toggle_password)    
+    password.config(show='*')    
 password = Entry(
     bd=0,
     bg="#FFFFFF",
@@ -202,16 +212,15 @@ canvas.create_text(
     font=("OpenSans Bold", 11 * -1)
 )
 
-button_image_2 = PhotoImage(
-    file=(pathset+"button_2.png"))
-button_2 = Button(
-    image=button_image_2,
+
+eye = Button(
+    image=eyeopen,
     borderwidth=0,
     highlightthickness=0,
-    command=show,
+    command=toggle_password,
     relief="flat"
 )
-button_2.place(
+eye.place(
     x=1137.523681640625,
     y=439.0,
     width=33.142822265625,
