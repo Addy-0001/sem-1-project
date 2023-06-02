@@ -1,5 +1,24 @@
 {% extends 'base.html'%}
-{% block title %}Login{% endblock %}
 {% block content %}
-
+<form method="POST">
+    {% csrf_token %} <!-- This is a security token to prevent cross-site request forgery -->
+    <fieldset class="flex flex-col">
+        <legend class="bg-slate-600 hover:bg-slate-700 p-2 my-5 w-full">
+            Join Us Today
+        </legend>
+        <div class="text-black">
+            {{ form.as_p }}
+        </div>
+    </fieldset>
+    <div>
+        <button type="submit" class="border-2 rounded-xl bg-slate-600 hover:bg-slate-700 p-1 my-5 hover:animate-bounce">
+            Sign UP
+        </button>
+    </div>
+    <input type="submit" value="Register">
+</form>
+<div>
+    Already have an account? <br>
+    <a href={% url 'login' %}>Log In</a>
+</div>
 {% endblock content %}
