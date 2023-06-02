@@ -1,12 +1,12 @@
 {% extends 'base.html'%}
 {% block content %}
-<form method="POST">
+<form method="POST" class="container">
     {% csrf_token %} <!-- This is a security token to prevent cross-site request forgery -->
     <fieldset class="flex flex-col">
         <legend class="bg-slate-600 hover:bg-slate-700 p-2 my-5 w-full">
             Join Us Today
         </legend>
-        <div class="text-black">
+        <div class="container">
             {{ form.as_p }}
         </div>
     </fieldset>
@@ -15,9 +15,8 @@
             Sign UP
         </button>
     </div>
-    <input type="submit" value="Register">
 </form>
-<div>
+<div class="container">
     Already have an account? <br>
     <a href={% url 'login' %}>Log In</a>
 </div>
