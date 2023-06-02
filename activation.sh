@@ -1,3 +1,3 @@
 source env/bin/activate
-cd computingproject
+cd VirtuEdu
 python3 manage.py runserver
