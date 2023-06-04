@@ -1,8 +1,5 @@
 from tkinter import *
-
 import os
-
-
 window = Tk()
 window.geometry("1280x800")
 window.configure(bg = "#EEEFF3")
@@ -420,7 +417,7 @@ canvas.create_rectangle(
     552.0,
     317.0,
     562.0,
-    fill="#3532A7",
+    fill="#6E6DBF",
     outline="")
 
 canvas.create_rectangle(
@@ -428,7 +425,10 @@ canvas.create_rectangle(
     552.0,
     405.0,
     562.0,
-    fill="#3532A7",
+    fill="#6E6DBF",
     outline="")
+
 window.resizable(False, False)
 window.mainloop()
+
+
