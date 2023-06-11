@@ -8,6 +8,7 @@ class UserRegisterForm(UserCreationForm):
         max_length=50, required=True, help_text='Required')
     last_name = forms.CharField(
         max_length=50, required=True, help_text='Required')
+        
     email = forms.EmailField()
 
     class Meta:

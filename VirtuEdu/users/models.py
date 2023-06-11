@@ -4,6 +4,7 @@ from courses.models import Course
 from modules.models import Module
 
 
+
 class Profile(models.Model):
     # if user is deleted, delete profile
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -13,3 +14,5 @@ class Profile(models.Model):
 
     def __str__(self):
         return f'{self.user.username} Profile'
+
+
