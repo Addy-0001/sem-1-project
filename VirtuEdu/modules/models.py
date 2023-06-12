@@ -4,7 +4,7 @@ from courses.models import Course
 
 
 class Module(models.Model):
-    module_id = models.CharField(max_length=10, primary_key=True)
+    id = models.CharField(max_length=10, primary_key=True)
     module_name = models.CharField(max_length=100)
     module_description = models.CharField(max_length=500)
     course_id = models.ForeignKey(Course, on_delete=models.CASCADE)

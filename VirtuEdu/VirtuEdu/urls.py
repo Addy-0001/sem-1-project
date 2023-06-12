@@ -20,5 +20,4 @@ urlpatterns = [
     path('', views.home, name='home'),
     path("user/", include('users.urls')), #this is the path to the users app level urls.py file
     path("api_virtuedu/", include('api_throw.urls')), #this is the path to the courses app level urls.py file
-
 ]
