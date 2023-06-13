@@ -6,7 +6,7 @@ from modules.models import Module
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('id', 'username', 'email', 'password')
+        fields = ('id', 'first_name', 'last_name', 'username', 'email', 'password')
 
 class CourseSerializer(serializers.ModelSerializer):
     class Meta:
