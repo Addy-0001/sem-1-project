@@ -2,8 +2,7 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from .serializers import UserSerializer, CourseSerializer, ModuleSerializer
 from users.models import User
-from courses.models import Course
-from modules.models import Module
+from courses.models import Course, Module
 
 
 class UserViewSet(viewsets.ModelViewSet):

@@ -34,7 +34,7 @@ LOGIN_REDIRECT_URL = 'profile'
 LOGIN_URL = 'login'
 
 INSTALLED_APPS = [
-    'modules',
+    'jazzmin',
     'courses',
     'VirtuEdu',
     'users',
