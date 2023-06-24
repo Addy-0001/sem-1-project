@@ -11,12 +11,12 @@ class UserSerializer(serializers.ModelSerializer):
 class CourseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Course
-        fields = ('id', 'course_name')
+        fields = ('course_id', 'course_name')
     
 class ModuleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Module
-        fields = ('id', 'module_name')
+        fields = ('module_id', 'module_name')
 
 class AttendanceSerializer(serializers.ModelSerializer):
     class Meta:
