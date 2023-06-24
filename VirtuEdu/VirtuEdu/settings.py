@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'courses',
     'VirtuEdu',
     'users',
+    'attendance',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
