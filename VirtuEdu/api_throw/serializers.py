@@ -1,11 +1,12 @@
 from rest_framework import serializers
-from users.models import User
+from users.models import Profile
 from courses.models import Course, Module
 from attendance.models import Attendance
+from blog.models import Blog
 
-class UserSerializer(serializers.ModelSerializer):
+class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
-        model = User
+        model = Profile
         fields = ('id', 'first_name', 'last_name', 'username', 'email', 'password')
 
 class CourseSerializer(serializers.ModelSerializer):
@@ -22,3 +23,8 @@ class AttendanceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Attendance
         fields = ('module', 'student', 'date', 'present')
+
+class BlogSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Blog
+        fields = ('Title', 'HtmlContent', 'Author', 'Module', 'Date')

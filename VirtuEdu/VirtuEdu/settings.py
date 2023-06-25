@@ -34,9 +34,11 @@ LOGIN_REDIRECT_URL = 'profile'
 LOGIN_URL = 'login'
 
 INSTALLED_APPS = [
+    'tinymce',
     'jazzmin',
     'courses',
     'VirtuEdu',
+    'blog',
     'users',
     'attendance',
     'django.contrib.admin',
