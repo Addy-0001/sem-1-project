@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .serializers import ProfileSerializer, CourseSerializer, ModuleSerializer, RoutineSerializer, AttendanceSerializer, BlogSerializer
-from users.models import User
+from .serializers import ProfileSerializer, CourseSerializer, ModuleSerializer, RoutineSerializer, AttendanceSerializer, BlogSerializer, BookSerializer
+from users.models import User, Book
 from courses.models import Course, Module, Routine
 from attendance.models import Attendance
 from blog.models import Blog
@@ -10,6 +10,11 @@ from blog.models import Blog
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = ProfileSerializer
+
+
+class BookViewSet(viewsets.ModelViewSet):
+    queryset = Book.objects.all()
+    serializer_class = BookSerializer
 
 
 class CourseViewSet(viewsets.ModelViewSet):
