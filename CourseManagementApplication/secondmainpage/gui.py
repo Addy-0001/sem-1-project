@@ -1,57 +1,60 @@
-
-
-from pathlib import Path
-
-
 from tkinter import *
-
-
 from tkinter import ttk
 
-
 window = Tk()
+window.geometry("1280x800")
+window.configure(bg="#EEEFF3")
 
-window.geometry("1280x2026")
-window.configure(bg = "#EEEFF3")
+# Create a Canvas widget with a scrollbar
+canvas = Canvas(window, height=600)
+scrollbar = Scrollbar(window, orient="vertical", command=canvas.yview)
+canvas.configure(yscrollcommand=scrollbar.set)
+scrollbar.pack(side="right", fill="y")
+canvas.pack(fill="both", expand=True)
 
+def on_mousewheel(event):
+    # Get the current scroll position
+    current_pos = canvas.canvasy(0)
 
-canvas = Canvas(
-    window,
-    bg = "#EEEFF3",
-    height = 2026,
-    width = 1280,
-    bd = 0,
-    highlightthickness = 0,
-    relief = "ridge"
+    # Get the top and bottom coordinates of the content
+    top_pos = canvas.bbox("all")[1]
+    bottom_pos = canvas.bbox("all")[3]
 
-)
+    # Calculate the available scroll distance
+    scroll_distance = bottom_pos - top_pos - window.winfo_height()
 
-canvas.place(x = 0, y = 0)
+    if event.delta <= 0 and current_pos <= scroll_distance:
+        # Scroll down if there is more content to show
+        canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+    elif event.delta >= 0 and current_pos >= 0:
+        # Scroll up if not at the top
+        canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
 
+# Bind the mousewheel event to scroll the canvas
+canvas.bind_all("<MouseWheel>", on_mousewheel)
 
-Yscroll = Scrollbar(window)
-Yscroll.pack(side=RIGHT, fill=Y)
+# Create a frame inside the canvas to hold your content
+frame = Frame(canvas)
+canvas.create_window((0, 0), window=frame, anchor="nw")
+
 canvas.create_rectangle(
-    
     0.0,
     4.0,
     1282.0,
     450.0,
     fill="#82B4FF",
-    outline="")
+    outline=""
+)
 
 canvas.create_text(
-  
-    54.0,
+    30.0,
     20.0,
     anchor="nw",
     text="VirtuEdu",
     fill="#3532A7",
     font=("Poppins SemiBold", 25 * -1)
 )
-
 canvas.create_text(
- 
     38.0,
     48.0,
     anchor="nw",
@@ -59,7 +62,6 @@ canvas.create_text(
     fill="#646ECB",
     font=("Poppins Regular", 6 * -1)
 )
-
 button_image_1 = PhotoImage(
     file=("profile.png"))
 button_1 = Button(
@@ -70,12 +72,14 @@ button_1 = Button(
     command=lambda: print("button_1 clicked"),
     relief="flat"
 )
-button_1.place(
-   x=1160.0,
-    y=20.0,
-    width=56.0,
-    height=56.0
-)
+canvas.create_window(1160, 20, anchor="nw", window=button_1)
+
+# button_1.place(
+#    x=1160.0,
+#     y=20.0,
+#     width=56.0,
+#     height=56.0
+# )
 
 entry_image_1 = PhotoImage(
     file=("entry_1.png"))
@@ -90,14 +94,17 @@ entry_1 = Entry(
     bd=0,
     bg="#FFFFFF",
     fg="#000716",
-    highlightthickness=0
+    highlightthickness=0,
+    font=("lexend deca", 16)
 )
-entry_1.place(
-    x=717.0,
-    y=16.0,
-    width=275.0,
-    height=32.0
-)
+canvas.create_window(717, 16, anchor="nw", window=entry_1)
+
+# entry_1.place(
+#     x=717.0,
+#     y=16.0,
+#     width=275.0,
+#     height=32.0
+# )
 
 button_image_2 = PhotoImage(
     file=("notification.png"))
@@ -109,12 +116,14 @@ button_2 = Button(
     command=lambda: print("button_2 clicked"),
     relief="flat"
 )
-button_2.place(
-    x=1100.0,
-    y=31.615699768066406,
-    width=29.694091796875,
-    height=29.550003051757812
-)
+canvas.create_window(1100, 31, anchor="nw", window=button_2)
+
+# button_2.place(
+#     x=1100.0,
+#     y=31.615699768066406,
+#     width=29.694091796875,
+#     height=29.550003051757812
+# )
 
 button_image_3 = PhotoImage(
     file=("home.png"))
@@ -126,12 +135,14 @@ button_3 = Button(
     command=lambda: print("button_3 clicked"),
     relief="flat"
 )
-button_3.place(
-    x=388.0,
-    y=31.0,
-    width=61.0,
-    height=28.0
-)
+canvas.create_window(388, 31, anchor="nw", window=button_3)
+
+# button_3.place(
+#     x=388.0,
+#     y=31.0,
+#     width=61.0,
+#     height=28.0
+# )
 
 button_image_4 = PhotoImage(
     file=("routines.png"))
@@ -143,12 +154,14 @@ button_4 = Button(
     command=lambda: print("button_4 clicked"),
     relief="flat"
 )
-button_4.place(
-    x=546.0,
-    y=34.0,
-    width=65.0,
-    height=20.0
-)
+canvas.create_window(546, 34, anchor="nw", window=button_4)
+
+# button_4.place(
+#     x=546.0,
+#     y=34.0,
+#     width=65.0,
+#     height=20.0
+# )
 
 button_image_5 = PhotoImage(
     file=("requests.png"))
@@ -160,12 +173,14 @@ button_5 = Button(
     command=lambda: print("button_5 clicked"),
     relief="flat"
 )
-button_5.place(
-   x=628.0,
-    y=31.0,
-    width=65.0,
-    height=20.0
-)
+canvas.create_window(628, 31, anchor="nw", window=button_5)
+
+# button_5.place(
+#    x=628.0,
+#     y=31.0,
+#     width=65.0,
+#     height=20.0
+# )
 
 button_image_6 = PhotoImage(
     file=("courses.png"))
@@ -177,12 +192,22 @@ button_6 = Button(
     command=lambda: print("button_6 clicked"),
     relief="flat"
 )
-button_6.place(
-    x=459.0,
-    y=31.0,
-    width=61.0,
-    height=28.0
-)
+canvas.create_window(459, 31, anchor="nw", window=button_6)
+
+# button_6.place(
+#     x=459.0,
+#     y=31.0,
+#     width=61.0,
+#     height=28.0
+# )
+
+
+
+## header endssss
+
+
+
+
 
 image_image_1 = PhotoImage(
     file=("image_1.png"))
@@ -245,12 +270,14 @@ button_7 = Button(
     command=lambda: print("button_7 clicked"),
     relief="flat"
 )
-button_7.place(
-    x=107.0,
-    y=661.12548828125,
-    width=87.0,
-    height=11.902435302734375
-)
+canvas.create_window(107, 661, anchor="nw", window=button_7)
+
+# button_7.place(
+#     x=107.0,
+#     y=661.12548828125,
+#     width=87.0,
+#     height=11.902435302734375
+# )
 
 image_image_3 = PhotoImage(
     file=("image_3.png"))
@@ -270,18 +297,20 @@ button_8 = Button(
     command=lambda: print("button_8 clicked"),
     relief="flat"
 )
-button_8.place(
-    x=108.0,
-    y=747.79443359375,
-    width=66.7545166015625,
-    height=18.074081420898438
-)
+canvas.create_window(108, 748, anchor="nw", window=button_8)
+
+# button_8.place(
+#     x=108.0,
+#     y=747.79443359375,
+#     width=66.7545166015625,
+#     height=18.074081420898438
+# )
 
 canvas.create_text(
     107.0,
     708.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive",
+    text="Discover the art of crafting exceptional user experiences with our\n Introduction to User Experience Design course. Dive into the world \nof interactive design, learn the fundamentals of user-centered \nthinking, and acquire the skills to create intuitive",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -321,12 +350,14 @@ button_9 = Button(
     command=lambda: print("button_9 clicked"),
     relief="flat"
 )
-button_9.place(
-    x=109.0,
-    y=944.12548828125,
-    width=87.0,
-    height=11.90243911743164
-)
+canvas.create_window(109, 944, anchor="nw", window=button_9)
+
+# button_9.place(
+#     x=109.0,
+#     y=944.12548828125,
+#     width=87.0,
+#     height=11.90243911743164
+# )
 
 image_image_5 = PhotoImage(
     file=("image_5.png"))
@@ -346,18 +377,20 @@ button_10 = Button(
     command=lambda: print("button_10 clicked"),
     relief="flat"
 )
-button_10.place(
-    x=110.0,
-    y=1030.79443359375,
-    width=66.7545166015625,
-    height=18.074073791503906
-)
+canvas.create_window(110, 1030, anchor="nw", window=button_10)
+
+# button_10.place(
+#     x=110.0,
+#     y=1030.79443359375,
+#     width=66.7545166015625,
+#     height=18.074073791503906
+# )
 
 canvas.create_text(
     109.0,
     991.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Discover the art of crafting exceptional user experiences with our\n Introduction to User Experience Design course. Dive into the world \nof interactive design, learn the fundamentals of user-centered \nthinking, and acquire the skills to create intuitive,",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -397,12 +430,14 @@ button_11 = Button(
     command=lambda: print("button_11 clicked"),
     relief="flat"
 )
-button_11.place(
-    x=409.0,
-    y=661.12548828125,
-    width=87.0,
-    height=11.902435302734375
-)
+canvas.create_window(409, 661, anchor="nw", window=button_11)
+
+# button_11.place(
+#     x=409.0,
+#     y=661.12548828125,
+#     width=87.0,
+#     height=11.902435302734375
+# )
 
 image_image_7 = PhotoImage(
     file=("image_7.png"))
@@ -422,18 +457,20 @@ button_12 = Button(
     command=lambda: print("button_12 clicked"),
     relief="flat"
 )
-button_12.place(
-    x=410.0,
-    y=747.79443359375,
-    width=66.7545166015625,
-    height=18.074081420898438
-)
+canvas.create_window(410, 748, anchor="nw", window=button_12)
+
+# button_12.place(
+#     x=410.0,
+#     y=747.79443359375,
+#     width=66.7545166015625,
+#     height=18.074081420898438
+# )
 
 canvas.create_text(
     409.0,
     708.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Discover the art of crafting exceptional user experiences with our\n Introduction to User Experience Design course. Dive into the world \nof interactive design, learn the fundamentals of user-centered \nthinking, and acquire the skills to create intuitive,",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -473,12 +510,14 @@ button_13 = Button(
     command=lambda: print("button_13 clicked"),
     relief="flat"
 )
-button_13.place(
-    x=411.0,
-    y=944.12548828125,
-    width=87.0,
-    height=11.90243911743164
-)
+canvas.create_window(411, 944, anchor="nw", window=button_13)
+
+# button_13.place(
+#     x=411.0,
+#     y=944.12548828125,
+#     width=87.0,
+#     height=11.90243911743164
+# )
 
 image_image_9 = PhotoImage(
     file=("image_9.png"))
@@ -498,18 +537,20 @@ button_14 = Button(
     command=lambda: print("button_14 clicked"),
     relief="flat"
 )
-button_14.place(
-    x=412.0,
-    y=1030.79443359375,
-    width=66.7545166015625,
-    height=18.074073791503906
-)
+canvas.create_window(412, 1030, anchor="nw", window=button_14)
+
+# button_14.place(
+#     x=412.0,
+#     y=1030.79443359375,
+#     width=66.7545166015625,
+#     height=18.074073791503906
+# )
 
 canvas.create_text(
     411.0,
     991.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Discover the art of crafting exceptional user experiences with our\n Introduction to User Experience Design course. Dive into the world \nof interactive design, learn the fundamentals of user-centered \nthinking, and acquire the skills to create intuitive,",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -549,12 +590,14 @@ button_15 = Button(
     command=lambda: print("button_15 clicked"),
     relief="flat"
 )
-button_15.place(
-    x=691.0,
-    y=661.12548828125,
-    width=87.0,
-    height=11.902435302734375
-)
+canvas.create_window(691, 661, anchor="nw", window=button_15)
+
+# button_15.place(
+#     x=691.0,
+#     y=661.12548828125,
+#     width=87.0,
+#     height=11.902435302734375
+# )
 
 image_image_11 = PhotoImage(
     file=("image_11.png"))
@@ -574,18 +617,20 @@ button_16 = Button(
     command=lambda: print("button_16 clicked"),
     relief="flat"
 )
-button_16.place(
-    x=692.0,
-    y=747.79443359375,
-    width=66.7545166015625,
-    height=18.074081420898438
-)
+canvas.create_window(692, 748, anchor="nw", window=button_16)
+
+# button_16.place(
+#     x=692.0,
+#     y=747.79443359375,
+#     width=66.7545166015625,
+#     height=18.074081420898438
+# )
 
 canvas.create_text(
     691.0,
     708.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text=" Discover the art of crafting exceptional user experiences with our\n Introduction to User Experience Design course. Dive into the world \nof interactive design, learn the fundamentals of user-centered \nthinking, and acquire the skills to create intuitive,",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -625,18 +670,20 @@ button_17 = Button(
     command=lambda: print("button_17 clicked"),
     relief="flat"
 )
-button_17.place(
-    x=693.0,
-    y=944.12548828125,
-    width=87.0,
-    height=11.90243911743164
-)
+canvas.create_window(693, 944, anchor="nw", window=button_17)
+
+# button_17.place(
+#     x=693.0,
+#     y=944.12548828125,
+#     width=87.0,
+#     height=11.90243911743164
+# )
 
 image_image_12 = PhotoImage(
-    file=("image_12.png"))
+    file=("image_2.png"))
 image_12 = canvas.create_image(
     801.0,
-    966.8292236328125,
+    875,
     image=image_image_12
 )
 
@@ -650,18 +697,20 @@ button_18 = Button(
     command=lambda: print("button_18 clicked"),
     relief="flat"
 )
-button_18.place(
-    x=694.0,
-    y=1030.79443359375,
-    width=66.7545166015625,
-    height=18.074073791503906
-)
+canvas.create_window(694, 1030, anchor="nw", window=button_18)
+
+# button_18.place(
+#     x=694.0,
+#     y=1030.79443359375,
+#     width=66.7545166015625,
+#     height=18.074073791503906
+# )
 
 canvas.create_text(
     693.0,
     991.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Discover the art of crafting exceptional user experiences with our\n Introduction to User Experience Design course. Dive into the world \nof interactive design, learn the fundamentals of user-centered \nthinking, and acquire the skills to create intuitive,",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -701,12 +750,14 @@ button_19 = Button(
     command=lambda: print("button_19 clicked"),
     relief="flat"
 )
-button_19.place(
-    x=980.0,
-    y=661.12548828125,
-    width=87.0,
-    height=11.902435302734375
-)
+canvas.create_window(980, 661, anchor="nw", window=button_19)
+
+# button_19.place(
+#     x=980.0,
+#     y=661.12548828125,
+#     width=87.0,
+#     height=11.902435302734375
+# )
 
 image_image_14 = PhotoImage(
     file=("image_14.png"))
@@ -726,18 +777,20 @@ button_20 = Button(
     command=lambda: print("button_20 clicked"),
     relief="flat"
 )
-button_20.place(
-    x=981.0,
-    y=747.79443359375,
-    width=66.7545166015625,
-    height=18.074081420898438
-)
+canvas.create_window(981, 747, anchor="nw", window=button_20)
+
+# button_20.place(
+#     x=981.0,
+#     y=747.79443359375,
+#     width=66.7545166015625,
+#     height=18.074081420898438
+# )
 
 canvas.create_text(
     980.0,
     708.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Discover the art of crafting exceptional user experiences with our\n Introduction to User Experience Design course. Dive into the world \nof interactive design, learn the fundamentals of user-centered \nthinking, and acquire the skills to create intuitive,",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -777,12 +830,14 @@ button_21 = Button(
     command=lambda: print("button_21 clicked"),
     relief="flat"
 )
-button_21.place(
-    x=982.0,
-    y=944.12548828125,
-    width=87.0,
-    height=11.90243911743164
-)
+canvas.create_window(982, 944, anchor="nw", window=button_21)
+
+# button_21.place(
+#     x=982.0,
+#     y=944.12548828125,
+#     width=87.0,
+#     height=11.90243911743164
+# )
 
 image_image_16 = PhotoImage(
     file=("image_16.png"))
@@ -802,18 +857,20 @@ button_22 = Button(
     command=lambda: print("button_22 clicked"),
     relief="flat"
 )
-button_22.place(
-    x=983.0,
-    y=1030.79443359375,
-    width=66.7545166015625,
-    height=18.074073791503906
-)
+canvas.create_window(983, 1030, anchor="nw", window=button_22)
+
+# button_22.place(
+#     x=983.0,
+#     y=1030.79443359375,
+#     width=66.7545166015625,
+#     height=18.074073791503906
+# )
 
 canvas.create_text(
     982.0,
     991.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Discover the art of crafting exceptional user experiences with our\n Introduction to User Experience Design course. Dive into the world \nof interactive design, learn the fundamentals of user-centered \nthinking, and acquire the skills to create intuitive,",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -884,7 +941,7 @@ canvas.create_text(
     63.0,
     1824.0,
     anchor="nw",
-    text="Our innovative online learning platform empowers students to pursue their educational goals from anywhere in the world. With flexible schedules and high-quality courses, we provide the tools and resources necessary for you to excel in your studies and succeed in any endeavor. Join our global community of learners and unlock your full potential with Virtu Edu.",
+    text="Our innovative online learning platform empowers students \nto pursue their educational goals from anywhere in the world. \nWith flexible schedules and high-quality courses, we provide \nthe tools and resources necessary for you to excel in your\nstudies and succeed in any endeavor. Join our global \ncommunity of learners and unlock your full potential with \nVirtu Edu.",
     fill="#FFFFFF",
     font=("Poppins Medium", 13 * -1)
 )
@@ -942,12 +999,14 @@ button_23 = Button(
     command=lambda: print("button_23 clicked"),
     relief="flat"
 )
-button_23.place(
-    x=507.0,
-    y=1091.0,
-    width=300.0,
-    height=38.0
-)
+canvas.create_window(507, 1091, anchor="nw", window=button_23)
+
+# button_23.place(
+#     x=507.0,
+#     y=1091.0,
+#     width=300.0,
+#     height=38.0
+# )
 
 button_image_24 = PhotoImage(
     file=("button_24.png"))
@@ -959,12 +1018,14 @@ button_24 = Button(
     command=lambda: print("button_24 clicked"),
     relief="flat"
 )
-button_24.place(
-    x=525.0,
-    y=1616.0,
-    width=300.0,
-    height=38.0
-)
+canvas.create_window(550, 1650, anchor="nw", window=button_24)
+
+# button_24.place(
+#     x=525.0,
+#     y=1816.0,
+#     width=300.0,
+#     height=38.0
+# )
 
 canvas.create_rectangle(
     104.0,
@@ -984,12 +1045,14 @@ button_25 = Button(
     command=lambda: print("button_25 clicked"),
     relief="flat"
 )
-button_25.place(
-    x=116.43994140625,
-    y=1516.666748046875,
-    width=48.959991455078125,
-    height=35.8974609375
-)
+canvas.create_window(116, 1516, anchor="nw", window=button_25)
+
+# button_25.place(
+#     x=116.43994140625,
+#     y=1516.666748046875,
+#     width=48.959991455078125,
+#     height=35.8974609375
+# )
 
 canvas.create_text(
     130.719970703125,
@@ -1028,12 +1091,14 @@ button_26 = Button(
     command=lambda: print("button_26 clicked"),
     relief="flat"
 )
-button_26.place(
-    x=262.0,
-    y=1514.0,
-    width=57.1199951171875,
-    height=41.88037109375
-)
+canvas.create_window(262, 1514, anchor="nw", window=button_26 )
+
+# button_26.place(
+#     x=262.0,
+#     y=1514.0,
+#     width=57.1199951171875,
+#     height=41.88037109375
+# )
 
 image_image_17 = PhotoImage(
     file=("image_17.png"))
@@ -1061,12 +1126,14 @@ button_27 = Button(
     command=lambda: print("button_27 clicked"),
     relief="flat"
 )
-button_27.place(
-    x=420.43994140625,
-    y=1516.666748046875,
-    width=48.96000671386719,
-    height=35.8974609375
-)
+canvas.create_window(420, 1516, anchor="nw", window=button_27)
+
+# button_27.place(
+#     x=420.43994140625,
+#     y=1516.666748046875,
+#     width=48.96000671386719,
+#     height=35.8974609375
+# )
 
 canvas.create_text(
     434.719970703125,
@@ -1105,12 +1172,14 @@ button_28 = Button(
     command=lambda: print("button_28 clicked"),
     relief="flat"
 )
-button_28.place(
-    x=566.0,
-    y=1514.0,
-    width=57.12000274658203,
-    height=41.88037109375
-)
+canvas.create_window(566, 1514, anchor="nw", window=button_28)
+
+# button_28.place(
+#     x=566.0,
+#     y=1514.0,
+#     width=57.12000274658203,
+#     height=41.88037109375
+# )
 
 image_image_18 = PhotoImage(
     file=("image_18.png"))
@@ -1138,12 +1207,14 @@ button_29 = Button(
     command=lambda: print("button_29 clicked"),
     relief="flat"
 )
-button_29.place(
-    x=700.43994140625,
-    y=1510.666748046875,
-    width=48.96000671386719,
-    height=35.8974609375
-)
+canvas.create_window(700, 1510, anchor="nw", window=button_29)
+
+# button_29.place(
+#     x=700.43994140625,
+#     y=1510.666748046875,
+#     width=48.96000671386719,
+#     height=35.8974609375
+# )
 
 canvas.create_text(
     714.719970703125,
@@ -1182,12 +1253,14 @@ button_30 = Button(
     command=lambda: print("button_30 clicked"),
     relief="flat"
 )
-button_30.place(
-    x=846.0,
-    y=1508.0,
-    width=57.1199951171875,
-    height=41.88037109375
-)
+canvas.create_window(846, 1508, anchor="nw", window=button_30)
+
+# button_30.place(
+#     x=846.0,
+#     y=1508.0,
+#     width=57.1199951171875,
+#     height=41.88037109375
+# )
 
 image_image_19 = PhotoImage(
     file=("image_19.png"))
@@ -1215,12 +1288,14 @@ button_31 = Button(
     command=lambda: print("button_31 clicked"),
     relief="flat"
 )
-button_31.place(
-    x=986.43994140625,
-    y=1510.666748046875,
-    width=48.959991455078125,
-    height=35.8974609375
-)
+canvas.create_window(986, 1510, anchor="nw", window=button_31)
+
+# button_31.place(
+#     x=986.43994140625,
+#     y=1510.666748046875,
+#     width=48.959991455078125,
+#     height=35.8974609375
+# )
 
 canvas.create_text(
     1000.719970703125,
@@ -1259,12 +1334,14 @@ button_32 = Button(
     command=lambda: print("button_32 clicked"),
     relief="flat"
 )
-button_32.place(
-    x=1132.0,
-    y=1508.0,
-    width=57.1199951171875,
-    height=41.88037109375
-)
+canvas.create_window(1132, 1508, anchor="nw", window=button_32)
+
+# button_32.place(
+#     x=1132.0,
+#     y=1508.0,
+#     width=57.1199951171875,
+#     height=41.88037109375
+# )
 
 image_image_20 = PhotoImage(
     file=("image_20.png"))
@@ -1283,5 +1360,9 @@ canvas.create_text(
     font=("Poppins Regular", 6 * -1)
 )
 
+# Update the scroll region to include the entire frame
+frame.update_idletasks()
+canvas.config(scrollregion=canvas.bbox("all"))
 window.resizable(False, False)
 window.mainloop()
+ 
