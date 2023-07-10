@@ -3,10 +3,12 @@ from tkinter import ttk
 
 window = Tk()
 window.geometry("1280x800")
+
 window.configure(bg="#EEEFF3")
 
 # Create a Canvas widget with a scrollbar
-canvas = Canvas(window, height=200)
+canvas = Canvas(window, height=100)
+
 scrollbar = Scrollbar(window, orient="vertical", command=canvas.yview)
 canvas.configure(yscrollcommand=scrollbar.set)
 scrollbar.pack(side="right", fill="y")
@@ -35,13 +37,14 @@ canvas.bind_all("<MouseWheel>", on_mousewheel)
 
 # Create a frame inside the canvas to hold your content
 frame = Frame(canvas)
+
 canvas.create_window((0, 0), window=frame, anchor="nw")
 canvas.create_rectangle(
     0.0,
-    2529.0,
+    1700.0,
     1280.0,
-    2795.0,
-    fill="#82B4FF",
+    2900.0,
+    fill="#3532A7",
     outline="")
 
 canvas.create_rectangle(
@@ -49,7 +52,7 @@ canvas.create_rectangle(
     4.0,
     1282.0,
     450.0,
-    fill="#90BCFD",
+    fill="#90BBFC",
     outline="")
 
 canvas.create_text(
@@ -71,7 +74,7 @@ canvas.create_text(
 )
 
 button_image_1 = PhotoImage(
-    file=("profile.png"))
+    file=("button_1.png"))
 button_1 = Button(
     image=button_image_1,
     borderwidth=0,
@@ -107,7 +110,7 @@ entry_1.place(
 )
 
 button_image_2 = PhotoImage(
-    file=("notification.png"))
+    file=("button_2.png"))
 button_2 = Button(
     image=button_image_2,
     borderwidth=0,
@@ -155,17 +158,9 @@ canvas.create_text(
     font=("OpenSans Bold", 60 * -1)
 )
 
-canvas.create_rectangle(
-    1616.0,
-    2701.0,
-    1716.0,
-    2801.0,
-    fill="#000000",
-    outline="")
-
 canvas.create_text(
     62.0,
-    2557.0,
+    1800.0,
     anchor="nw",
     text="VirtuEdu",
     fill="#FFFFFF",
@@ -174,25 +169,25 @@ canvas.create_text(
 
 canvas.create_text(
     506.0,
-    2572.0,
+    1800.0,
     anchor="nw",
     text="Menu",
-    fill="#FFFFFF",
+    fill="#fff",
     font=("Poppins SemiBold", 24 * -1)
 )
 
 canvas.create_text(
     740.0,
-    2572.0,
+    1800.0,
     anchor="nw",
     text="Menu",
-    fill="#FFFFFF",
+    fill="#fff",
     font=("Poppins SemiBold", 24 * -1)
 )
 
 canvas.create_text(
     1010.0,
-    2572.0,
+    1800.0,
     anchor="nw",
     text="Menu",
     fill="#FFFFFF",
@@ -201,7 +196,7 @@ canvas.create_text(
 
 canvas.create_text(
     88.0,
-    2603.0,
+    1830.0,
     anchor="nw",
     text="Learn Anywhere, Achieve Everywhere",
     fill="#FFFFFF",
@@ -210,28 +205,32 @@ canvas.create_text(
 
 canvas.create_text(
     90.0,
-    2628.0,
+    2220.0,
     anchor="nw",
     text="Our innovative online learning platform empowers students to pursue their educational goals from anywhere in the world. With flexible schedules and high-quality courses, we provide the tools and resources necessary for you to excel in your studies and succeed in any endeavor. Join our global community of learners and unlock your full potential with Virtu Edu.",
-    fill="#FFFFFF",
+    fill="#222",
     font=("Poppins Medium", 12 * -1)
 )
 
 button_image_3 = PhotoImage(
     file=("button_3.png"))
 button_3 = Button(
-    image=button_image_3,
+    # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_3 clicked"),
-    relief="flat"
+    relief="flat",
+    text= "Home",
+    
 )
-button_3.place(
-    x=518.0,
-    y=2615.0,
-    width=30.0,
-    height=15.0
-)
+canvas.create_window(506, 1830, anchor="nw", window=button_3)
+
+# button_3.place(
+#     x=518.0,
+#     y=2615.0,
+#     width=30.0,
+#     height=15.0
+# )
 
 button_image_4 = PhotoImage(
     file=("button_4.png"))
@@ -362,20 +361,157 @@ button_11.place(
 )
 
 button_image_12 = PhotoImage(
-    file=("button_12.png"))
+    file=("button_3.png"))
 button_12 = Button(
-    image=button_image_12,
+    # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_12 clicked"),
-    relief="flat"
+    command=lambda: print("about us clicked"),
+    relief="flat",
+    text= "About Us",
+    
+
 )
-button_12.place(
-    x=518.0,
-    y=2640.0,
-    width=46.0,
-    height=15.0
+canvas.create_window(506, 1860, anchor="nw", window=button_12)
+
+
+courses = PhotoImage(
+    file=("button_3.png"))
+coursesbtn = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("courses clicked"),
+    relief="flat",
+    text= "Courses",
+    
+
 )
+canvas.create_window(506, 1890, anchor="nw", window=coursesbtn)
+
+
+events = PhotoImage(
+    file=("button_3.png"))
+eventbtn = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("event clicked"),
+    relief="flat",
+    text= "Events",
+    
+
+)
+canvas.create_window(506, 1920, anchor="nw", window=eventbtn)
+
+routinebtn = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("routines clicked"),
+    relief="flat",
+    text= "Routines",
+    
+
+)
+canvas.create_window(506, 1950, anchor="nw", window=routinebtn)
+
+termsandcon = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("terms and conditions clicked"),
+    relief="flat",
+    text= "Terms and Conditions",
+    
+
+)
+canvas.create_window(740, 1830, anchor="nw", window=termsandcon)
+
+privacy = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("Privacy clicked"),
+    relief="flat",
+    text= "Privacy Policy",
+    
+
+)
+canvas.create_window(740, 1860, anchor="nw", window=privacy)
+
+support = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("Support clicked"),
+    relief="flat",
+    text= "Support",
+    
+
+)
+canvas.create_window(740, 1890, anchor="nw", window=support)
+
+
+contact = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("Contact clicked"),
+    relief="flat",
+    text= "Contact Us",
+    
+
+)
+canvas.create_window(740, 1920, anchor="nw", window=contact)
+
+cden = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("CDEN clicked"),
+    relief="flat",
+    text= "CDEN",
+    
+
+)
+canvas.create_window(1010, 1830, anchor="nw", window=cden)
+
+ioe = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("IOE clicked"),
+    relief="flat",
+    text= "IOE",
+    
+
+)
+canvas.create_window(1010, 1860, anchor="nw", window=ioe)
+
+tu = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("TU clicked"),
+    relief="flat",
+    text= "TU",
+    
+
+)
+canvas.create_window(1010, 1890, anchor="nw", window=tu)
+
+cu = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("cu clicked"),
+    relief="flat",
+    text= "Coventry University",
+    
+
+)
+canvas.create_window(1010, 1920, anchor="nw", window=cu)
 
 button_image_13 = PhotoImage(
     file=("button_13.png"))
@@ -426,7 +562,7 @@ button_15.place(
 )
 
 button_image_16 = PhotoImage(
-    file=("home.png"))
+    file=("button_16.png"))
 button_16 = Button(
     image=button_image_16,
     borderwidth=0,
@@ -442,19 +578,23 @@ button_16.place(
 )
 
 button_image_17 = PhotoImage(
-    file=("courses.png"))
+    file=("button_17.png"))
 button_17 = Button(
-    window,
-    image=button_image_6,
+    image=button_image_17,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("Course Button Clicked"),
+    command=lambda: print("button_17 clicked"),
     relief="flat"
 )
-canvas.create_window(459, 28, anchor="nw", window=button_17)
+button_17.place(
+    x=533.0,
+    y=32.0,
+    width=65.0,
+    height=20.0
+)
 
 button_image_18 = PhotoImage(
-    file=("routines.png"))
+    file=("button_18.png"))
 button_18 = Button(
     image=button_image_18,
     borderwidth=0,
@@ -465,12 +605,12 @@ button_18 = Button(
 button_18.place(
     x=446.0,
     y=32.0,
-    # width=69.0,
-    # height=20.0
+    width=69.0,
+    height=20.0
 )
 
 button_image_19 = PhotoImage(
-    file=("requests.png"))
+    file=("button_19.png"))
 button_19 = Button(
     image=button_image_19,
     borderwidth=0,
@@ -489,7 +629,7 @@ canvas.create_text(
     44.0,
     467.0,
     anchor="nw",
-    text="Privacy Policy for VirtuEdu\nAt VirtuEdu, we are committed to protecting your privacy and ensuring the security of any personal information you provide to us. This \nPrivacy Policy outlines how we collect, use, and safeguard your personal information \when you access and use our web application.\n\nInformation Collection and Use:\nWe may collect certain personally identifiable information from you, such as your name, email address, and other contact details when \nyou register for our courses or interact with our website. This information is used to provide you with the requested services, improve \nour courses and services, and communicate important updates and announcements."
+     text="Privacy Policy for VirtuEdu\nAt VirtuEdu, we are committed to protecting your privacy and ensuring the security of any personal information you provide to us. This \nPrivacy Policy outlines how we collect, use, and safeguard your personal information \when you access and use our web application.\n\nInformation Collection and Use:\nWe may collect certain personally identifiable information from you, such as your name, email address, and other contact details when \nyou register for our courses or interact with our website. This information is used to provide you with the requested services, improve \nour courses and services, and communicate important updates and announcements."
 "\n\nData Security:"
 "\nWe take appropriate measures to protect the security of your personal information and prevent unauthorized access, disclosure, alteration, \nor destruction of data. We use industry-standard security technologies and procedures to ensure the confidentiality and integrity of your \ninformation."
 
@@ -512,15 +652,14 @@ canvas.create_text(
 "\nIf you have any questions, concerns, or requests regarding this Privacy Policy or the handling of your personal information, please contact \nus at  heypsycho339@gmail.com"
 
 "\n\nBy using the VirtuEdu web application, you consent to the terms of this Privacy Policy and the collection and use of your personal \ninformation as described herein."
-
-,
+"\n\nOur innovative online learning platform empowers students to pursue their educational goals from anywhere in the world. With flexible \nschedules and high-quality courses, we provide the tools and resources necessary for you to excel in your studies and succeed in any \nendeavor. Join our global community of learners and unlock your full potential with Virtu Edu.",
     fill="#000000",
-    font=("lexend deca", 15,)
+    font=("lexend deca",15)
 )
 
 canvas.create_text(
     44.0,
-    1500.0,
+    1600.0,
     anchor="nw",
     text="All other terms and conditions as applicable under the Terms and Conditions of Us will be applicable to You \nand will be read along with this Privacy Policy.",
     fill="#000000",
