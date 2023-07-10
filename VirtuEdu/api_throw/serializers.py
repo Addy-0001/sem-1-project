@@ -21,7 +21,7 @@ class BookSerializer(serializers.ModelSerializer):
 class ContactSerializer(serializers.ModelSerializer):
     class Meta:
         model = Contact
-        fields = ('name', 'email', 'message')
+        fields = ('contact_name', 'email', 'message')
 
 
 class CourseSerializer(serializers.ModelSerializer):

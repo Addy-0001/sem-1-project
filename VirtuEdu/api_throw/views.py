@@ -18,7 +18,7 @@ class BookViewSet(viewsets.ModelViewSet):
 
 
 class ContactViewSet(viewsets.ModelViewSet):
-    queryset = Book.objects.all()
+    queryset = Contact.objects.all()
     serializer_class = ContactSerializer
 
 
