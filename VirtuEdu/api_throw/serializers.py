@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from users.models import Profile, Book
+from users.models import Profile, Book, Contact
 from courses.models import Course, Module, Routine
 from attendance.models import Attendance
 from blog.models import Blog
@@ -17,6 +17,12 @@ class BookSerializer(serializers.ModelSerializer):
         model = Book
         fields = ('book_name', 'books_available', 'book_author',
                   'book_link', 'book_description')
+
+
+class ContactSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Contact
+        fields = ('name', 'email', 'message')
 
 
 class CourseSerializer(serializers.ModelSerializer):
