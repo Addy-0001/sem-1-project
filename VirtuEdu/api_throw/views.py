@@ -1,14 +1,14 @@
 from django.shortcuts import render
 from rest_framework import viewsets
 from .serializers import ProfileSerializer, CourseSerializer, ModuleSerializer, RoutineSerializer, AttendanceSerializer, BlogSerializer, BookSerializer, ContactSerializer
-from users.models import User, Book
+from users.models import Profile, Book, Contact
 from courses.models import Course, Module, Routine
 from attendance.models import Attendance
 from blog.models import Blog
 
 
 class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all()
+    queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
 
 

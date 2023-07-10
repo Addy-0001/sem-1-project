@@ -8,8 +8,7 @@ from blog.models import Blog
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
-        fields = ('id', 'first_name', 'last_name',
-                  'username', 'email', 'password' 'user_course', 'books_issued')
+        fields = ('user', 'user_course', 'books_issued')
 
 
 class BookSerializer(serializers.ModelSerializer):
