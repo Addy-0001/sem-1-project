@@ -1,9 +1,10 @@
 from tkinter import *
 
 import os
+import sys
+import subprocess
 
-
-
+from pymongo import MongoClient
 
 window = Tk()
 window.geometry("1280x800")
@@ -11,8 +12,70 @@ window.configure(bg = "#EEEFF3")
 window.title("Sign In")
 just = os.getcwd().replace("\\","\\\\")
 pathset = just+"\\\\imagessignin\\\\"
+
 logo = PhotoImage(file=pathset+"logo.png")
 window.iconphoto(True, logo)
+
+# Set the initial transparency of the window
+window.attributes('-alpha', 1.0)
+
+
+
+
+
+
+
+import bcrypt
+
+def authenticate_user():
+    email_value = email.get()
+    password_value = password.get()
+
+    # Connect to MongoDB
+    client = MongoClient('mongodb://localhost:27017/')
+    db = client['users_data']
+    collection = db['authenticate']
+
+    # Find the user in the database
+    user = collection.find_one({'email_address': email_value})
+
+    # Check if the user exists and the password is correct
+    if user and bcrypt.checkpw(password_value.encode('utf-8'), user['password'].encode('utf-8')):
+        error_label.config(text='')  # Clear any previous error message
+        print('Authentication successful!')
+
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd(), 'homepage')
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+    else:
+        error_label.config(text='Invalid credentials')  # Show error message
+        print('Authentication failed!')
+
+
+def fade_out(window, duration):
+    # Calculate the number of steps for the fade effect
+    steps = int(duration / 10)
+    alpha = window.attributes('-alpha')
+    alpha_step = alpha / steps
+
+    # Apply the fade effect
+    for _ in range(steps):
+        alpha -= alpha_step
+        window.attributes('-alpha', alpha)
+        window.update()
+        window.after(10)  # Delay between each step
+
+    # Open the signin.py file
+    subprocess.Popen([sys.executable, 'signup.py'])
+
+    # Destroy the current signup.py window
+    window.destroy()
+
 
 
 canvas = Canvas(
@@ -70,12 +133,13 @@ canvas.create_text(
     font=("Poppins Regular", 15 * -1)
 )
 
-newto = Label(
+newto = Button(
     window,
     anchor="nw",
     text="New to VirtuEdu? Sign Up",
     cursor="hand2",
     font=("lexend deca", 15 * -1),
+    command=lambda: fade_out(window, 160) 
     
     
     
@@ -89,7 +153,7 @@ button_1 = Button(
     text="Sign In",
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_1 clicked"),
+    command=authenticate_user,
     relief="flat",
     font=("lexend deca",20)
 
@@ -109,6 +173,10 @@ image_1 = canvas.create_image(
     418.0,
     image=image_image_1
 )
+
+# Create the error label
+error_label = Label(window, fg='red')
+error_label.place(x=800, y=270)
 
 canvas.create_text(
     861.3333129882812,
@@ -267,6 +335,8 @@ image_4 = canvas.create_image(
     658.0,
     image=image_image_4
 )
+
+
 
 canvas.create_rectangle(
     326.0,

@@ -5,7 +5,11 @@ from pathlib import Path
 
 # from tkinter import *
 # Explicit imports to satisfy Flake8
-from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
+from tkinter import *
+import sqlite3
+import os
+import requests
+
 
 
 
@@ -14,6 +18,35 @@ window = Tk()
 window.geometry("1280x832")
 window.configure(bg = "#EEEFF3")
 
+def post_data():
+    # Get data from entry fields
+    name = entry_1.get()
+    email = entry_2.get()
+    message = entry_3.get()
+
+    # Create the data payload
+    payload = {
+        'contact_name': name,
+        'email': email,
+        'message': message
+    }
+
+    # Make the POST request to the API
+    try:
+        response = requests.post('http://127.0.0.1:8000/api_virtuedu/contact/', json=payload)
+        response.raise_for_status()  # Raise an exception for non-200 status codes
+
+        # Handle the response (e.g., display a success message)
+        error_label.config(text="Data successfully sent to the API!", fg="green")
+     # Clear the entry fields
+        entry_1.delete(0, END)
+        entry_2.delete(0, END)
+        entry_3.delete(0, END)
+    except requests.exceptions.RequestException as e:
+        # Handle the exception (e.g., display an error message)
+        error_label.config(text="Error: Failed to send data to the API.", fg="red")
+        print(f"Error: {e}")
+   
 
 canvas = Canvas(
     window,
@@ -77,7 +110,7 @@ button_1 = Button(
     image=button_image_1,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_1 clicked"),
+    command=post_data,
     relief="flat"
 )
 canvas.create_window(912, 684, anchor="nw", window=button_1)
@@ -89,6 +122,9 @@ canvas.create_window(912, 684, anchor="nw", window=button_1)
 #     height=34.0
 # )
 
+# Create a label for error messages
+error_label = Label(window, text="", fg="red")
+error_label.place(x=816.0, y=160.0)
 image_image_1 = PhotoImage(
     file=("image_1.png"))
 image_1 = canvas.create_image(
@@ -131,6 +167,8 @@ entry_bg_1 = canvas.create_image(
     239.0,
     image=entry_image_1
 )
+
+
 entry_1 = Entry(
     bd=0,
     bg="#FFFFFF",

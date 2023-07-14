@@ -1,5 +1,9 @@
 from tkinter import *
 import os
+from pymongo import MongoClient
+import subprocess
+import sys
+import re
 window = Tk()
 window.geometry("1280x800")
 window.configure(bg = "#EEEFF3")
@@ -9,7 +13,109 @@ pathset = just+"\\\\imagessignup\\\\"
 logo = PhotoImage(file=pathset+"logo.png")
 window.iconphoto(True, logo)
 
+client = MongoClient('mongodb://localhost:27017/')
+db = client['users_data']
+collection = db['authenticate']
 
+
+# Set the initial transparency of the window
+window.attributes('-alpha', 1.0)
+
+import bcrypt
+
+
+from google_auth_oauthlib.flow import Flow
+from google.oauth2.credentials import Credentials
+
+# Client ID and Client Secret from Google API project
+CLIENT_ID = '808449259232-ordjm3193u7e2j150k3edu1gj105aqfj.apps.googleusercontent.com'
+CLIENT_SECRET = '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'
+SCOPES = ['openid', 'email', 'profile']
+
+def authenticate_with_google():
+    # Create the authorization flow
+    flow = Flow.from_client_secrets_file(
+        'client_secret.json',  # Path to your client_secret.json file
+        scopes=SCOPES,
+        redirect_uri='urn:ietf:wg:oauth:2.0:oob'
+    )
+
+    # Generate the authorization URL
+    authorization_url, _ = flow.authorization_url(prompt='consent')
+
+    # Open the authorization URL in a browser window
+    os.system(f'start {authorization_url}')
+
+    # Prompt the user to enter the authorization code
+    authorization_code = input('Enter the authorization code: ')
+
+    # Exchange the authorization code for credentials
+    flow.fetch_token(authorization_response=authorization_code)
+
+    # Get the user's profile information
+    credentials = flow.credentials
+    profile_info = get_profile_info(credentials)
+
+    # Process the profile information or perform further actions
+    print('Authentication successful!')
+    print('Profile information:')
+    print(f'Name: {profile_info["name"]}')
+    print(f'Email: {profile_info["email"]}')
+    # ...
+
+def get_profile_info(credentials):
+    # Use the credentials to get the user's profile information
+    client = credentials.authorized_http()
+    response = client.get('https://www.googleapis.com/oauth2/v3/userinfo')
+    profile_info = response.json()
+    return profile_info
+
+
+
+
+def save_data():
+    full_name = fullname.get()
+    phone_number = phonenumber.get()
+    email_address = email.get()
+    password_value = password.get()
+
+    # Validate that all fields are filled
+    if not (full_name and phone_number and email_address and password_value):
+        error_label.config(text='All fields are required')
+        return
+    
+    if not re.match(r'^98\d{8}$', phone_number):
+        error_label.config(text='Invalid phone number')
+        return
+
+    # Validate the email address format
+    if not re.match(r'^[\w\.-]+@[\w\.-]+\.\w+$', email_address):
+        error_label.config(text='Invalid email address')
+        return
+    
+    # Hash the password
+    hashed_password = bcrypt.hashpw(password_value.encode('utf-8'), bcrypt.gensalt())
+
+    data = {
+        'full_name': full_name,
+        'phone_number': phone_number,
+        'email_address': email_address,
+        'password': hashed_password.decode('utf-8')  # Store the hashed password as a string
+    }
+
+    collection.insert_one(data) 
+
+    # Clear the entry boxes after saving the data
+    fullname.delete(0, 'end')
+    phonenumber.delete(0, 'end')
+    email.delete(0, 'end')
+    password.delete(0, 'end')
+
+    # Destroy the current window
+    window.destroy()
+
+    # Open signin.py using subprocess
+    subprocess.Popen([sys.executable, 'signin.py'])
 canvas = Canvas(
     window,
     bg = "#EEEFF3",
@@ -47,12 +153,34 @@ canvas.create_text(
     fill="#EAE7ED",
     font=("Poppins Regular", 15 * -1)
 )
-newto = Label(
+
+
+def fade_out(window, duration):
+    # Calculate the number of steps for the fade effect
+    steps = int(duration / 10)
+    alpha = window.attributes('-alpha')
+    alpha_step = alpha / steps
+
+    # Apply the fade effect
+    for _ in range(steps):
+        alpha -= alpha_step
+        window.attributes('-alpha', alpha)
+        window.update()
+        window.after(10)  # Delay between each step
+
+    # Open the signin.py file
+    subprocess.Popen([sys.executable, 'signin.py'])
+
+    # Destroy the current signup.py window
+    window.destroy()
+
+newto = Button(
     window,
     anchor="nw",
     text="New to VirtuEdu? Sign Up",
     cursor="hand2",
     font=("lexend deca", 15 * -1),
+    command=lambda: fade_out(window, 200) 
     
     
     
@@ -76,7 +204,7 @@ button_1 = Button(
     bg="white",
     font=("lexend deca", 16),
  
-    command=lambda: print("Create Account button pressed"),
+    command=save_data,
 
 )
 button_1.place(
@@ -139,6 +267,10 @@ canvas.create_text(
     fill="#EAE7ED",
     font=("OpenSans Bold", 14 * -1)
 )
+# Create the error_label widget
+error_label = Label(window, text='', fg="red")
+error_label.place(x=830, y= 200)
+                       
 
 entry_image_1 = PhotoImage(
     file=(pathset+"entry_1.png"))
@@ -351,7 +483,7 @@ button_image_3 = PhotoImage(
 button_3 = Button(
     image=button_image_3,
 
-    command=lambda: print("button_3 clicked"),
+    command=authenticate_with_google,
 
 )
 button_3.place(

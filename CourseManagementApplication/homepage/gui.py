@@ -1,5 +1,7 @@
 from tkinter import *
-from tkinter import ttk
+import os
+import sys
+import subprocess
 
 window = Tk()
 window.geometry("1280x800")
@@ -62,14 +64,14 @@ canvas.create_text(
     fill="#646ECB",
     font=("Poppins Regular", 6 * -1)
 )
-profile = PhotoImage(
-    file=("profile.png")
-)
-button_1 = Button(
-    canvas, 
-    image= profile,
-    command=lambda: print("profile button clicked")
-)
+# profile = PhotoImage(
+#     file=("profile.png")
+# )
+# button_1 = Button(
+#     canvas, 
+#     image= profile,
+#     command=lambda: print("profile button clicked")
+# )
 # canvas.create_window(1160, 31, window=button_1)
 
 # button_image_1 = PhotoImage(
@@ -84,12 +86,12 @@ button_1 = Button(
 #     relief="flat"
 # )
 # canvas.create_window(1160, 20, anchor="nw", window=button_1)
-button_1.place(
-    x=1160.0,
-    y=20.0,
-    width=56.0,
-    height=56.0
-)
+# button_1.place(
+#     x=1160.0,
+#     y=20.0,
+#     width=56.0,
+#     height=56.0
+# )
 entry_image_1 = PhotoImage(
     file=("entry_1.png"))
 entry_bg_1 = canvas.create_image(
@@ -165,7 +167,27 @@ canvas.create_window(388, 31, anchor="nw", window=button_3)
 #     width=61.0,
 #     height=28.0
 # )
+def routinesfile():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("homepage","routines"))
+        os.chdir(next_folder)
 
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
+def requestsfile():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("homepage","requests_notdone"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
 button_image_4 = PhotoImage(
     file=("routines.png"))
 button_4 = Button(
@@ -173,7 +195,7 @@ button_4 = Button(
     image=button_image_4,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_4 clicked"),
+    command=routinesfile,
     relief="flat",
   
 )
@@ -193,7 +215,7 @@ button_5 = Button(
     image=button_image_5,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_5 clicked"),
+    command=requestsfile,
     relief="flat"
 )
 canvas.create_window(628, 31, anchor="nw", window=button_5)
@@ -416,25 +438,7 @@ canvas.create_window(107, 661.12548828125, anchor="nw", window=button_13)
 #     height=11.9024658203125
 # )
 
-entry_image_3 = PhotoImage(
-    file=("entry_3.png"))
-entry_bg_3 = canvas.create_image(
-    215.01956176757812,
-    684.5987854003906,
-    image=entry_image_3
-)
-entry_3 = Text(
-    bd=0,
-    bg="#FFFFFF",
-    fg="#000716",
-    highlightthickness=0
-)
-entry_3.place(
-    x=108.0,
-    y=679.8292236328125,
-    width=214.03912353515625,
-    height=7.53912353515625
-)
+
 
 button_image_14 = PhotoImage(
     file=("button_14.png"))
@@ -446,7 +450,7 @@ button_14 = Button(
     command=lambda: print("button_14 clicked"),
     relief="flat"
 )
-canvas.create_window(108, 748, anchor="nw", window=button_1)
+canvas.create_window(108, 748, anchor="nw", window=button_14)
 
 # button_14.place(
 #     x=108.0,
@@ -508,25 +512,6 @@ canvas.create_window(409, 661, anchor="nw", window=button_15)
 #     height=11.9024658203125
 # )
 
-entry_image_4 = PhotoImage(
-    file=("entry_4.png"))
-entry_bg_4 = canvas.create_image(
-    517.0195617675781,
-    684.5987854003906,
-    image=entry_image_4
-)
-entry_4 = Text(
-    bd=0,
-    bg="#FFFFFF",
-    fg="#000716",
-    highlightthickness=0
-)
-entry_4.place(
-    x=410.0,
-    y=679.8292236328125,
-    width=214.03912353515625,
-    height=7.53912353515625
-)
 
 button_image_16 = PhotoImage(
     file=("button_16.png"))
@@ -600,25 +585,6 @@ canvas.create_window(691, 661, anchor="nw", window=button_17)
 #     height=11.9024658203125
 # )
 
-entry_image_5 = PhotoImage(
-    file=("entry_5.png"))
-entry_bg_5 = canvas.create_image(
-    799.0195617675781,
-    684.5987854003906,
-    image=entry_image_5
-)
-entry_5 = Text(
-    bd=0,
-    bg="#FFFFFF",
-    fg="#000716",
-    highlightthickness=0
-)
-entry_5.place(
-    x=692.0,
-    y=679.8292236328125,
-    width=214.03912353515625,
-    height=7.53912353515625
-)
 
 button_image_18 = PhotoImage(
     file=("button_18.png"))
@@ -692,25 +658,6 @@ canvas.create_window(980, 661, anchor="nw", window=button_19)
 #     height=11.9024658203125
 # )
 
-entry_image_6 = PhotoImage(
-    file=("entry_6.png"))
-entry_bg_6 = canvas.create_image(
-    1088.01953125,
-    684.5987854003906,
-    image=entry_image_6
-)
-entry_6 = Text(
-    bd=0,
-    bg="#FFFFFF",
-    fg="#000716",
-    highlightthickness=0
-)
-entry_6.place(
-    x=981.0,
-    y=679.8292236328125,
-    width=214.0390625,
-    height=7.53912353515625
-)
 
 button_image_20 = PhotoImage(
     file=("button_20.png"))
@@ -814,7 +761,7 @@ button_22 = Button(
     command=lambda: print("button_22 clicked"),
     relief="flat"
 )
-canvas.create_window(110, 1031, anchor="nw", window=button_22)
+canvas.create_window(110, 931, anchor="nw", window=button_22)
 
 # button_22.place(
 #     x=110.0,
