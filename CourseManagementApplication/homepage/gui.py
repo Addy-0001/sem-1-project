@@ -761,7 +761,10 @@ button_22 = Button(
     command=lambda: print("button_22 clicked"),
     relief="flat"
 )
-canvas.create_window(110, 931, anchor="nw", window=button_22)
+
+# canvas.create_window( 412, 1031, anchor="nw", window=button_22)
+canvas.create_window(411, 1031, anchor="nw", window=button_22)
+
 
 # button_22.place(
 #     x=110.0,
@@ -1365,7 +1368,18 @@ button_35 = Button(
     command=lambda: print("button_35 clicked"),
     relief="flat"
 )
-canvas.create_window(982, 1224, anchor="nw", window=button_35)
+
+# button_image_35 = PhotoImage(
+#     file=("button_35.png"))
+# button_35 = Button(
+#     canvas,
+#     image=button_image_35,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_35 clicked"),
+#     relief="flat"
+# )
+canvas.create_window(984, 1224, anchor="nw", window=button_35)
 # button_35.place(
 #     x=982.0,
 #     y=1224.12548828125,
@@ -1446,6 +1460,18 @@ button_36 = Button(
     relief="flat"
 )
 canvas.create_window(111, 1507, anchor="nw", window=button_36)
+
+button_image_65 = PhotoImage(
+    file=("button_65.png"))
+button_65 = Button(
+    canvas,
+    image=button_image_65,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("button_65 clicked"),
+    relief="flat"
+)
+canvas.create_window(111, 1594, anchor="nw", window=button_65)
 # button_36.place(
 #     x=111.0,
 #     y=1507.12548828125,
@@ -1483,12 +1509,15 @@ button_37 = Button(
     command=lambda: print("button_37 clicked"),
     relief="flat"
 )
-button_37.place(
-    x=112.0,
-    y=1593.79443359375,
-    width=66.7545166015625,
-    height=18.0740966796875
-)
+
+canvas.create_window(983, 1310, anchor="nw", window=button_37)
+
+# button_37.place(
+#     x=112.0,
+#     y=1593.79443359375,
+#     width=66.7545166015625,
+#     height=18.0740966796875
+# )
 
 canvas.create_text(
     111.0,
@@ -1624,7 +1653,7 @@ button_40 = Button(
     command=lambda: print("button_40 clicked"),
     relief="flat"
 )
-canvas.create_window(695, 1507, anchor="nw", window=button_22)
+canvas.create_window(695, 1507, anchor="nw", window=button_40)
 # button_40.place(
 #     x=695.0,
 #     y=1507.12548828125,
@@ -1752,12 +1781,15 @@ button_43 = Button(
     command=lambda: print("button_43 clicked"),
     relief="flat"
 )
-button_43.place(
-    x=985.0,
-    y=1593.79443359375,
-    width=66.7545166015625,
-    height=18.0740966796875
-)
+
+canvas.create_window(983, 1594, anchor="nw", window=button_43)
+
+# button_43.place(
+#     x=985.0,
+#     y=1593.79443359375,
+#     width=66.7545166015625,
+#     height=18.0740966796875
+# )
 
 canvas.create_text(
     984.0,
@@ -1804,12 +1836,14 @@ button_45 = Button(
     command=lambda: print("button_45 clicked"),
     relief="flat"
 )
-button_45.place(
-    x=504.0,
-    y=1644.0,
-    width=47.0,
-    height=45.0
-)
+canvas.create_window(504, 1644, anchor="nw", window=button_45)
+
+# button_45.place(
+#     x=504.0,
+#     y=1644.0,
+#     width=47.0,
+#     height=45.0
+# )
 
 button_image_46 = PhotoImage(
     file=("button_46.png"))
@@ -1857,7 +1891,7 @@ button_48 = Button(
     command=lambda: print("button_48 clicked"),
     relief="flat"
 )
-canvas.create_window(744, 1644, anchor="nw", window=button_22)
+canvas.create_window(744, 1644, anchor="nw", window=button_48)
 # button_48.place(
 #     x=744.0,
 #     y=1644.0,
@@ -1978,7 +2012,7 @@ canvas.create_text(
     63.0,
     1824.0,
     anchor="nw",
-    text="\nour innovative online learning platform empowers students to pursue their educational goals from anywhere in the \nworld. With flexible schedules and high-quality courses, we provide the tools and resources necessary for you to excel in your studies and succeed in any endeavor. Join \nour global community of learners and unlock your full potential with Virtu Edu.",
+    text="\nour innovative online learning platform empowers students to pursue their educational goals from anywhere in the \nworld. With flexible schedules and high-quality courses, we provide the tools and resources necessary for you to excel \nin your studies and succeed in any endeavor. Join our global community of learners and unlock your full potential with \n Virtu Edu.",
     fill="#FFFFFF",
     font=("Poppins Medium", 6 * -1)
 )
