@@ -1,7 +1,9 @@
 from tkinter import *
+
 import os
 import sys
 import subprocess
+
 
 window = Tk()
 window.geometry("1280x800")
@@ -447,6 +449,7 @@ button_14 = Button(
     image=button_image_14,
     borderwidth=0,
     highlightthickness=0,
+    
     command=lambda: print("button_14 clicked"),
     relief="flat"
 )
