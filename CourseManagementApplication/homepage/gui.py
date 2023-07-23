@@ -111,6 +111,18 @@ canvas.create_window(717, 16, anchor="nw", window=entry_1)
 
 
 
+from tkinter import messagebox
+
+
+    
+
+def create_gui():
+    
+    messagebox.showinfo("Alert", "Feature is not available right now")
+    
+
+    
+    
 # entry_image_2 = PhotoImage(
 #     file=("entry_2.png"))
 # entry_bg_2 = canvas.create_image(
@@ -138,7 +150,7 @@ button_2 = Button(
     image=button_image_2,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("notification clicked"),
+    command=create_gui,
     relief="flat"
 )
 canvas.create_window(1100, 31.615699768066406, anchor="nw", window=button_2)
@@ -188,6 +200,64 @@ def requestsfile():
         subprocess.Popen([sys.executable, 'gui.py'])
 
         window.destroy()
+
+def computingfile():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("homepage","computing_wala"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+      
+        window.destroy()
+
+def multimediafile():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("homepage","multimedia_wala"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
+def marketingfile():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("homepage","marketing_wala"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
+
+def languagefile():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("homepage","language_wala"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy() 
+
+
+def designingfile():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("homepage","designing_wala"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy() 
+
 button_image_4 = PhotoImage(
     file=("routines.png"))
 button_4 = Button(
@@ -226,7 +296,16 @@ canvas.create_window(628, 31, anchor="nw", window=button_5)
 #     width=65.0,
 #     height=20.0
 # )
-
+profileimg = PhotoImage(
+    file=("profile.png"))
+profile = Button(
+    image=profileimg,
+    borderwidth=0,
+    highlightthickness=0,
+    command=create_gui,
+    relief="flat"
+)
+canvas.create_window(1154, 20, anchor="nw", window=profile)
 button_image_6 = PhotoImage(
     file=("courses.png"))
 button_6 = Button(
@@ -262,6 +341,8 @@ image_2 = canvas.create_image(
     image=image_image_2
 )
 
+
+
 button_image_7 = PhotoImage(
     file=("computing.png"))
 button_7 = Button(
@@ -269,7 +350,7 @@ button_7 = Button(
     image=button_image_7,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_7 clicked"),
+    command=computingfile,
     relief="flat"
 )
 canvas.create_window(400, 457, anchor="nw", window=button_7)
@@ -307,7 +388,7 @@ button_9 = Button(
     image=button_image_9,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_9 clicked"),
+    command=multimediafile,
     relief="flat"
 )
 canvas.create_window(526, 457, anchor="nw", window=button_9)
@@ -326,7 +407,7 @@ button_10 = Button(
     image=button_image_10,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_10 clicked"),
+    command=designingfile,
     relief="flat"
 )
 canvas.create_window(660, 457, anchor="nw", window=button_10)
@@ -345,7 +426,7 @@ button_11 = Button(
     image=button_image_11,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_11 clicked"),
+    command=languagefile,
     relief="flat"
 )
 canvas.create_window(785, 457, anchor="nw", window=button_11)
@@ -364,7 +445,7 @@ button_12 = Button(
     image=button_image_12,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_12 clicked"),
+    command=marketingfile,
     relief="flat"
 )
 canvas.create_window(925, 457, anchor="nw", window=button_12)
@@ -378,9 +459,9 @@ canvas.create_window(925, 457, anchor="nw", window=button_12)
 
 canvas.create_text(
     797.0,
-    195.0,
+    160.0,
     anchor="nw",
-    text="\nour Courses",
+    text="\nOur Courses",
     fill="#3D4AC0",
     font=("OpenSans Bold", 60 * -1)
 )
@@ -389,7 +470,7 @@ canvas.create_text(
     794.0,
     285.0,
     anchor="nw",
-    text="Unlock your potential with \nour transformative courses.",
+    text="Unlock your potential with our transformative courses.",
     fill="#646ECB",
     font=("Poppins Regular", 15 * -1)
 )
@@ -2020,20 +2101,19 @@ canvas.create_text(
 button_image_52 = PhotoImage(
     file=("button_52.png"))
 button_52 = Button(
-    canvas,
-    image=button_image_52,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_52 clicked"),
-    relief="flat"
+    window,
+    text="Home",
+    
+  
+    
 )
 canvas.create_window(464, 1817, anchor="nw", window=button_52)
 
 # button_52.place(
 #     x=464.0,
 #     y=1817.0,
-#     width=41.0,
-#     height=18.0
+#     # width=41.0,
+#     # height=18.0
 # )
 
 button_image_53 = PhotoImage(
