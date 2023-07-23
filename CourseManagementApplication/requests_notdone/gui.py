@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import ttk
-
+import os,sys,subprocess
 window = Tk()
 window.geometry("1280x800")
 window.configure(bg="#EEEFF3")
@@ -37,6 +37,38 @@ canvas.bind_all("<MouseWheel>", on_mousewheel)
 frame = Frame(canvas)
 canvas.create_window((0, 0), window=frame, anchor="nw")
 
+from tkinter import messagebox
+
+
+    
+
+def create_gui():
+    
+    messagebox.showinfo("Alert", "Feature is not available right now")
+
+
+def homefile():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("requests_notdone","homepage"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+def routinesfile():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("requests_notdone","routines"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
+
 canvas.create_rectangle(
     0.0,
     4.0,
@@ -69,7 +101,7 @@ button_1 = Button(
     image=button_image_1,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("profile clicked"),
+    command=create_gui,
     relief="flat"
 )
 
@@ -104,7 +136,7 @@ button_2 = Button(
     image=button_image_2,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("notification clicked"),
+    command=create_gui,
     relief="flat"
 )
 canvas.create_window(1130, 26, anchor="nw", window=button_2)
@@ -419,7 +451,7 @@ button_16 = Button(
     image=button_image_16,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("home clicked"),
+    command=homefile,
     relief="flat"
 )
 canvas.create_window(385, 31, anchor="nw", window=button_16)
@@ -432,7 +464,7 @@ button_17 = Button(
     image=button_image_17,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_5 clicked"),
+    command=routinesfile,
     relief="flat"
 )
 canvas.create_window(533, 32, anchor="nw", window=button_17)
@@ -445,7 +477,7 @@ button_18 = Button(
     image=button_image_18,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_5 clicked"),
+    command=homefile,
     relief="flat"
 )
 canvas.create_window(446, 32, anchor="nw", window=button_18)
@@ -458,7 +490,7 @@ button_19 = Button(
     image=button_image_19,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_5 clicked"),
+    state=DISABLED,
     relief="flat"
 )
 canvas.create_window(628, 31, anchor="nw", window=button_19)
