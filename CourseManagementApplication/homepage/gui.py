@@ -529,12 +529,13 @@ def get_data_from_api():
 def modulesfile():
     data = get_data_from_api()
     data_window = Tk()
-    data_window.title("Data from API")
-    for i, item in enumerate(data):
-        label = Label(data_window, text=item)
-        label.pack()
+    data_window.title("Modules Name")
+    listbox = Listbox(data_window, width=40, height=10)
+    listbox.pack()
+    for item in data:
+        listbox.insert(END, f"module ID: {item['module_id']}, module Name: {item['module_name']}")
     data_window.mainloop()
-       
+    
 
 button_image_14 = PhotoImage(
     file=("button_14.png"))
