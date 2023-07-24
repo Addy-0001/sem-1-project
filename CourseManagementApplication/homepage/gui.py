@@ -3,6 +3,7 @@ from tkinter import *
 import os
 import sys
 import subprocess
+import requests
 
 
 window = Tk()
@@ -520,8 +521,20 @@ canvas.create_window(107, 661.12548828125, anchor="nw", window=button_13)
 #     width=87.0,
 #     height=11.9024658203125
 # )
+def get_data_from_api():
+    response = requests.get('http://127.0.0.1:8000/api_virtuedu/modules/')
+    return response.json()
 
 
+def modulesfile():
+    data = get_data_from_api()
+    data_window = Tk()
+    data_window.title("Data from API")
+    for i, item in enumerate(data):
+        label = Label(data_window, text=item)
+        label.pack()
+    data_window.mainloop()
+       
 
 button_image_14 = PhotoImage(
     file=("button_14.png"))
@@ -531,7 +544,7 @@ button_14 = Button(
     borderwidth=0,
     highlightthickness=0,
     
-    command=lambda: print("button_14 clicked"),
+    command=modulesfile,
     relief="flat"
 )
 canvas.create_window(108, 748, anchor="nw", window=button_14)

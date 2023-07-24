@@ -16,6 +16,5 @@ def show_data():
 
 root = Tk()
 root.title("REST API App")
-button = Button(root, text="Get Data", command=show_data)
-button.pack()
+
 root.mainloop()
