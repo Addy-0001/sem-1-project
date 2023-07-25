@@ -33,7 +33,7 @@ class CourseSerializer(serializers.ModelSerializer):
 class ModuleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Module
-        fields = ('module_id', 'module_name')
+        fields = ('module_id', 'module_name', 'module_description', 'tutor_name', 'credit_hours')
 
 
 class RoutineSerializer(serializers.ModelSerializer):
