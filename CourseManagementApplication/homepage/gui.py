@@ -529,11 +529,12 @@ def get_data_from_api():
 def modulesfile():
     data = get_data_from_api()
     data_window = Tk()
-    data_window.title(f"['module_name']")
-    listbox = Listbox(data_window, width=40, height=10)
-    listbox.pack()
+    data_window.title(f"{data['module_name']}")
+    data_window.geometry("500x500")
+    # listbox = Listbox(data_window, width=10, height=40)
+    # listbox.pack()
     for item in data:
-        listbox.insert(END, f"module ID: {item['module_id']}, module Name: {item['module_name']}")
+        data_window.insert(END, f"module ID: {item['module_id']}, module Name: {item['module_name']}")
     data_window.mainloop()
     
 
