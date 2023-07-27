@@ -200,7 +200,7 @@ canvas.create_text(
 )
 
 canvas.create_text(
-    88.0,
+    62.0,
     2603.0,
     anchor="nw",
     text="Learn Anywhere, Achieve Everywhere",
@@ -209,10 +209,10 @@ canvas.create_text(
 )
 
 canvas.create_text(
-    90.0,
+    62.0,
     2628.0,
     anchor="nw",
-    text="Our innovative online learning platform empowers students to pursue their educational goals from anywhere in the world. With flexible schedules and high-quality courses, we provide the tools and resources necessary for you to excel in your studies and succeed in any endeavor. Join our global community of learners and unlock your full potential with Virtu Edu.",
+    text="Our innovative online learning platform empowers students to \n pursue  their educational goals from anywhere in the world. \n With flexible schedules and high-quality courses, we provide the tools \nand resources necessary for you to excel in your studies and succeed \n in any endeavor. Join our global community of learners and unlock your \n full potential with Virtu Edu.",
     fill="#FFFFFF",
     font=("Poppins Medium", 12 * -1)
 )
@@ -522,7 +522,7 @@ canvas.create_text(
     44.0,
     1500.0,
     anchor="nw",
-    text="All other terms and conditions as applicable under the Terms and Conditions of Us will be applicable to You \nand will be read along with this Privacy Policy.",
+    text="All other terms and conditions as applicable under the Terms and Conditions of Us \n will be applicable to You and will be read along with this Privacy Policy.",
     fill="#000000",
     font=("Poppins Medium", 24 * -1)
 )

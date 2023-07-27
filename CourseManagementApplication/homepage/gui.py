@@ -521,9 +521,9 @@ canvas.create_window(107, 661.12548828125, anchor="nw", window=button_13)
 #     width=87.0,
 #     height=11.9024658203125
 # )
-# def get_data_from_api():
-#     response = requests.get('virtuedu.com/api_virtuedu/modules/')
-#     return response.json()
+def get_data_from_api():
+    response = requests.get('http://127.0.0.1:8000/api_virtuedu/modules/')
+    return response.json()
 
 
 # def modulesfile():

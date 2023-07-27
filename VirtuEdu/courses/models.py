@@ -4,7 +4,7 @@ from django.db import models
 class Course(models.Model):
     course_id = models.CharField(max_length=10, primary_key=True)
     course_name = models.CharField(max_length=100)
-    course_description = models.CharField(max_length=500)
+    course_description = models.CharField(max_length=1500)
     modules = models.ManyToManyField('Module', blank=False)
 
     def __str__(self):
@@ -14,7 +14,7 @@ class Course(models.Model):
 class Module(models.Model):
     module_id = models.CharField(max_length=10, primary_key=True)
     module_name = models.CharField(max_length=100)
-    module_description = models.CharField(max_length=500)
+    module_description = models.CharField(max_length=1500)
     tutor_name = models.CharField(max_length=100)
     credit_hours = models.IntegerField()
 

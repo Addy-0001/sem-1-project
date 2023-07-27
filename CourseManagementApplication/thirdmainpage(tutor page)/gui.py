@@ -18,6 +18,11 @@ window.geometry("1280x2006")
 window.configure(bg = "#EEEFF3")
 
 
+from tkinter import messagebox
+
+def create_gui():
+    messagebox.showinfo("Alert", "Feature is not available right now")
+
 canvas = Canvas(
     window,
     bg = "#EEEFF3",
@@ -61,7 +66,7 @@ button_1 = Button(
     image=button_image_1,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_1 clicked"),
+    command=create_gui,
     relief="flat"
 )
 button_1.place(
@@ -103,7 +108,7 @@ button_3 = Button(
     image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_3 clicked"),
+    command=create_gui,
     relief="flat"
 )
 button_3.place(
@@ -407,7 +412,7 @@ canvas.create_text(
     138.0,
     1892.0,
     anchor="nw",
-    text="Our innovative online learning platform empowers students to pursue their educational goals from anywhere in the world. With flexible schedules and high-quality courses, we provide the tools and resources necessary for you to excel in your studies and succeed in any endeavor. Join our global community of learners and unlock your full potential with Virtu Edu.",
+    text="\nour innovative online learning platform empowers students to pursue their educational goals from anywhere in the \nworld. With flexible schedules and high-quality courses, we provide the tools and resources necessary for you to excel \nin your studies and succeed in any endeavor. Join our global community of learners and unlock your full potential with \n Virtu Edu.",
     fill="#FFFFFF",
     font=("Poppins Medium", 10 * -1)
 )
