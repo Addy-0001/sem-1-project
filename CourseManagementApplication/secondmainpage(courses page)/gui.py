@@ -12,6 +12,11 @@ canvas.configure(yscrollcommand=scrollbar.set)
 scrollbar.pack(side="right", fill="y")
 canvas.pack(fill="both", expand=True)
 
+
+from tkinter import messagebox
+
+def create_gui():
+    messagebox.showinfo("Alert", "Feature is not available right now")
 def on_mousewheel(event):
     # Get the current scroll position
     current_pos = canvas.canvasy(0)
@@ -69,7 +74,7 @@ button_1 = Button(
     image=button_image_1,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_1 clicked"),
+    command=create_gui,
     relief="flat"
 )
 canvas.create_window(1160, 20, anchor="nw", window=button_1)
@@ -113,7 +118,7 @@ button_2 = Button(
     image=button_image_2,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_2 clicked"),
+    command=create_gui,
     relief="flat"
 )
 canvas.create_window(1100, 31, anchor="nw", window=button_2)

@@ -18,6 +18,11 @@ window.geometry("1280x2006")
 window.configure(bg = "#EEEFF3")
 
 
+from tkinter import messagebox
+
+def create_gui():
+    messagebox.showinfo("Alert", "Feature is not available right now")
+
 canvas = Canvas(
     window,
     bg = "#EEEFF3",
@@ -61,7 +66,7 @@ button_1 = Button(
     image=button_image_1,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_1 clicked"),
+    command=create_gui,
     relief="flat"
 )
 button_1.place(
@@ -103,7 +108,7 @@ button_3 = Button(
     image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_3 clicked"),
+    command=create_gui,
     relief="flat"
 )
 button_3.place(
