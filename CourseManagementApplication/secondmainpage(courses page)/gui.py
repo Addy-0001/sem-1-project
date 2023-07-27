@@ -941,7 +941,7 @@ canvas.create_text(
     63.0,
     1824.0,
     anchor="nw",
-    text="Our innovative online learning platform empowers students \nto pursue their educational goals from anywhere in the world. \nWith flexible schedules and high-quality courses, we provide \nthe tools and resources necessary for you to excel in your\nstudies and succeed in any endeavor. Join our global \ncommunity of learners and unlock your full potential with \nVirtu Edu.",
+    text="\nour innovative online learning platform empowers students to pursue their educational goals from anywhere in the \nworld. With flexible schedules and high-quality courses, we provide the tools and resources necessary for you to excel \nin your studies and succeed in any endeavor. Join our global community of learners and unlock your full potential with \n Virtu Edu.",
     fill="#FFFFFF",
     font=("Poppins Medium", 13 * -1)
 )
