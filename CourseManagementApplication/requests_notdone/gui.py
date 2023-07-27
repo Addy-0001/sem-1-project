@@ -106,12 +106,13 @@ button_1 = Button(
 )
 
 canvas.create_window(1194, 12, anchor="nw", window=button_1)
-button_1.place(
-    x=1194.0,
-    y=12.0,
-    width=56.0,
-    height=56.0
-)
+
+# button_1.place(
+#     x=1194.0,
+#     y=12.0,
+#     width=56.0,
+#     height=56.0
+# )
 
 entry_image_1 = PhotoImage(
     file=("entry_1.png"))
@@ -232,7 +233,7 @@ canvas.create_text(
     68.0,
     1756.0,
     anchor="nw",
-    text="Our innovative online learning platform empowers students to pursue their educational goals from anywhere in the world. With flexible schedules and high-quality courses, we provide the tools and resources necessary for you to excel in your studies and succeed in any endeavor. Join our global community of learners and unlock your full potential with Virtu Edu.",
+    text="\nour innovative online learning platform empowers students to pursue their educational goals from anywhere in the \nworld. With flexible schedules and high-quality courses, we provide the tools and resources necessary for you to excel \nin your studies and succeed in any endeavor. Join our global community of learners and unlock your full potential with \n Virtu Edu.",
     fill="#FFFFFF",
     font=("Poppins Medium", 12 * -1)
 )
@@ -821,12 +822,15 @@ button_20 = Button(
     command=lambda: print("button_20 clicked"),
     relief="flat"
 )
-button_20.place(
-    x=97.0,
-    y=731.12548828125,
-    width=87.0,
-    height=11.9024658203125
-)
+
+canvas.create_window(97, 731, anchor="nw", window=button_20)
+
+# button_20.place(
+#     x=97.0,
+#     y=731.12548828125,
+#     width=87.0,
+#     height=11.9024658203125
+# )
 
 button_image_21 = PhotoImage(
     file=("button_21.png"))
@@ -837,12 +841,14 @@ button_21 = Button(
     command=lambda: print("button_21 clicked"),
     relief="flat"
 )
-button_21.place(
-    x=98.0,
-    y=1462.12548828125,
-    width=87.0,
-    height=11.9024658203125
-)
+canvas.create_window(98, 1462, anchor="nw", window=button_21)
+
+# button_21.place(
+#     x=98.0,
+#     y=1462.12548828125,
+#     width=87.0,
+#     height=11.9024658203125
+# )
 
 button_image_22 = PhotoImage(
     file=("button_22.png"))
@@ -853,12 +859,15 @@ button_22 = Button(
     command=lambda: print("button_22 clicked"),
     relief="flat"
 )
-button_22.place(
-    x=398.0,
-    y=1462.12548828125,
-    width=87.0,
-    height=11.9024658203125
-)
+
+canvas.create_window(397, 1462, anchor="nw", window=button_22)
+
+# button_22.place(
+#     x=398.0,
+#     y=1462.12548828125,
+#     width=87.0,
+#     height=11.9024658203125
+# )
 
 button_image_23 = PhotoImage(
     file=("button_23.png"))
@@ -869,12 +878,15 @@ button_23 = Button(
     command=lambda: print("button_23 clicked"),
     relief="flat"
 )
-button_23.place(
-    x=696.0,
-    y=1462.12548828125,
-    width=87.0,
-    height=11.9024658203125
-)
+
+canvas.create_window(697, 1462, anchor="nw", window=button_23)
+
+# button_23.place(
+#     x=696.0,
+#     y=1462.12548828125,
+#     width=87.0,
+#     height=11.9024658203125
+# )
 
 button_image_24 = PhotoImage(
     file=("button_24.png"))
@@ -885,12 +897,15 @@ button_24 = Button(
     command=lambda: print("button_24 clicked"),
     relief="flat"
 )
-button_24.place(
-    x=995.0,
-    y=1462.12548828125,
-    width=87.0,
-    height=11.9024658203125
-)
+
+canvas.create_window(995, 1462, anchor="nw", window=button_24)
+
+# button_24.place(
+#     x=995.0,
+#     y=1462.12548828125,
+#     width=87.0,
+#     height=11.9024658203125
+# )
 
 button_image_25 = PhotoImage(
     file=("button_25.png"))
@@ -901,12 +916,15 @@ button_25 = Button(
     command=lambda: print("button_25 clicked"),
     relief="flat"
 )
-button_25.place(
-    x=97.0,
-    y=1021.12548828125,
-    width=87.0,
-    height=11.9024658203125
-)
+
+canvas.create_window(97, 1021, anchor="nw", window=button_25)
+
+# button_25.place(
+#     x=97.0,
+#     y=1021.12548828125,
+#     width=87.0,
+#     height=11.9024658203125
+# )
 
 button_image_26 = PhotoImage(
     file=("button_26.png"))
@@ -917,12 +935,14 @@ button_26 = Button(
     command=lambda: print("button_26 clicked"),
     relief="flat"
 )
-button_26.place(
-    x=390.0,
-    y=731.12548828125,
-    width=87.0,
-    height=11.9024658203125
-)
+canvas.create_window(390, 731, anchor="nw", window=button_26)
+
+# button_26.place(
+#     x=390.0,
+#     y=731.12548828125,
+#     width=87.0,
+#     height=11.9024658203125
+# )
 
 button_image_27 = PhotoImage(
     file=("button_27.png"))
@@ -933,12 +953,15 @@ button_27 = Button(
     command=lambda: print("button_27 clicked"),
     relief="flat"
 )
-button_27.place(
-    x=390.0,
-    y=1021.12548828125,
-    width=87.0,
-    height=11.9024658203125
-)
+
+canvas.create_window(390, 1021, anchor="nw", window=button_27)
+
+# button_27.place(
+#     x=390.0,
+#     y=1021.12548828125,
+#     width=87.0,
+#     height=11.9024658203125
+# )
 
 button_image_28 = PhotoImage(
     file=("button_28.png"))
@@ -949,12 +972,15 @@ button_28 = Button(
     command=lambda: print("button_28 clicked"),
     relief="flat"
 )
-button_28.place(
-    x=683.0,
-    y=731.12548828125,
-    width=87.0,
-    height=11.9024658203125
-)
+canvas.create_window(683, 731, anchor="nw", window=button_28)
+
+
+# button_28.place(
+#     x=683.0,
+#     y=731.12548828125,
+#     width=87.0,
+#     height=11.9024658203125
+# )
 
 button_image_29 = PhotoImage(
     file=("button_29.png"))
@@ -965,12 +991,15 @@ button_29 = Button(
     command=lambda: print("button_29 clicked"),
     relief="flat"
 )
-button_29.place(
-    x=683.0,
-    y=1021.12548828125,
-    width=87.0,
-    height=11.9024658203125
-)
+
+canvas.create_window(683, 1021, anchor="nw", window=button_29)
+
+# button_29.place(
+#     x=683.0,
+#     y=1021.12548828125,
+#     width=87.0,
+#     height=11.9024658203125
+# )
 
 button_image_30 = PhotoImage(
     file=("button_30.png"))
@@ -981,12 +1010,15 @@ button_30 = Button(
     command=lambda: print("button_30 clicked"),
     relief="flat"
 )
-button_30.place(
-    x=976.0,
-    y=731.12548828125,
-    width=87.0,
-    height=11.9024658203125
-)
+
+canvas.create_window(976, 731, anchor="nw", window=button_30)
+
+# button_30.place(
+#     x=976.0,
+#     y=731.12548828125,
+#     width=87.0,
+#     height=11.9024658203125
+# )
 
 button_image_31 = PhotoImage(
     file=("button_31.png"))
@@ -997,12 +1029,15 @@ button_31 = Button(
     command=lambda: print("button_31 clicked"),
     relief="flat"
 )
-button_31.place(
-    x=976.0,
-    y=1021.12548828125,
-    width=87.0,
-    height=11.9024658203125
-)
+canvas.create_window(976, 1021, anchor="nw", window=button_31)
+
+
+# button_31.place(
+#     x=976.0,
+#     y=1021.12548828125,
+#     width=87.0,
+#     height=11.9024658203125
+# )
 
 image_image_16 = PhotoImage(
     file=("image_16.png"))
@@ -1109,12 +1144,15 @@ button_32 = Button(
     command=lambda: print("button_32 clicked"),
     relief="flat"
 )
-button_32.place(
-    x=97.0,
-    y=781.0,
-    width=80.5115966796875,
-    height=18.0740966796875
-)
+
+canvas.create_window(97, 781, anchor="nw", window=button_32)
+
+# button_32.place(
+#     x=97.0,
+#     y=781.0,
+#     width=80.5115966796875,
+#     height=18.0740966796875
+# )
 
 button_image_33 = PhotoImage(
     file=("button_33.png"))
@@ -1125,12 +1163,15 @@ button_33 = Button(
     command=lambda: print("button_33 clicked"),
     relief="flat"
 )
-button_33.place(
-    x=98.0,
-    y=1512.0,
-    width=80.5115966796875,
-    height=18.073974609375
-)
+canvas.create_window(98, 1512, anchor="nw", window=button_33)
+
+
+# button_33.place(
+#     x=98.0,
+#     y=1512.0,
+#     width=80.5115966796875,
+#     height=18.073974609375
+# )
 
 button_image_34 = PhotoImage(
     file=("button_34.png"))
@@ -1141,12 +1182,15 @@ button_34 = Button(
     command=lambda: print("button_34 clicked"),
     relief="flat"
 )
-button_34.place(
-    x=398.0,
-    y=1512.0,
-    width=80.5115966796875,
-    height=18.073974609375
-)
+canvas.create_window(398, 1512, anchor="nw", window=button_34)
+
+
+# button_34.place(
+#     x=398.0,
+#     y=1512.0,
+#     width=80.5115966796875,
+#     height=18.073974609375
+# )
 
 button_image_35 = PhotoImage(
     file=("button_35.png"))
@@ -1157,12 +1201,15 @@ button_35 = Button(
     command=lambda: print("button_35 clicked"),
     relief="flat"
 )
-button_35.place(
-    x=696.0,
-    y=1512.0,
-    width=80.5115966796875,
-    height=18.073974609375
-)
+
+canvas.create_window(696, 1512, anchor="nw", window=button_35)
+
+# button_35.place(
+#     x=696.0,
+#     y=1512.0,
+#     width=80.5115966796875,
+#     height=18.073974609375
+# )
 
 button_image_36 = PhotoImage(
     file=("button_36.png"))
@@ -1173,12 +1220,15 @@ button_36 = Button(
     command=lambda: print("button_36 clicked"),
     relief="flat"
 )
-button_36.place(
-    x=995.0,
-    y=1512.0,
-    width=80.51171875,
-    height=18.073974609375
-)
+
+canvas.create_window(995, 1512, anchor="nw", window=button_36)
+
+# button_36.place(
+#     x=995.0,
+#     y=1512.0,
+#     width=80.51171875,
+#     height=18.073974609375
+# )
 
 button_image_37 = PhotoImage(
     file=("button_37.png"))
@@ -1189,12 +1239,15 @@ button_37 = Button(
     command=lambda: print("button_37 clicked"),
     relief="flat"
 )
-button_37.place(
-    x=97.0,
-    y=1071.0,
-    width=80.5115966796875,
-    height=18.0740966796875
-)
+
+canvas.create_window(97, 1071, anchor="nw", window=button_37)
+
+# button_37.place(
+#     x=97.0,
+#     y=1071.0,
+#     width=80.5115966796875,
+#     height=18.0740966796875
+# )
 
 button_image_38 = PhotoImage(
     file=("button_38.png"))
@@ -1205,12 +1258,15 @@ button_38 = Button(
     command=lambda: print("button_38 clicked"),
     relief="flat"
 )
-button_38.place(
-    x=390.0,
-    y=781.0,
-    width=80.5115966796875,
-    height=18.0740966796875
-)
+
+canvas.create_window(390, 781, anchor="nw", window=button_38)
+
+# button_38.place(
+#     x=390.0,
+#     y=781.0,
+#     width=80.5115966796875,
+#     height=18.0740966796875
+# )
 
 button_image_39 = PhotoImage(
     file=("button_39.png"))
@@ -1221,12 +1277,14 @@ button_39 = Button(
     command=lambda: print("button_39 clicked"),
     relief="flat"
 )
-button_39.place(
-    x=390.0,
-    y=1071.0,
-    width=80.5115966796875,
-    height=18.0740966796875
-)
+
+canvas.create_window(390, 1071, anchor="nw", window=button_39)
+# button_39.place(
+#     x=390.0,
+#     y=1071.0,
+#     width=80.5115966796875,
+#     height=18.0740966796875
+# )
 
 button_image_40 = PhotoImage(
     file=("button_40.png"))
@@ -1237,12 +1295,14 @@ button_40 = Button(
     command=lambda: print("button_40 clicked"),
     relief="flat"
 )
-button_40.place(
-    x=683.0,
-    y=781.0,
-    width=80.5115966796875,
-    height=18.0740966796875
-)
+
+canvas.create_window(683, 781, anchor="nw", window=button_40)
+# button_40.place(
+#     x=683.0,
+#     y=781.0,
+#     width=80.5115966796875,
+#     height=18.0740966796875
+# )
 
 button_image_41 = PhotoImage(
     file=("button_41.png"))
@@ -1253,12 +1313,14 @@ button_41 = Button(
     command=lambda: print("button_41 clicked"),
     relief="flat"
 )
-button_41.place(
-    x=683.0,
-    y=1071.0,
-    width=80.5115966796875,
-    height=18.0740966796875
-)
+
+canvas.create_window(683, 1071, anchor="nw", window=button_41)
+# button_41.place(
+#     x=683.0,
+#     y=1071.0,
+#     width=80.5115966796875,
+#     height=18.0740966796875
+# )
 
 button_image_42 = PhotoImage(
     file=("button_42.png"))
@@ -1269,12 +1331,14 @@ button_42 = Button(
     command=lambda: print("button_42 clicked"),
     relief="flat"
 )
-button_42.place(
-    x=976.0,
-    y=781.0,
-    width=80.51171875,
-    height=18.0740966796875
-)
+
+canvas.create_window(976, 781, anchor="nw", window=button_42)
+# button_42.place(
+#     x=976.0,
+#     y=781.0,
+#     width=80.51171875,
+#     height=18.0740966796875
+# )
 
 button_image_43 = PhotoImage(
     file=("button_43.png"))
@@ -1285,12 +1349,14 @@ button_43 = Button(
     command=lambda: print("button_43 clicked"),
     relief="flat"
 )
-button_43.place(
-    x=976.0,
-    y=1071.0,
-    width=80.51171875,
-    height=18.0740966796875
-)
+
+canvas.create_window(976, 1071, anchor="nw", window=button_43)
+# button_43.place(
+#     x=976.0,
+#     y=1071.0,
+#     width=80.51171875,
+#     height=18.0740966796875
+# )
 
 button_image_44 = PhotoImage(
     file=("button_44.png"))
@@ -1301,12 +1367,14 @@ button_44 = Button(
     command=lambda: print("button_44 clicked"),
     relief="flat"
 )
-button_44.place(
-    x=133.0,
-    y=805.0,
-    width=144.0,
-    height=25.0
-)
+
+canvas.create_window(133, 805, anchor="nw", window=button_44)
+# button_44.place(
+#     x=133.0,
+#     y=805.0,
+#     width=144.0,
+#     height=25.0
+# )
 
 button_image_45 = PhotoImage(
     file=("button_45.png"))
@@ -1317,12 +1385,15 @@ button_45 = Button(
     command=lambda: print("button_45 clicked"),
     relief="flat"
 )
-button_45.place(
-    x=134.0,
-    y=1536.0,
-    width=144.0,
-    height=25.0
-)
+
+canvas.create_window(133, 1536, anchor="nw", window=button_45)
+
+# button_45.place(
+#     x=134.0,
+#     y=1536.0,
+#     width=144.0,
+#     height=25.0
+# )
 
 button_image_46 = PhotoImage(
     file=("button_46.png"))
@@ -1333,12 +1404,15 @@ button_46 = Button(
     command=lambda: print("button_46 clicked"),
     relief="flat"
 )
-button_46.place(
-    x=434.0,
-    y=1536.0,
-    width=144.0,
-    height=25.0
-)
+
+canvas.create_window(434, 1536, anchor="nw", window=button_46)
+
+# button_46.place(
+#     x=434.0,
+#     y=1536.0,
+#     width=144.0,
+#     height=25.0
+# )
 
 button_image_47 = PhotoImage(
     file=("button_47.png"))
@@ -1349,12 +1423,15 @@ button_47 = Button(
     command=lambda: print("button_47 clicked"),
     relief="flat"
 )
-button_47.place(
-    x=732.0,
-    y=1536.0,
-    width=144.0,
-    height=25.0
-)
+
+canvas.create_window(732, 1536, anchor="nw", window=button_47)
+
+# button_47.place(
+#     x=732.0,
+#     y=1536.0,
+#     width=144.0,
+#     height=25.0
+# )
 
 button_image_48 = PhotoImage(
     file=("button_48.png"))
@@ -1365,12 +1442,15 @@ button_48 = Button(
     command=lambda: print("button_48 clicked"),
     relief="flat"
 )
-button_48.place(
-    x=1031.0,
-    y=1536.0,
-    width=144.0,
-    height=25.0
-)
+
+canvas.create_window(1031, 1536, anchor="nw", window=button_48)
+
+# button_48.place(
+#     x=1031.0,
+#     y=1536.0,
+#     width=144.0,
+#     height=25.0
+# )
 
 button_image_49 = PhotoImage(
     file=("button_49.png"))
@@ -1381,12 +1461,15 @@ button_49 = Button(
     command=lambda: print("button_49 clicked"),
     relief="flat"
 )
-button_49.place(
-    x=133.0,
-    y=1095.0,
-    width=144.0,
-    height=25.0
-)
+
+canvas.create_window(133, 1095, anchor="nw", window=button_49)
+
+# button_49.place(
+#     x=133.0,
+#     y=1095.0,
+#     width=144.0,
+#     height=25.0
+# )
 
 button_image_50 = PhotoImage(
     file=("button_50.png"))
@@ -1397,12 +1480,14 @@ button_50 = Button(
     command=lambda: print("button_50 clicked"),
     relief="flat"
 )
-button_50.place(
-    x=426.0,
-    y=805.0,
-    width=144.0,
-    height=25.0
-)
+canvas.create_window(426, 805, anchor="nw", window=button_50)
+
+# button_50.place(
+#     x=426.0,
+#     y=805.0,
+#     width=144.0,
+#     height=25.0
+# )
 
 button_image_51 = PhotoImage(
     file=("button_51.png"))
@@ -1413,12 +1498,14 @@ button_51 = Button(
     command=lambda: print("button_51 clicked"),
     relief="flat"
 )
-button_51.place(
-    x=426.0,
-    y=1095.0,
-    width=144.0,
-    height=25.0
-)
+
+canvas.create_window(426, 1095, anchor="nw", window=button_51)
+# button_51.place(
+#     x=426.0,
+#     y=1095.0,
+#     width=144.0,
+#     height=25.0
+# )
 
 button_image_52 = PhotoImage(
     file=("button_52.png"))
@@ -1429,12 +1516,15 @@ button_52 = Button(
     command=lambda: print("button_52 clicked"),
     relief="flat"
 )
-button_52.place(
-    x=719.0,
-    y=805.0,
-    width=144.0,
-    height=25.0
-)
+
+canvas.create_window(719, 805, anchor="nw", window=button_52)
+
+# button_52.place(
+#     x=719.0,
+#     y=805.0,
+#     width=144.0,
+#     height=25.0
+# )
 
 button_image_53 = PhotoImage(
     file=("button_53.png"))
@@ -1445,12 +1535,14 @@ button_53 = Button(
     command=lambda: print("button_53 clicked"),
     relief="flat"
 )
-button_53.place(
-    x=719.0,
-    y=1095.0,
-    width=144.0,
-    height=25.0
-)
+
+canvas.create_window(719, 1095, anchor="nw", window=button_53)
+# button_53.place(
+#     x=719.0,
+#     y=1095.0,
+#     width=144.0,
+#     height=25.0
+# )
 
 button_image_54 = PhotoImage(
     file=("button_54.png"))
@@ -1461,12 +1553,15 @@ button_54 = Button(
     command=lambda: print("button_54 clicked"),
     relief="flat"
 )
-button_54.place(
-    x=1012.0,
-    y=805.0,
-    width=144.0,
-    height=25.0
-)
+
+canvas.create_window(1012, 805, anchor="nw", window=button_54)
+
+# button_54.place(
+#     x=1012.0,
+#     y=805.0,
+#     width=144.0,
+#     height=25.0
+# )
 
 button_image_55 = PhotoImage(
     file=("button_55.png"))
@@ -1477,12 +1572,15 @@ button_55 = Button(
     command=lambda: print("button_55 clicked"),
     relief="flat"
 )
-button_55.place(
-    x=1012.0,
-    y=1095.0,
-    width=144.0,
-    height=25.0
-)
+
+canvas.create_window(1012, 1095, anchor="nw", window=button_55)
+
+# button_55.place(
+#     x=1012.0,
+#     y=1095.0,
+#     width=144.0,
+#     height=25.0
+# )
 
 # Update the scroll region to include the entire frame
 frame.update_idletasks()
