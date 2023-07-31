@@ -1,5 +1,6 @@
 from tkinter import *
-from tkinter import ttk
+from tkinter import ttk, messagebox
+import os, subprocess, sys, webbrowser
 
 window = Tk()
 window.geometry("1280x800")
@@ -13,6 +14,10 @@ scrollbar = Scrollbar(window, orient="vertical", command=canvas.yview)
 canvas.configure(yscrollcommand=scrollbar.set)
 scrollbar.pack(side="right", fill="y")
 canvas.pack(fill="both", expand=True)
+
+def create_gui():
+    
+    messagebox.showinfo("Alert", "Feature is not available right now")
 
 def on_mousewheel(event):
     # Get the current scroll position
@@ -204,13 +209,25 @@ canvas.create_text(
     font=("Poppins Medium", 12 * -1)
 )
 
+
+def Homes():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","homepage"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
 button_image_3 = PhotoImage(
     file=("button_3.png"))
 button_3 = Button(
     # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_3 clicked"),
+    command=Homes,
     relief="flat",
     text= "Home",
     bg="#3532A7",
@@ -339,13 +356,24 @@ button_10.place(
     height=15.0
 )
 
+def home():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","homepage"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
 button_image_11 = PhotoImage(
     file=("button_11.png"))
 button_11 = Button(
     image=button_image_11,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_11 clicked"),
+    command=home,
     relief="flat"
 )
 button_11.place(
@@ -355,13 +383,15 @@ button_11.place(
     height=15.0
 )
 
+
+
 button_image_12 = PhotoImage(
     file=("button_3.png"))
 button_12 = Button(
     # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("about us clicked"),
+    command=create_gui,
     relief="flat",
     text= "About Us",
     bg="#3532A7",
@@ -372,6 +402,17 @@ button_12 = Button(
 )
 canvas.create_window(506, 1860, anchor="nw", window=button_12)
 
+def Courses():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","secondmainpage(courses_page)"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
 
 courses = PhotoImage(
     file=("button_3.png"))
@@ -379,7 +420,7 @@ coursesbtn = Button(
     # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("courses clicked"),
+    command=Courses,
     relief="flat",
     text= "Courses",
     bg="#3532A7",
@@ -397,7 +438,7 @@ eventbtn = Button(
     # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("event clicked"),
+    command=create_gui,
     relief="flat",
     text= "Events",
     bg="#3532A7",
@@ -408,11 +449,22 @@ eventbtn = Button(
 )
 canvas.create_window(506, 1920, anchor="nw", window=eventbtn)
 
+def Routines():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","routines"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
 routinebtn = Button(
     # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("routines clicked"),
+    command=Routines,
     relief="flat",
     text= "Routines",    
     bg="#3532A7",
@@ -427,7 +479,7 @@ termsandcon = Button(
     # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("terms and conditions clicked"),
+    command=create_gui,
     relief="flat",
     text= "Terms and Conditions",  
     bg="#3532A7",
@@ -439,11 +491,15 @@ termsandcon = Button(
 )
 canvas.create_window(740, 1830, anchor="nw", window=termsandcon)
 
+
+def alert1():
+    messagebox.showinfo("Alert", "You are on Same page now") 
+
 privacy = Button(
     # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("Privacy clicked"),
+    command=alert1,
     relief="flat",
     text= "Privacy Policy",
     bg="#3532A7",
@@ -454,11 +510,22 @@ privacy = Button(
 )
 canvas.create_window(740, 1860, anchor="nw", window=privacy)
 
+def Support():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","support"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
 support = Button(
     # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("Support clicked"),
+    command=Support,
     relief="flat",
     text= "Support",
     bg="#3532A7",
@@ -469,12 +536,22 @@ support = Button(
 )
 canvas.create_window(740, 1890, anchor="nw", window=support)
 
+def Contact():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","contact_us"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
 
 contact = Button(
     # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("Contact clicked"),
+    command=Contact,
     relief="flat",
     text= "Contact Us",
     bg="#3532A7",
@@ -489,7 +566,7 @@ cden = Button(
     # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("CDEN clicked"),
+    command=lambda: webbrowser.open_new(r"http://www.cden.org.np"),
     relief="flat",
     text= "CDEN",
        bg="#3532A7",
@@ -504,7 +581,7 @@ ioe = Button(
     # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("IOE clicked"),
+    command=lambda: webbrowser.open_new(r"http://www.ioe.edu.np"),
     relief="flat",
     text= "IOE",
        bg="#3532A7",
@@ -519,7 +596,7 @@ tu = Button(
     # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("TU clicked"),
+    command=lambda: webbrowser.open_new(r"http://www.tu.edu.np"),
     relief="flat",
     text= "TU",
        bg="#3532A7",
@@ -534,7 +611,7 @@ cu = Button(
     # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("CU clicked"),
+    command=lambda: webbrowser.open_new(r"http://www.coventry.ac.uk"),
     relief="flat",
     text= "Coventry University",
     bg="#3532A7",
