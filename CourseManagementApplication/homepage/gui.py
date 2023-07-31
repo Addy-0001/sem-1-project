@@ -2243,298 +2243,656 @@ canvas.create_rectangle(
     fill="#3532A7",
     outline="")
 
-canvas.create_text(
-    56.0,
-    1776.0,
-    anchor="nw",
-    text="VirtuEdu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 25 * -1)
-)
+# canvas.create_text(
+#     56.0,
+#     1776.0,
+#     anchor="nw",
+#     text="VirtuEdu",
+#     fill="#FFFFFF",
+#     font=("Poppins SemiBold", 25 * -1)
+# )
 
-canvas.create_text(
-    461.0,
-    1785.0,
-    anchor="nw",
-    text="Menu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 17 * -1)
-)
+# canvas.create_text(
+#     461.0,
+#     1785.0,
+#     anchor="nw",
+#     text="Menu",
+#     fill="#FFFFFF",
+#     font=("Poppins SemiBold", 17 * -1)
+# )
 
-canvas.create_text(
-    745.0,
-    1787.0,
-    anchor="nw",
-    text="Menu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 17 * -1)
-)
+# canvas.create_text(
+#     745.0,
+#     1787.0,
+#     anchor="nw",
+#     text="Menu",
+#     fill="#FFFFFF",
+#     font=("Poppins SemiBold", 17 * -1)
+# )
 
-canvas.create_text(
-    974.0,
-    1787.0,
-    anchor="nw",
-    text="Menu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 17 * -1)
-)
+# canvas.create_text(
+#     974.0,
+#     1787.0,
+#     anchor="nw",
+#     text="Menu",
+#     fill="#FFFFFF",
+#     font=("Poppins SemiBold", 17 * -1)
+# )
 
-canvas.create_text(
-    63.0,
-    1804.0,
-    anchor="nw",
-    text="Learn Anywhere, Achieve Everywhere",
-    fill="#FFFFFF",
-    font=("Poppins Regular", 6 * -1)
-)
+# canvas.create_text(
+#     63.0,
+#     1804.0,
+#     anchor="nw",
+#     text="Learn Anywhere, Achieve Everywhere",
+#     fill="#FFFFFF",
+#     font=("Poppins Regular", 6 * -1)
+# )
 
-canvas.create_text(
-    63.0,
-    1824.0,
-    anchor="nw",
-    text="\nour innovative online learning platform empowers students to pursue their educational goals from anywhere in the \nworld. With flexible schedules and high-quality courses, we provide the tools and resources necessary for you to excel \nin your studies and succeed in any endeavor. Join our global community of learners and unlock your full potential with \n Virtu Edu.",
-    fill="#FFFFFF",
-    font=("Poppins Medium", 6 * -1)
-)
+# canvas.create_text(
+#     63.0,
+#     1824.0,
+#     anchor="nw",
+#     text="\nour innovative online learning platform empowers students to pursue their educational goals from anywhere in the \nworld. With flexible schedules and high-quality courses, we provide the tools and resources necessary for you to excel \nin your studies and succeed in any endeavor. Join our global community of learners and unlock your full potential with \n Virtu Edu.",
+#     fill="#FFFFFF",
+#     font=("Poppins Medium", 6 * -1)
+# )
 
-button_image_52 = PhotoImage(
-    file=("button_52.png"))
-button_52 = Button(
-    window,
-    text="Home",
+# button_image_52 = PhotoImage(
+#     file=("button_52.png"))
+# button_52 = Button(
+#     window,
+#     text="Home",
     
   
     
-)
-canvas.create_window(464, 1817, anchor="nw", window=button_52)
-
-# button_52.place(
-#     x=464.0,
-#     y=1817.0,
-#     # width=41.0,
-#     # height=18.0
 # )
+# canvas.create_window(464, 1817, anchor="nw", window=button_52)
 
-button_image_53 = PhotoImage(
-    file=("button_53.png"))
-button_53 = Button(
-    canvas,
-    image=button_image_53,
+# # button_52.place(
+# #     x=464.0,
+# #     y=1817.0,
+# #     # width=41.0,
+# #     # height=18.0
+# # )
+
+# button_image_53 = PhotoImage(
+#     file=("button_53.png"))
+# button_53 = Button(
+#     canvas,
+#     image=button_image_53,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_53 clicked"),
+#     relief="flat"
+# )
+# canvas.create_window(464, 1835, anchor="nw", window=button_53)
+
+# # button_53.place(
+# #     x=464.0,
+# #     y=1835.0,
+# #     width=41.0,
+# #     height=18.0
+# # )
+
+# button_image_54 = PhotoImage(
+#     file=("button_54.png"))
+# button_54 = Button(
+#     canvas,
+#     image=button_image_54,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_54 clicked"),
+#     relief="flat"
+# )
+# canvas.create_window(464, 1853, anchor="nw", window=button_54)
+
+# # button_54.place(
+# #     x=464.0,
+# #     y=1853.0,
+# #     width=41.0,
+# #     height=18.0
+# # )
+
+# button_image_55 = PhotoImage(
+#     file=("button_55.png"))
+# button_55 = Button(
+#     canvas,
+#     image=button_image_55,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_55 clicked"),
+#     relief="flat"
+# )
+# canvas.create_window(464, 1871, anchor="nw", window=button_55)
+
+# # button_55.place(
+# #     x=464.0,
+# #     y=1871.0,
+# #     width=41.0,
+# #     height=18.0
+# # )
+
+# button_image_56 = PhotoImage(
+#     file=("button_56.png"))
+# button_56 = Button(
+#     canvas,
+#     image=button_image_56,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_56 clicked"),
+#     relief="flat"
+# )
+# canvas.create_window(464, 1889, anchor="nw", window=button_56)
+
+# # button_56.place(
+# #     x=464.0,
+# #     y=1889.0,
+# #     width=41.0,
+# #     height=18.0
+# # )
+
+# button_image_57 = PhotoImage(
+#     file=("button_57.png"))
+# button_57 = Button(
+#     canvas,
+#     image=button_image_57,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_57 clicked"),
+#     relief="flat"
+# )
+# canvas.create_window(756, 1817, anchor="nw", window=button_57)
+
+# # button_57.place(
+# #     x=756.0,
+# #     y=1817.0,
+# #     width=75.0,
+# #     height=15.0
+# # )
+
+# button_image_58 = PhotoImage(
+#     file=("button_58.png"))
+# button_58 = Button(
+#     canvas,
+#     image=button_image_58,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_58 clicked"),
+#     relief="flat"
+# )
+# canvas.create_window(756, 1832, anchor="nw", window=button_58)
+
+# # button_58.place(
+# #     x=756.0,
+# #     y=1832.0,
+# #     width=75.0,
+# #     height=15.0
+# # )
+
+# button_image_59 = PhotoImage(
+#     file=("button_59.png"))
+# button_59 = Button(
+#     canvas,
+#     image=button_image_59,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_59 clicked"),
+#     relief="flat"
+# )
+# canvas.create_window(756, 1847, anchor="nw", window=button_59)
+
+# # button_59.place(
+# #     x=756.0,
+# #     y=1847.0,
+# #     width=75.0,
+# #     height=15.0
+# # )
+
+# button_image_60 = PhotoImage(
+#     file=("button_60.png"))
+# button_60 = Button(
+#     canvas,
+#     image=button_image_60,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_60 clicked"),
+#     relief="flat"
+# )
+# canvas.create_window(756, 1862, anchor="nw", window=button_60)
+
+# # button_60.place(
+# #     x=756.0,
+# #     y=1862.0,
+# #     width=75.0,
+# #     height=15.0
+# # )
+
+# button_image_61 = PhotoImage(
+#     file=("button_61.png"))
+# button_61 = Button(
+#     canvas,
+#     image=button_image_61,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_61 clicked"),
+#     relief="flat"
+# )
+# canvas.create_window(979, 1817, anchor="nw", window=button_61)
+
+# # button_61.place(
+# #     x=979.0,
+# #     y=1817.0,
+# #     width=40.0,
+# #     height=13.0
+# # )
+
+# button_image_62 = PhotoImage(
+#     file=("button_62.png"))
+# button_62 = Button(
+#     canvas,
+#     image=button_image_62,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_62 clicked"),
+#     relief="flat"
+# )
+# canvas.create_window(979, 1830, anchor="nw", window=button_62)
+
+# # button_62.place(
+# #     x=979.0,
+# #     y=1830.0,
+# #     width=40.0,
+# #     height=13.0
+# # )
+
+# button_image_63 = PhotoImage(
+#     file=("button_63.png"))
+# button_63 = Button(
+#     canvas,
+#     image=button_image_63,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_63 clicked"),
+#     relief="flat"
+# )
+# canvas.create_window(979, 1843, anchor="nw", window=button_63)
+
+# # button_63.place(
+# #     x=979.0,
+# #     y=1843.0,
+# #     width=40.0,
+# #     height=13.0
+# # )
+
+# button_image_64 = PhotoImage(
+#     file=("button_64.png"))
+# button_64 = Button(
+#     canvas,
+#     image=button_image_64,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_64 clicked"),
+#     relief="flat"
+# )
+# canvas.create_window(979, 1856, anchor="nw", window=button_64)
+
+
+
+canvas.create_text(
+    62.0,
+    1750.0,
+    anchor="nw",
+    text="VirtuEdu",
+    fill="#FFFFFF",
+    font=("Poppins SemiBold", 32 * -1)
+)
+
+canvas.create_text(
+    506.0,
+    1780.0,
+    anchor="nw",
+    text="Menu",
+    fill="#fff",
+    font=("Poppins SemiBold", 24 * -1)
+)
+
+canvas.create_text(
+    740.0,
+    1780.0,
+    anchor="nw",
+    text="Menu",
+    fill="#fff",
+    font=("Poppins SemiBold", 24 * -1)
+)
+
+canvas.create_text(
+    1010.0,
+    1780.0,
+    anchor="nw",
+    text="Menu",
+    fill="#FFFFFF",
+    font=("Poppins SemiBold", 24 * -1)
+)
+
+canvas.create_text(
+    88.0,
+    1790.0,
+    anchor="nw",
+    text="Learn Anywhere, Achieve Everywhere",
+    fill="#FFFFFF",
+    font=("Poppins Regular", 11 * -1)
+)
+
+canvas.create_text(
+    50.0,
+    1830.0,
+    anchor="nw",
+    text="Our innovative online learning platform empowers students\nto pursue their educational goals from anywhere in the world.\nWith flexible schedules and high-quality courses, we provide the\ntools and resources necessary for you to excel in your studies\nand succeed in any endeavor. Join our global community of\nlearners and unlock your full potential with Virtu Edu.",
+    fill="#fff",
+    font=("Poppins Medium", 12 * -1)
+)
+
+def alert1():
+    messagebox.showinfo("Alert", "You are on Same page now") 
+
+def privacypolicy():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("homepage", "PrivacyPolicy"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
+button_image_3 = PhotoImage(
+    file=("button_3.png"))
+button_3 = Button(
+    # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_53 clicked"),
-    relief="flat"
+    command=alert1,
+    relief="flat",
+    text= "Home",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
 )
-canvas.create_window(464, 1835, anchor="nw", window=button_53)
+canvas.create_window(506, 1830, anchor="nw", window=button_3)
 
-# button_53.place(
-#     x=464.0,
-#     y=1835.0,
-#     width=41.0,
-#     height=18.0
-# )
-
-button_image_54 = PhotoImage(
-    file=("button_54.png"))
-button_54 = Button(
-    canvas,
-    image=button_image_54,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_54 clicked"),
-    relief="flat"
-)
-canvas.create_window(464, 1853, anchor="nw", window=button_54)
-
-# button_54.place(
-#     x=464.0,
-#     y=1853.0,
-#     width=41.0,
-#     height=18.0
-# )
-
-button_image_55 = PhotoImage(
-    file=("button_55.png"))
-button_55 = Button(
-    canvas,
-    image=button_image_55,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_55 clicked"),
-    relief="flat"
-)
-canvas.create_window(464, 1871, anchor="nw", window=button_55)
-
-# button_55.place(
-#     x=464.0,
-#     y=1871.0,
-#     width=41.0,
-#     height=18.0
-# )
-
-button_image_56 = PhotoImage(
-    file=("button_56.png"))
-button_56 = Button(
-    canvas,
-    image=button_image_56,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_56 clicked"),
-    relief="flat"
-)
-canvas.create_window(464, 1889, anchor="nw", window=button_56)
-
-# button_56.place(
-#     x=464.0,
-#     y=1889.0,
-#     width=41.0,
-#     height=18.0
-# )
-
-button_image_57 = PhotoImage(
-    file=("button_57.png"))
-button_57 = Button(
-    canvas,
-    image=button_image_57,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_57 clicked"),
-    relief="flat"
-)
-canvas.create_window(756, 1817, anchor="nw", window=button_57)
-
-# button_57.place(
-#     x=756.0,
-#     y=1817.0,
-#     width=75.0,
+# button_3.place(
+#     x=518.0,
+#     y=2615.0,
+#     width=30.0,
 #     height=15.0
 # )
 
-button_image_58 = PhotoImage(
-    file=("button_58.png"))
-button_58 = Button(
-    canvas,
-    image=button_image_58,
+def home():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","homepage"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
+button_image_11 = PhotoImage(
+    file=("button_11.png"))
+button_11 = Button(
+    image=button_image_11,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_58 clicked"),
+    command=home,
     relief="flat"
 )
-canvas.create_window(756, 1832, anchor="nw", window=button_58)
+button_11.place(
+    x=751.0,
+    y=2687.0,
+    width=56.0,
+    height=15.0
+)
 
-# button_58.place(
-#     x=756.0,
-#     y=1832.0,
-#     width=75.0,
-#     height=15.0
-# )
 
-button_image_59 = PhotoImage(
-    file=("button_59.png"))
-button_59 = Button(
-    canvas,
-    image=button_image_59,
+
+button_image_12 = PhotoImage(
+    file=("button_3.png"))
+button_12 = Button(
+    # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_59 clicked"),
-    relief="flat"
+    command=create_gui,
+    relief="flat",
+    text= "About Us",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
 )
-canvas.create_window(756, 1847, anchor="nw", window=button_59)
+canvas.create_window(506, 1860, anchor="nw", window=button_12)
 
-# button_59.place(
-#     x=756.0,
-#     y=1847.0,
-#     width=75.0,
-#     height=15.0
-# )
+def Courses():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("homepage","secondmainpage(courses_page)"))
+        os.chdir(next_folder)
 
-button_image_60 = PhotoImage(
-    file=("button_60.png"))
-button_60 = Button(
-    canvas,
-    image=button_image_60,
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
+
+courses = PhotoImage(
+    file=("button_3.png"))
+coursesbtn = Button(
+    # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_60 clicked"),
-    relief="flat"
+    command=Courses,
+    relief="flat",
+    text= "Courses",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
 )
-canvas.create_window(756, 1862, anchor="nw", window=button_60)
+canvas.create_window(506, 1890, anchor="nw", window=coursesbtn)
 
-# button_60.place(
-#     x=756.0,
-#     y=1862.0,
-#     width=75.0,
-#     height=15.0
-# )
 
-button_image_61 = PhotoImage(
-    file=("button_61.png"))
-button_61 = Button(
-    canvas,
-    image=button_image_61,
+events = PhotoImage(
+    file=("button_3.png"))
+eventbtn = Button(
+    # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_61 clicked"),
-    relief="flat"
+    command=create_gui,
+    relief="flat",
+    text= "Events",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
 )
-canvas.create_window(979, 1817, anchor="nw", window=button_61)
+canvas.create_window(506, 1920, anchor="nw", window=eventbtn)
 
-# button_61.place(
-#     x=979.0,
-#     y=1817.0,
-#     width=40.0,
-#     height=13.0
-# )
+def Routines():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("homepage","routines"))
+        os.chdir(next_folder)
 
-button_image_62 = PhotoImage(
-    file=("button_62.png"))
-button_62 = Button(
-    canvas,
-    image=button_image_62,
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
+routinebtn = Button(
+    # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_62 clicked"),
-    relief="flat"
+    command=Routines,
+    relief="flat",
+    text= "Routines",    
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
 )
-canvas.create_window(979, 1830, anchor="nw", window=button_62)
+canvas.create_window(506, 1950, anchor="nw", window=routinebtn)
 
-# button_62.place(
-#     x=979.0,
-#     y=1830.0,
-#     width=40.0,
-#     height=13.0
-# )
-
-button_image_63 = PhotoImage(
-    file=("button_63.png"))
-button_63 = Button(
-    canvas,
-    image=button_image_63,
+termsandcon = Button(
+    # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_63 clicked"),
-    relief="flat"
+    command=create_gui,
+    relief="flat",
+    text= "Terms and Conditions",  
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+
+    
+
 )
-canvas.create_window(979, 1843, anchor="nw", window=button_63)
+canvas.create_window(740, 1830, anchor="nw", window=termsandcon)
 
-# button_63.place(
-#     x=979.0,
-#     y=1843.0,
-#     width=40.0,
-#     height=13.0
-# )
 
-button_image_64 = PhotoImage(
-    file=("button_64.png"))
-button_64 = Button(
-    canvas,
-    image=button_image_64,
+
+
+privacy = Button(
+    # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_64 clicked"),
-    relief="flat"
+    command=privacypolicy,
+    relief="flat",
+    text= "Privacy Policy",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
 )
-canvas.create_window(979, 1856, anchor="nw", window=button_64)
+canvas.create_window(740, 1860, anchor="nw", window=privacy)
+
+def Support():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("homepage","support"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
+support = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=Support,
+    relief="flat",
+    text= "Support",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(740, 1890, anchor="nw", window=support)
+
+def Contact():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("homepage","contact_us"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
+contact = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=Contact,
+    relief="flat",
+    text= "Contact Us",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(740, 1920, anchor="nw", window=contact)
+
+cden = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: webbrowser.open_new(r"http://www.cden.org.np"),
+    relief="flat",
+    text= "CDEN",
+       bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(1010, 1830, anchor="nw", window=cden)
+
+ioe = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: webbrowser.open_new(r"http://www.ioe.edu.np"),
+    relief="flat",
+    text= "IOE",
+       bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(1010, 1860, anchor="nw", window=ioe)
+
+tu = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: webbrowser.open_new(r"http://www.tu.edu.np"),
+    relief="flat",
+    text= "TU",
+       bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(1010, 1890, anchor="nw", window=tu)
+
+cu = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: webbrowser.open_new(r"http://www.coventry.ac.uk"),
+    relief="flat",
+    text= "Coventry University",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(1010, 1920, anchor="nw", window=cu)
 
 # button_64.place(
 #     x=979.0,
