@@ -1,56 +1,66 @@
-
-
-
-import sys
 from tkinter import *
-
-
-
-
-
-
-
-
-
+from tkinter import ttk
+import os,sys,subprocess
 window = Tk()
+window.geometry("1280x800")
+window.configure(bg="#EEEFF3")
 
-window.geometry("1280x2006")
-window.configure(bg = "#EEEFF3")
-
-
+# Create a Canvas widget with a scrollbar
+canvas = Canvas(window, height=600)
+scrollbar = Scrollbar(window, orient="vertical", command=canvas.yview)
+canvas.configure(yscrollcommand=scrollbar.set)
+scrollbar.pack(side="right", fill="y")
+canvas.pack(fill="both", expand=True)
 from tkinter import messagebox
 
+
+    
+
 def create_gui():
+    
     messagebox.showinfo("Alert", "Feature is not available right now")
+def on_mousewheel(event):
+    # Get the current scroll position
+    current_pos = canvas.canvasy(0)
 
-canvas = Canvas(
-    window,
-    bg = "#EEEFF3",
-    height = 2006,
-    width = 1280,
-    bd = 0,
-    highlightthickness = 0,
-    relief = "ridge"
-)
+    # Get the top and bottom coordinates of the content
+    top_pos = canvas.bbox("all")[1]
+    bottom_pos = canvas.bbox("all")[3]
 
-canvas.place(x = 0, y = 0)
+    # Calculate the available scroll distance
+    scroll_distance = bottom_pos - top_pos - window.winfo_height()
+
+    if event.delta <= 0 and current_pos <= scroll_distance:
+        # Scroll down if there is more content to show
+        canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+    elif event.delta >= 0 and current_pos >= 0:
+        # Scroll up if not at the top
+        canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+
+# Bind the mousewheel event to scroll the canvas
+canvas.bind_all("<MouseWheel>", on_mousewheel)
+
+# Create a frame inside the canvas to hold your content
+frame = Frame(canvas)
+canvas.create_window((0, 0), window=frame, anchor="nw")
+
 canvas.create_rectangle(
     0.0,
     4.0,
     1282.0,
     450.0,
-    fill="#83B4FF",
-    outline="")
+    fill="#82B4FF",
+    outline=""
+)
 
 canvas.create_text(
-    58.0,
+    30.0,
     20.0,
     anchor="nw",
     text="VirtuEdu",
     fill="#3532A7",
     font=("Poppins SemiBold", 25 * -1)
 )
-
 canvas.create_text(
     38.0,
     48.0,
@@ -59,7 +69,6 @@ canvas.create_text(
     fill="#646ECB",
     font=("Poppins Regular", 6 * -1)
 )
-
 button_image_1 = PhotoImage(
     file=("profile.png"))
 button_1 = Button(
@@ -1545,32 +1554,6 @@ button_52.place(
 
 
 
-# from tkinter import *
-
-# window = Tk()
-# window.resizable(False, False)
-# window.title("Scrollbar Widget Example")
-
-# apply the grid layout
-window.grid_columnconfigure(0, weight=1)
-window.grid_rowconfigure(0, weight=1)
-
-
-text = Text(window, height=10)
-text.grid(row=0, column=0, sticky=EW)
-
-scrollbar = Scrollbar(window, orient='vertical', command=text.yview)
-scrollbar.grid(row=0, column=1, sticky=NS)
-
-
-text['yscrollcommand'] = scrollbar.set
-
-
-for i in range(1,50):
-    position = f'{i}.0'
-    text.insert(position,f'Line {i}\n');
-
-
 
 
 
@@ -1582,29 +1565,3 @@ for i in range(1,50):
 
 window.resizable(False, False)
 window.mainloop()
-# from tkinter import *
-
-# window = Tk()
-# window.resizable(False, False)
-# window.title("Scrollbar Widget Example")
-
-# # apply the grid layout
-# window.grid_columnconfigure(0, weight=1)
-# window.grid_rowconfigure(0, weight=1)
-
-
-# text = Text(window, height=10)
-# text.grid(row=0, column=0, sticky=EW)
-
-# scrollbar = Scrollbar(window, orient='vertical', command=text.yview)
-# scrollbar.grid(row=0, column=1, sticky=NS)
-
-
-# text['yscrollcommand'] = scrollbar.set
-
-
-# for i in range(1,50):
-#     position = f'{i}.0'
-#     text.insert(position,f'Line {i}\n');
-
-# window.mainloop()

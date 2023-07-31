@@ -41,6 +41,51 @@ canvas.bind_all("<MouseWheel>", on_mousewheel)
 # Create a frame inside the canvas to hold your content
 frame = Frame(canvas)
 canvas.create_window((0, 0), window=frame, anchor="nw")
+def coursesfile():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("build","homepage"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
+def tutorsfile():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("build","thirdmainpage(tutor page)"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
+def routinesfile():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("build","routines"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
+
+def requestsfile():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("build","requests"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
 
 canvas.create_rectangle(
     0.0,
@@ -157,7 +202,7 @@ button_5 = Button(
     image=button_image_5,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_5 clicked"),
+    command=routinesfile,
     relief="flat"
     ,bg="#82B4FF"
 )
@@ -170,7 +215,7 @@ button_6 = Button(
     image=button_image_6,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_6 clicked"),
+    command=requestsfile,
     relief="flat",
     bg="#82B4FF"
 )
@@ -184,7 +229,7 @@ button_7 = Button(
     image=button_image_7,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_7 clicked"),
+    command=coursesfile,
     relief="flat",
     bg="#82B4FF"
 )
@@ -837,13 +882,14 @@ canvas.create_rectangle(
     fill="#646ECB",
     outline="")
 
+
 button_image_15 = PhotoImage(
     file=("button_15.png"))
 button_15 = Button(
     image=button_image_15,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_15 clicked"),
+    command=coursesfile,
     relief="flat"
 )
 canvas.create_window(507, 1091, anchor="nw", window=button_15)
@@ -856,7 +902,7 @@ button_16 = Button(
     image=button_image_16,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_16 clicked"),
+    command=tutorsfile,
     relief="flat"
 )
 canvas.create_window(525, 1616, anchor="nw", window=button_16)
@@ -961,6 +1007,57 @@ button_20 = Button(
 )
 canvas.create_window(420, 1516, anchor="nw", window=button_20)
 
+import sqlite3
+
+DATABASE_NAME = "like_button.db"
+
+def create_table():
+    conn = sqlite3.connect(DATABASE_NAME)
+    cursor = conn.cursor()
+    cursor.execute("CREATE TABLE IF NOT EXISTS likes (id INTEGER PRIMARY KEY, count INTEGER)")
+    conn.commit()
+    conn.close()
+create_table() 
+def get_like_count():
+    conn = sqlite3.connect(DATABASE_NAME)
+    cursor = conn.cursor()
+    cursor.execute("SELECT count FROM likes WHERE id=1")
+    result = cursor.fetchone()
+    conn.close()
+    if result:
+        return result[0]
+    return 0
+
+def update_like_count(count):
+    conn = sqlite3.connect(DATABASE_NAME)
+    cursor = conn.cursor()
+    cursor.execute("INSERT OR REPLACE INTO likes (id, count) VALUES (1, ?)", (count,))
+    conn.commit()
+    conn.close()
+
+def button_click():
+    global current_count, liked
+    current_count += 1 if liked else -1
+    update_like_count(current_count)
+    like_label.config(text=str(current_count))
+    liked = not liked
+    toggle_image()
+
+def toggle_image():
+    global liked, button_image_21
+    if liked:
+        button_21.config(image=button_image_21)
+    else:
+        button_21.config(image=None)
+
+def main():
+    global current_count, liked, button_image_21
+    liked = False
+     # Call create_table() before retrieving the like count
+    current_count = get_like_count()
+
+    
+
 
 button_image_21 = PhotoImage(
     file=("button_21.png"))
@@ -968,7 +1065,7 @@ button_21 = Button(
     image=button_image_21,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_21 clicked"),
+    command=main,
     relief="flat"
 )
 canvas.create_window(115, 1514, anchor="nw", window=button_21)
