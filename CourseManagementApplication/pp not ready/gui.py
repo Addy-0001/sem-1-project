@@ -43,7 +43,7 @@ canvas.create_rectangle(
     0.0,
     1700.0,
     1280.0,
-    2900.0,
+    2060.0,
     fill="#3532A7",
     outline="")
 
@@ -52,7 +52,7 @@ canvas.create_rectangle(
     4.0,
     1282.0,
     450.0,
-    fill="#90BBFC",
+    fill="#82B4FF",
     outline="")
 
 canvas.create_text(
@@ -74,7 +74,7 @@ canvas.create_text(
 )
 
 button_image_1 = PhotoImage(
-    file=("button_1.png"))
+    file=("profile.png"))
 button_1 = Button(
     image=button_image_1,
     borderwidth=0,
@@ -82,12 +82,8 @@ button_1 = Button(
     command=lambda: print("button_1 clicked"),
     relief="flat"
 )
-button_1.place(
-    x=1194.0,
-    y=12.0,
-    width=56.0,
-    height=56.0
-)
+canvas.create_window(1154, 20, anchor="nw", window=button_1)
+
 
 entry_image_1 = PhotoImage(
     file=("entry_1.png"))
@@ -97,20 +93,19 @@ entry_bg_1 = canvas.create_image(
     image=entry_image_1
 )
 entry_1 = Entry(
+    canvas,
     bd=0,
     bg="#FFFFFF",
     fg="#000716",
-    highlightthickness=0
+    highlightthickness=0,
+    font=("lexend deca",16)
 )
-entry_1.place(
-    x=717.0,
-    y=24.0,
-    width=275.0,
-    height=32.0
-)
+canvas.create_window(717, 16, anchor="nw", window=entry_1)
+
+
 
 button_image_2 = PhotoImage(
-    file=("button_2.png"))
+    file=("notification.png"))
 button_2 = Button(
     image=button_image_2,
     borderwidth=0,
@@ -118,12 +113,9 @@ button_2 = Button(
     command=lambda: print("button_2 clicked"),
     relief="flat"
 )
-button_2.place(
-    x=1157.0,
-    y=38.9105224609375,
-    width=17.694091796875,
-    height=35.137451171875
-)
+canvas.create_window(1100, 38, anchor="nw", window=button_2)
+
+
 
 image_image_1 = PhotoImage(
     file=("image_1.png"))
@@ -160,7 +152,7 @@ canvas.create_text(
 
 canvas.create_text(
     62.0,
-    1800.0,
+    1750.0,
     anchor="nw",
     text="VirtuEdu",
     fill="#FFFFFF",
@@ -169,7 +161,7 @@ canvas.create_text(
 
 canvas.create_text(
     506.0,
-    1800.0,
+    1780.0,
     anchor="nw",
     text="Menu",
     fill="#fff",
@@ -178,7 +170,7 @@ canvas.create_text(
 
 canvas.create_text(
     740.0,
-    1800.0,
+    1780.0,
     anchor="nw",
     text="Menu",
     fill="#fff",
@@ -187,7 +179,7 @@ canvas.create_text(
 
 canvas.create_text(
     1010.0,
-    1800.0,
+    1780.0,
     anchor="nw",
     text="Menu",
     fill="#FFFFFF",
@@ -196,7 +188,7 @@ canvas.create_text(
 
 canvas.create_text(
     88.0,
-    1830.0,
+    1790.0,
     anchor="nw",
     text="Learn Anywhere, Achieve Everywhere",
     fill="#FFFFFF",
@@ -204,11 +196,11 @@ canvas.create_text(
 )
 
 canvas.create_text(
-    90.0,
-    2220.0,
+    50.0,
+    1830.0,
     anchor="nw",
-    text="Our innovative online learning platform empowers students to pursue their educational goals from anywhere in the world. With flexible schedules and high-quality courses, we provide the tools and resources necessary for you to excel in your studies and succeed in any endeavor. Join our global community of learners and unlock your full potential with Virtu Edu.",
-    fill="#222",
+    text="Our innovative online learning platform empowers students\nto pursue their educational goals from anywhere in the world.\nWith flexible schedules and high-quality courses, we provide the\ntools and resources necessary for you to excel in your studies\nand succeed in any endeavor. Join our global community of\nlearners and unlock your full potential with Virtu Edu.",
+    fill="#fff",
     font=("Poppins Medium", 12 * -1)
 )
 
@@ -221,6 +213,9 @@ button_3 = Button(
     command=lambda: print("button_3 clicked"),
     relief="flat",
     text= "Home",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
     
 )
 canvas.create_window(506, 1830, anchor="nw", window=button_3)
@@ -369,6 +364,9 @@ button_12 = Button(
     command=lambda: print("about us clicked"),
     relief="flat",
     text= "About Us",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
     
 
 )
@@ -384,6 +382,9 @@ coursesbtn = Button(
     command=lambda: print("courses clicked"),
     relief="flat",
     text= "Courses",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
     
 
 )
@@ -399,6 +400,9 @@ eventbtn = Button(
     command=lambda: print("event clicked"),
     relief="flat",
     text= "Events",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
     
 
 )
@@ -410,7 +414,10 @@ routinebtn = Button(
     highlightthickness=0,
     command=lambda: print("routines clicked"),
     relief="flat",
-    text= "Routines",
+    text= "Routines",    
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
     
 
 )
@@ -422,7 +429,11 @@ termsandcon = Button(
     highlightthickness=0,
     command=lambda: print("terms and conditions clicked"),
     relief="flat",
-    text= "Terms and Conditions",
+    text= "Terms and Conditions",  
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+
     
 
 )
@@ -435,6 +446,9 @@ privacy = Button(
     command=lambda: print("Privacy clicked"),
     relief="flat",
     text= "Privacy Policy",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
     
 
 )
@@ -447,6 +461,9 @@ support = Button(
     command=lambda: print("Support clicked"),
     relief="flat",
     text= "Support",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
     
 
 )
@@ -460,6 +477,9 @@ contact = Button(
     command=lambda: print("Contact clicked"),
     relief="flat",
     text= "Contact Us",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
     
 
 )
@@ -472,6 +492,9 @@ cden = Button(
     command=lambda: print("CDEN clicked"),
     relief="flat",
     text= "CDEN",
+       bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
     
 
 )
@@ -484,6 +507,9 @@ ioe = Button(
     command=lambda: print("IOE clicked"),
     relief="flat",
     text= "IOE",
+       bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
     
 
 )
@@ -496,6 +522,9 @@ tu = Button(
     command=lambda: print("TU clicked"),
     relief="flat",
     text= "TU",
+       bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
     
 
 )
@@ -505,9 +534,12 @@ cu = Button(
     # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("cu clicked"),
+    command=lambda: print("CU clicked"),
     relief="flat",
     text= "Coventry University",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
     
 
 )
@@ -562,7 +594,7 @@ button_15.place(
 )
 
 button_image_16 = PhotoImage(
-    file=("button_16.png"))
+    file=("home.png"))
 button_16 = Button(
     image=button_image_16,
     borderwidth=0,
@@ -570,47 +602,37 @@ button_16 = Button(
     command=lambda: print("button_16 clicked"),
     relief="flat"
 )
-button_16.place(
-    x=385.0,
-    y=31.0,
-    width=43.0,
-    height=20.0
-)
+canvas.create_window(385, 31, anchor="nw", window=button_16)
+
+
 
 button_image_17 = PhotoImage(
-    file=("button_17.png"))
+    file=("routines.png"))
 button_17 = Button(
     image=button_image_17,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_17 clicked"),
+    command=lambda: print("routines clicked"),
     relief="flat"
 )
-button_17.place(
-    x=533.0,
-    y=32.0,
-    width=65.0,
-    height=20.0
-)
+canvas.create_window(533, 32, anchor="nw", window=button_17)
+
 
 button_image_18 = PhotoImage(
-    file=("button_18.png"))
+    file=("courses.png"))
 button_18 = Button(
     image=button_image_18,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_18 clicked"),
+    command=lambda: print("courses clicked"),
     relief="flat"
 )
-button_18.place(
-    x=446.0,
-    y=32.0,
-    width=69.0,
-    height=20.0
-)
+canvas.create_window(446, 32, anchor="nw", window=button_18)
+
+
 
 button_image_19 = PhotoImage(
-    file=("button_19.png"))
+    file=("requests.png"))
 button_19 = Button(
     image=button_image_19,
     borderwidth=0,
@@ -618,12 +640,8 @@ button_19 = Button(
     command=lambda: print("button_19 clicked"),
     relief="flat"
 )
-button_19.place(
-    x=610.0,
-    y=32.0,
-    width=83.0,
-    height=23.0
-)
+canvas.create_window(610, 32, anchor="nw", window=button_19)
+
 
 canvas.create_text(
     44.0,
