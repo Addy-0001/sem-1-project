@@ -191,8 +191,8 @@ canvas.create_rectangle(
 
 
 canvas.create_text(
-    62.0,
-    1750.0,
+    60.0,
+    2852.0,
     anchor="nw",
     text="VirtuEdu",
     fill="#FFFFFF",
@@ -200,8 +200,8 @@ canvas.create_text(
 )
 
 canvas.create_text(
-    506.0,
-    1780.0,
+    504.0,
+    2867.0,
     anchor="nw",
     text="Menu",
     fill="#fff",
@@ -210,7 +210,7 @@ canvas.create_text(
 
 canvas.create_text(
     740.0,
-    1780.0,
+    2867.0,
     anchor="nw",
     text="Menu",
     fill="#fff",
@@ -219,7 +219,7 @@ canvas.create_text(
 
 canvas.create_text(
     1010.0,
-    1780.0,
+    2867.0,
     anchor="nw",
     text="Menu",
     fill="#FFFFFF",
@@ -228,7 +228,7 @@ canvas.create_text(
 
 canvas.create_text(
     88.0,
-    1790.0,
+    2898.0,
     anchor="nw",
     text="Learn Anywhere, Achieve Everywhere",
     fill="#FFFFFF",
@@ -237,7 +237,7 @@ canvas.create_text(
 
 canvas.create_text(
     50.0,
-    1830.0,
+    2923.0,
     anchor="nw",
     text="Our innovative online learning platform empowers students\nto pursue their educational goals from anywhere in the world.\nWith flexible schedules and high-quality courses, we provide the\ntools and resources necessary for you to excel in your studies\nand succeed in any endeavor. Join our global community of\nlearners and unlock your full potential with Virtu Edu.",
     fill="#fff",
@@ -270,7 +270,7 @@ button_3 = Button(
     cursor="hand2"
     
 )
-canvas.create_window(506, 1830, anchor="nw", window=button_3)
+canvas.create_window(516, 2910, anchor="nw", window=button_3)
 
 # button_3.place(
 #     x=518.0,
@@ -566,331 +566,331 @@ canvas.create_window(1010, 1920, anchor="nw", window=cu)
 
 
 
-canvas.create_text(
-    60.0,
-    2852.0,
-    anchor="nw",
-    text="VirtuEdu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 32 * -1)
-)
+# canvas.create_text(
+#     60.0,
+#     2852.0,
+#     anchor="nw",
+#     text="VirtuEdu",
+#     fill="#FFFFFF",
+#     font=("Poppins SemiBold", 32 * -1)
+# )
 
-canvas.create_text(
-    504.0,
-    2867.0,
-    anchor="nw",
-    text="Menu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 24 * -1)
-)
+# canvas.create_text(
+#     504.0,
+#     2867.0,
+#     anchor="nw",
+#     text="Menu",
+#     fill="#FFFFFF",
+#     font=("Poppins SemiBold", 24 * -1)
+# )
 
-canvas.create_text(
-    738.0,
-    2867.0,
-    anchor="nw",
-    text="Menu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 24 * -1)
-)
+# canvas.create_text(
+#     738.0,
+#     2867.0,
+#     anchor="nw",
+#     text="Menu",
+#     fill="#FFFFFF",
+#     font=("Poppins SemiBold", 24 * -1)
+# )
 
-canvas.create_text(
-    1008.0,
-    2867.0,
-    anchor="nw",
-    text="Menu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 24 * -1)
-)
+# canvas.create_text(
+#     1008.0,
+#     2867.0,
+#     anchor="nw",
+#     text="Menu",
+#     fill="#FFFFFF",
+#     font=("Poppins SemiBold", 24 * -1)
+# )
 
-canvas.create_text(
-    86.0,
-    2898.0,
-    anchor="nw",
-    text="Learn Anywhere, Achieve Everywhere",
-    fill="#FFFFFF",
-    font=("Poppins Regular", 11 * -1)
-)
+# canvas.create_text(
+#     86.0,
+#     2898.0,
+#     anchor="nw",
+#     text="Learn Anywhere, Achieve Everywhere",
+#     fill="#FFFFFF",
+#     font=("Poppins Regular", 11 * -1)
+# )
 
-canvas.create_text(
-    88.0,
-    2923.0,
-    anchor="nw",
-    text="Our innovative online learning platform empowers students to pursue their educational goals from anywhere in the world. With flexible schedules and high-quality courses, we provide the tools and resources necessary for you to excel in your studies and succeed in any endeavor. Join our global community of learners and unlock your full potential with Virtu Edu.",
-    fill="#FFFFFF",
-    font=("Poppins Medium", 12 * -1)
-)
+# canvas.create_text(
+#     88.0,
+#     2923.0,
+#     anchor="nw",
+#     text="Our innovative online learning platform empowers students to pursue their educational goals from anywhere in the world. With flexible schedules and high-quality courses, we provide the tools and resources necessary for you to excel in your studies and succeed in any endeavor. Join our global community of learners and unlock your full potential with Virtu Edu.",
+#     fill="#FFFFFF",
+#     font=("Poppins Medium", 12 * -1)
+# )
 
-button_image_4 = PhotoImage(
-    file=("button_4.png"))
-button_4 = Button(
-    image=button_image_4,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_4 clicked"),
-    relief="flat"
-)
-button_4.place(
-    x=516.0,
-    y=2910.0,
-    width=30.0,
-    height=15.0
-)
+# button_image_4 = PhotoImage(
+#     file=("button_4.png"))
+# button_4 = Button(
+#     image=button_image_4,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_4 clicked"),
+#     relief="flat"
+# )
+# button_4.place(
+#     x=516.0,
+#     y=2910.0,
+#     width=30.0,
+#     height=15.0
+# )
 
-button_image_5 = PhotoImage(
-    file=("button_5.png"))
-button_5 = Button(
-    image=button_image_5,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_5 clicked"),
-    relief="flat"
-)
-button_5.place(
-    x=747.0,
-    y=2907.0,
-    width=112.0,
-    height=15.0
-)
+# button_image_5 = PhotoImage(
+#     file=("button_5.png"))
+# button_5 = Button(
+#     image=button_image_5,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_5 clicked"),
+#     relief="flat"
+# )
+# button_5.place(
+#     x=747.0,
+#     y=2907.0,
+#     width=112.0,
+#     height=15.0
+# )
 
-button_image_6 = PhotoImage(
-    file=("button_6.png"))
-button_6 = Button(
-    image=button_image_6,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_6 clicked"),
-    relief="flat"
-)
-button_6.place(
-    x=1021.0,
-    y=2907.0,
-    width=28.0,
-    height=15.0
-)
+# button_image_6 = PhotoImage(
+#     file=("button_6.png"))
+# button_6 = Button(
+#     image=button_image_6,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_6 clicked"),
+#     relief="flat"
+# )
+# button_6.place(
+#     x=1021.0,
+#     y=2907.0,
+#     width=28.0,
+#     height=15.0
+# )
 
-button_image_7 = PhotoImage(
-    file=("button_7.png"))
-button_7 = Button(
-    image=button_image_7,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_7 clicked"),
-    relief="flat"
-)
-button_7.place(
-    x=1021.0,
-    y=2932.0,
-    width=16.0,
-    height=15.0
-)
+# button_image_7 = PhotoImage(
+#     file=("button_7.png"))
+# button_7 = Button(
+#     image=button_image_7,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_7 clicked"),
+#     relief="flat"
+# )
+# button_7.place(
+#     x=1021.0,
+#     y=2932.0,
+#     width=16.0,
+#     height=15.0
+# )
 
-button_image_8 = PhotoImage(
-    file=("button_8.png"))
-button_8 = Button(
-    image=button_image_8,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_8 clicked"),
-    relief="flat"
-)
-button_8.place(
-    x=1022.0,
-    y=2957.0,
-    width=13.0,
-    height=15.0
-)
+# button_image_8 = PhotoImage(
+#     file=("button_8.png"))
+# button_8 = Button(
+#     image=button_image_8,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_8 clicked"),
+#     relief="flat"
+# )
+# button_8.place(
+#     x=1022.0,
+#     y=2957.0,
+#     width=13.0,
+#     height=15.0
+# )
 
-button_image_9 = PhotoImage(
-    file=("button_9.png"))
-button_9 = Button(
-    image=button_image_9,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_9 clicked"),
-    relief="flat"
-)
-button_9.place(
-    x=1022.0,
-    y=2982.0,
-    width=98.0,
-    height=15.0
-)
+# button_image_9 = PhotoImage(
+#     file=("button_9.png"))
+# button_9 = Button(
+#     image=button_image_9,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_9 clicked"),
+#     relief="flat"
+# )
+# button_9.place(
+#     x=1022.0,
+#     y=2982.0,
+#     width=98.0,
+#     height=15.0
+# )
 
-button_image_10 = PhotoImage(
-    file=("button_10.png"))
-button_10 = Button(
-    image=button_image_10,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_10 clicked"),
-    relief="flat"
-)
-button_10.place(
-    x=749.0,
-    y=2932.0,
-    width=69.0,
-    height=15.0
-)
+# button_image_10 = PhotoImage(
+#     file=("button_10.png"))
+# button_10 = Button(
+#     image=button_image_10,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_10 clicked"),
+#     relief="flat"
+# )
+# button_10.place(
+#     x=749.0,
+#     y=2932.0,
+#     width=69.0,
+#     height=15.0
+# )
 
-button_image_11 = PhotoImage(
-    file=("button_11.png"))
-button_11 = Button(
-    image=button_image_11,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_11 clicked"),
-    relief="flat"
-)
-button_11.place(
-    x=749.0,
-    y=2957.0,
-    width=41.0,
-    height=15.0
-)
+# button_image_11 = PhotoImage(
+#     file=("button_11.png"))
+# button_11 = Button(
+#     image=button_image_11,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_11 clicked"),
+#     relief="flat"
+# )
+# button_11.place(
+#     x=749.0,
+#     y=2957.0,
+#     width=41.0,
+#     height=15.0
+# )
 
-button_image_12 = PhotoImage(
-    file=("button_12.png"))
-button_12 = Button(
-    image=button_image_12,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_12 clicked"),
-    relief="flat"
-)
-button_12.place(
-    x=749.0,
-    y=2982.0,
-    width=56.0,
-    height=15.0
-)
+# button_image_12 = PhotoImage(
+#     file=("button_12.png"))
+# button_12 = Button(
+#     image=button_image_12,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_12 clicked"),
+#     relief="flat"
+# )
+# button_12.place(
+#     x=749.0,
+#     y=2982.0,
+#     width=56.0,
+#     height=15.0
+# )
 
-button_image_13 = PhotoImage(
-    file=("button_13.png"))
-button_13 = Button(
-    image=button_image_13,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_13 clicked"),
-    relief="flat"
-)
-button_13.place(
-    x=516.0,
-    y=2935.0,
-    width=46.0,
-    height=15.0
-)
+# button_image_13 = PhotoImage(
+#     file=("button_13.png"))
+# button_13 = Button(
+#     image=button_image_13,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_13 clicked"),
+#     relief="flat"
+# )
+# button_13.place(
+#     x=516.0,
+#     y=2935.0,
+#     width=46.0,
+#     height=15.0
+# )
 
-button_image_14 = PhotoImage(
-    file=("button_14.png"))
-button_14 = Button(
-    image=button_image_14,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_14 clicked"),
-    relief="flat"
-)
-button_14.place(
-    x=516.0,
-    y=2960.0,
-    width=42.0,
-    height=15.0
-)
+# button_image_14 = PhotoImage(
+#     file=("button_14.png"))
+# button_14 = Button(
+#     image=button_image_14,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_14 clicked"),
+#     relief="flat"
+# )
+# button_14.place(
+#     x=516.0,
+#     y=2960.0,
+#     width=42.0,
+#     height=15.0
+# )
 
-button_image_15 = PhotoImage(
-    file=("button_15.png"))
-button_15 = Button(
-    image=button_image_15,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_15 clicked"),
-    relief="flat"
-)
-button_15.place(
-    x=516.0,
-    y=2985.0,
-    width=33.0,
-    height=15.0
-)
+# button_image_15 = PhotoImage(
+#     file=("button_15.png"))
+# button_15 = Button(
+#     image=button_image_15,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_15 clicked"),
+#     relief="flat"
+# )
+# button_15.place(
+#     x=516.0,
+#     y=2985.0,
+#     width=33.0,
+#     height=15.0
+# )
 
-button_image_16 = PhotoImage(
-    file=("button_16.png"))
-button_16 = Button(
-    image=button_image_16,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_16 clicked"),
-    relief="flat"
-)
-button_16.place(
-    x=516.0,
-    y=3010.0,
-    width=39.0,
-    height=15.0
-)
+# button_image_16 = PhotoImage(
+#     file=("button_16.png"))
+# button_16 = Button(
+#     image=button_image_16,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_16 clicked"),
+#     relief="flat"
+# )
+# button_16.place(
+#     x=516.0,
+#     y=3010.0,
+#     width=39.0,
+#     height=15.0
+# )
 
-button_image_17 = PhotoImage(
-    file=("button_17.png"))
-button_17 = Button(
-    image=button_image_17,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_17 clicked"),
-    relief="flat"
-)
-button_17.place(
-    x=385.0,
-    y=31.0,
-    width=43.0,
-    height=20.0
-)
+# button_image_17 = PhotoImage(
+#     file=("button_17.png"))
+# button_17 = Button(
+#     image=button_image_17,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_17 clicked"),
+#     relief="flat"
+# )
+# button_17.place(
+#     x=385.0,
+#     y=31.0,
+#     width=43.0,
+#     height=20.0
+# )
 
-button_image_18 = PhotoImage(
-    file=("button_18.png"))
-button_18 = Button(
-    image=button_image_18,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_18 clicked"),
-    relief="flat"
-)
-button_18.place(
-    x=533.0,
-    y=32.0,
-    width=65.0,
-    height=20.0
-)
+# button_image_18 = PhotoImage(
+#     file=("button_18.png"))
+# button_18 = Button(
+#     image=button_image_18,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_18 clicked"),
+#     relief="flat"
+# )
+# button_18.place(
+#     x=533.0,
+#     y=32.0,
+#     width=65.0,
+#     height=20.0
+# )
 
-button_image_19 = PhotoImage(
-    file=("button_19.png"))
-button_19 = Button(
-    image=button_image_19,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_19 clicked"),
-    relief="flat"
-)
-button_19.place(
-    x=446.0,
-    y=32.0,
-    width=69.0,
-    height=20.0
-)
+# button_image_19 = PhotoImage(
+#     file=("button_19.png"))
+# button_19 = Button(
+#     image=button_image_19,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_19 clicked"),
+#     relief="flat"
+# )
+# button_19.place(
+#     x=446.0,
+#     y=32.0,
+#     width=69.0,
+#     height=20.0
+# )
 
-button_image_20 = PhotoImage(
-    file=("button_20.png"))
-button_20 = Button(
-    image=button_image_20,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_20 clicked"),
-    relief="flat"
-)
-button_20.place(
-    x=610.0,
-    y=32.0,
-    width=83.0,
-    height=23.0
-)
+# button_image_20 = PhotoImage(
+#     file=("button_20.png"))
+# button_20 = Button(
+#     image=button_image_20,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=lambda: print("button_20 clicked"),
+#     relief="flat"
+# )
+# button_20.place(
+#     x=610.0,
+#     y=32.0,
+#     width=83.0,
+#     height=23.0
+# )
 
 canvas.create_text(
     60.0,
