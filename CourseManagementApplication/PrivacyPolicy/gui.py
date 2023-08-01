@@ -155,94 +155,6 @@ canvas.create_text(
     font=("OpenSans Bold", 60 * -1)
 )
 
-canvas.create_text(
-    62.0,
-    1750.0,
-    anchor="nw",
-    text="VirtuEdu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 32 * -1)
-)
-
-canvas.create_text(
-    506.0,
-    1780.0,
-    anchor="nw",
-    text="Menu",
-    fill="#fff",
-    font=("Poppins SemiBold", 24 * -1)
-)
-
-canvas.create_text(
-    740.0,
-    1780.0,
-    anchor="nw",
-    text="Menu",
-    fill="#fff",
-    font=("Poppins SemiBold", 24 * -1)
-)
-
-canvas.create_text(
-    1010.0,
-    1780.0,
-    anchor="nw",
-    text="Menu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 24 * -1)
-)
-
-canvas.create_text(
-    88.0,
-    1790.0,
-    anchor="nw",
-    text="Learn Anywhere, Achieve Everywhere",
-    fill="#FFFFFF",
-    font=("Poppins Regular", 11 * -1)
-)
-
-canvas.create_text(
-    50.0,
-    1830.0,
-    anchor="nw",
-    text="Our innovative online learning platform empowers students\nto pursue their educational goals from anywhere in the world.\nWith flexible schedules and high-quality courses, we provide the\ntools and resources necessary for you to excel in your studies\nand succeed in any endeavor. Join our global community of\nlearners and unlock your full potential with Virtu Edu.",
-    fill="#fff",
-    font=("Poppins Medium", 12 * -1)
-)
-
-
-def Homes():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","homepage"))
-        os.chdir(next_folder)
-
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
-
-        window.destroy()
-
-button_image_3 = PhotoImage(
-    file=("button_3.png"))
-button_3 = Button(
-    # image=button_image_3,
-    borderwidth=0,
-    highlightthickness=0,
-    command=Homes,
-    relief="flat",
-    text= "Home",
-    bg="#3532A7",
-    fg="#fff",
-    cursor="hand2"
-    
-)
-canvas.create_window(506, 1830, anchor="nw", window=button_3)
-
-# button_3.place(
-#     x=518.0,
-#     y=2615.0,
-#     width=30.0,
-#     height=15.0
-# )
 
 button_image_4 = PhotoImage(
     file=("button_4.png"))
@@ -355,6 +267,96 @@ button_10.place(
     width=41.0,
     height=15.0
 )
+
+
+canvas.create_text(
+    62.0,
+    1750.0,
+    anchor="nw",
+    text="VirtuEdu",
+    fill="#FFFFFF",
+    font=("Poppins SemiBold", 32 * -1)
+)
+
+canvas.create_text(
+    506.0,
+    1780.0,
+    anchor="nw",
+    text="Menu",
+    fill="#fff",
+    font=("Poppins SemiBold", 24 * -1)
+)
+
+canvas.create_text(
+    740.0,
+    1780.0,
+    anchor="nw",
+    text="Menu",
+    fill="#fff",
+    font=("Poppins SemiBold", 24 * -1)
+)
+
+canvas.create_text(
+    1010.0,
+    1780.0,
+    anchor="nw",
+    text="Menu",
+    fill="#FFFFFF",
+    font=("Poppins SemiBold", 24 * -1)
+)
+
+canvas.create_text(
+    88.0,
+    1790.0,
+    anchor="nw",
+    text="Learn Anywhere, Achieve Everywhere",
+    fill="#FFFFFF",
+    font=("Poppins Regular", 11 * -1)
+)
+
+canvas.create_text(
+    50.0,
+    1830.0,
+    anchor="nw",
+    text="Our innovative online learning platform empowers students\nto pursue their educational goals from anywhere in the world.\nWith flexible schedules and high-quality courses, we provide the\ntools and resources necessary for you to excel in your studies\nand succeed in any endeavor. Join our global community of\nlearners and unlock your full potential with Virtu Edu.",
+    fill="#fff",
+    font=("Poppins Medium", 12 * -1)
+)
+
+
+def Homes():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","homepage"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
+button_image_3 = PhotoImage(
+    file=("button_3.png"))
+button_3 = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=Homes,
+    relief="flat",
+    text= "Home",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+)
+canvas.create_window(506, 1830, anchor="nw", window=button_3)
+
+# button_3.place(
+#     x=518.0,
+#     y=2615.0,
+#     width=30.0,
+#     height=15.0
+# )
 
 def home():
  
@@ -475,11 +477,22 @@ routinebtn = Button(
 )
 canvas.create_window(506, 1950, anchor="nw", window=routinebtn)
 
+def termsandcondition():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","termsandconditions"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
 termsandcon = Button(
     # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=create_gui,
+    command=termsandcondition,
     relief="flat",
     text= "Terms and Conditions",  
     bg="#3532A7",

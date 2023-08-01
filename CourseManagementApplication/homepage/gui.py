@@ -2757,11 +2757,22 @@ routinebtn = Button(
 )
 canvas.create_window(506, 1950, anchor="nw", window=routinebtn)
 
+def termsandcondition():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("homepage","termsandconditions"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
 termsandcon = Button(
     # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=create_gui,
+    command=termsandcondition,
     relief="flat",
     text= "Terms and Conditions",  
     bg="#3532A7",
