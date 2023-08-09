@@ -1179,7 +1179,7 @@ canvas.create_rectangle(
 
 canvas.create_text(
     62.0,
-    1224.0,
+    1214.0,
     anchor="nw",
     text="VirtuEdu",
     fill="#FFFFFF",
