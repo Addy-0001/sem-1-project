@@ -2872,7 +2872,7 @@ ioe = Button(
 
 )
 canvas.create_window(1010, 1860, anchor="nw", window=ioe)
-
+import webbrowser
 tu = Button(
     # image=button_image_3,
     borderwidth=0,
