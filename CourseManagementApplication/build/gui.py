@@ -130,6 +130,7 @@ button_1 = Button(
     highlightthickness=0,
     command=create_gui,
     relief="flat",
+    cursor="hand2",
     bg="#82B4FF"
 )
 canvas.create_window(1194, 12, anchor="nw", window=button_1)
@@ -164,6 +165,7 @@ button_2 = Button(
     highlightthickness=0,
     command=lambda: print("button_2 clicked"),
     relief="flat",
+    cursor="hand2",
     bg="#fff"
 )
 canvas.create_window(975, 23, anchor="nw", window=button_2)
@@ -177,6 +179,7 @@ button_3 = Button(
     highlightthickness=0,
     command=create_gui,
     relief="flat",
+    cursor="hand2",
     bg="#82B4FF"
 )
 canvas.create_window(1157, 31, anchor="nw", window=button_3)
@@ -190,6 +193,7 @@ button_4 = Button(
     highlightthickness=0,
     command=lambda: print("button_4 clicked"),
     relief="flat",
+    cursor="hand2",
     bg="#82B4FF"
 )
 canvas.create_window(388, 29, anchor="nw", window=button_4)
@@ -203,7 +207,8 @@ button_5 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=routinesfile,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
     ,bg="#82B4FF"
 )
 canvas.create_window(546, 31, anchor="nw", window=button_5)
@@ -217,6 +222,7 @@ button_6 = Button(
     highlightthickness=0,
     command=requestsfile,
     relief="flat",
+    cursor="hand2",
     bg="#82B4FF"
 )
 canvas.create_window(628, 31, anchor="nw", window=button_6)
@@ -231,6 +237,7 @@ button_7 = Button(
     highlightthickness=0,
     command=coursesfile,
     relief="flat",
+    cursor="hand2",
     bg="#82B4FF"
 )
 canvas.create_window(459, 31, anchor="nw", window=button_7)
@@ -282,7 +289,7 @@ canvas.create_text(
     92.1629638671875,
     697.5265502929688,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Tkinter Basics",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -302,15 +309,69 @@ image_4 = canvas.create_image(
     689.1949462890625,
     image=image_image_4
 )
+def get_data_from_api():
+    response = requests.get('http://127.0.0.1:8000/api_virtuedu/modules/')
+    return response.json()
 
+
+
+
+
+def tkinter():
+    try:
+        # Replace 'YOUR_API_URL' with the actual API endpoint URL
+        response = requests.get('https://virtuedu.com/api_virtuedu/modules/')
+        data_list = response.json()
+
+        # Check if any data has 'module_id' as '123Eth'
+        found_data = [data for data in data_list if data.get(
+            'module_id') == 'soft002']
+
+        if found_data:
+            new_window = Toplevel()
+            new_window.geometry("500x500")
+            new_window.title("Fetched Data")
+
+            y_position = 30
+
+            # Format and display the data in labels
+            for data in found_data:
+                title_label = Label(new_window, text=f"Title: {data.get('module_name')}",
+                                    font=("Lexend deca", 15, "bold"), wraplength=400, justify=LEFT)
+                title_label.place(x=30, y=y_position)
+                y_position += title_label.winfo_reqheight()
+
+                description_label = Label(new_window, text=f"Description: {data.get('module_description')}",
+                                          wraplength=400, justify=LEFT)
+                description_label.place(x=30, y=y_position)
+                y_position += description_label.winfo_reqheight()
+
+                tutor_label = Label(new_window, text=f"Tutor: {data.get('tutor_name')}",
+                                    wraplength=400, justify=LEFT)
+                tutor_label.place(x=30, y=y_position)
+                y_position += tutor_label.winfo_reqheight()
+
+                # Add other labels to display other data as needed
+
+                separator = Frame(new_window, height=2, bd=1, relief=SUNKEN)
+                separator.pack(fill=X, padx=5, pady=5)
+                y_position += 10
+
+        else:
+            messagebox.showinfo(
+                "Info", "Data is not available for module_id '123Eth'")
+
+    except requests.exceptions.RequestException as e:
+        messagebox.showerror("Error", f"Error fetching data from the API: {e}")
 button_image_8 = PhotoImage(
     file=("button_8.png"))
 button_8 = Button(
     image=button_image_8,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_8 clicked"),
-    relief="flat"
+    command=tkinter,
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(93, 755, anchor="nw", window=button_8)
 
@@ -319,7 +380,7 @@ canvas.create_text(
     92.1629638671875,
     714.3814086914062,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our \nIntroduction to User Experience Design course. Dive into the world of\ninteractive design, learn the fundamentals of user-centered thinking\n, and acquire the skills to create intuitive,",
+    text="Discover the art of crafting exceptional user experiences with \nour Introduction to User Experience Design course. Dive into the \nworld of interactive design, learn the fundamentals of user-centered \nthinking, and acquire the skills to create intuitive,",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -344,7 +405,7 @@ canvas.create_text(
     94.18804931640625,
     990.7295532226562,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="HTML Basics",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -372,7 +433,8 @@ button_9 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_9 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(95, 1048, anchor="nw", window=button_9)
 
@@ -381,7 +443,7 @@ canvas.create_text(
     94.18804931640625,
     1007.5844116210938,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our \nIntroduction to User Experience Design course. Dive into the world of\ninteractive design, learn the fundamentals of user-centered thinking\n, and acquire the skills to create intuitive,",
+ text="Discover the art of crafting exceptional user experiences with \nour Introduction to User Experience Design course. Dive into the \nworld of interactive design, learn the fundamentals of user-centered \nthinking, and acquire the skills to create intuitive,",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -406,7 +468,7 @@ canvas.create_text(
     397.9481506347656,
     697.5265502929688,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Transparent Language",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -433,7 +495,7 @@ canvas.create_text(
     397.9481506347656,
     714.3814086914062,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our \nIntroduction to User Experience Design course. Dive into the world of\ninteractive design, learn the fundamentals of user-centered thinking\n, and acquire the skills to create intuitive,",
+ text="Discover the art of crafting exceptional user experiences with \nour Introduction to User Experience Design course. Dive into the \nworld of interactive design, learn the fundamentals of user-centered \nthinking, and acquire the skills to create intuitive,",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -458,7 +520,7 @@ canvas.create_text(
     399.9731750488281,
     990.7295532226562,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Seo Optimization course",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -486,7 +548,8 @@ button_10 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_10 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(400, 1048, anchor="nw", window=button_10)
 
@@ -495,7 +558,7 @@ canvas.create_text(
     399.9731750488281,
     1007.5844116210938,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our \nIntroduction to User Experience Design course. Dive into the world of\ninteractive design, learn the fundamentals of user-centered thinking\n, and acquire the skills to create intuitive,",
+ text="Discover the art of crafting exceptional user experiences with \nour Introduction to User Experience Design course. Dive into the \nworld of interactive design, learn the fundamentals of user-centered \nthinking, and acquire the skills to create intuitive,",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -520,7 +583,7 @@ canvas.create_text(
     683.4825439453125,
     697.5265502929688,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Python Basics",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -540,25 +603,140 @@ image_16 = canvas.create_image(
     689.1949462890625,
     image=image_image_16
 )
+
+
+def get_data_from_api():
+    response = requests.get('http://127.0.0.1:8000/api_virtuedu/modules/')
+    return response.json()
+
+
+
+
+
+def trans():
+    try:
+        # Replace 'YOUR_API_URL' with the actual API endpoint URL
+        response = requests.get('https://virtuedu.com/api_virtuedu/modules/')
+        data_list = response.json()
+
+        # Check if any data has 'module_id' as '123Eth'
+        found_data = [data for data in data_list if data.get(
+            'module_id') == 'trans']
+
+        if found_data:
+            new_window = Toplevel()
+            new_window.geometry("500x500")
+            new_window.title("Fetched Data")
+
+            y_position = 30
+
+            # Format and display the data in labels
+            for data in found_data:
+                title_label = Label(new_window, text=f"Title: {data.get('module_name')}",
+                                    font=("Lexend deca", 15, "bold"), wraplength=400, justify=LEFT)
+                title_label.place(x=30, y=y_position)
+                y_position += title_label.winfo_reqheight()
+
+                description_label = Label(new_window, text=f"Description: {data.get('module_description')}",
+                                          wraplength=400, justify=LEFT)
+                description_label.place(x=30, y=y_position)
+                y_position += description_label.winfo_reqheight()
+
+                tutor_label = Label(new_window, text=f"Tutor: {data.get('tutor_name')}",
+                                    wraplength=400, justify=LEFT)
+                tutor_label.place(x=30, y=y_position)
+                y_position += tutor_label.winfo_reqheight()
+
+                # Add other labels to display other data as needed
+
+                separator = Frame(new_window, height=2, bd=1, relief=SUNKEN)
+                separator.pack(fill=X, padx=5, pady=5)
+                y_position += 10
+
+        else:
+            messagebox.showinfo(
+                "Info", "Data is not available for module_id '123Eth'")
+
+    except requests.exceptions.RequestException as e:
+        messagebox.showerror("Error", f"Error fetching data from the API: {e}")
 button_image_27 = PhotoImage(
     file=("button_11.png"))
 button_27 = Button(
     image=button_image_27,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_27 clicked"),
-    relief="flat"
+    command=trans,
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(400, 755, anchor="nw", window=button_27)
 
+
+
+
+def get_data_from_api():
+    response = requests.get('http://127.0.0.1:8000/api_virtuedu/modules/')
+    return response.json()
+
+
+
+
+
+def soft001():
+    try:
+        # Replace 'YOUR_API_URL' with the actual API endpoint URL
+        response = requests.get('https://virtuedu.com/api_virtuedu/modules/')
+        data_list = response.json()
+
+        # Check if any data has 'module_id' as '123Eth'
+        found_data = [data for data in data_list if data.get(
+            'module_id') == 'soft001']
+
+        if found_data:
+            new_window = Toplevel()
+            new_window.geometry("500x500")
+            new_window.title("Fetched Data")
+
+            y_position = 30
+
+            # Format and display the data in labels
+            for data in found_data:
+                title_label = Label(new_window, text=f"Title: {data.get('module_name')}",
+                                    font=("Lexend deca", 15, "bold"), wraplength=400, justify=LEFT)
+                title_label.place(x=30, y=y_position)
+                y_position += title_label.winfo_reqheight()
+
+                description_label = Label(new_window, text=f"Description: {data.get('module_description')}",
+                                          wraplength=400, justify=LEFT)
+                description_label.place(x=30, y=y_position)
+                y_position += description_label.winfo_reqheight()
+
+                tutor_label = Label(new_window, text=f"Tutor: {data.get('tutor_name')}",
+                                    wraplength=400, justify=LEFT)
+                tutor_label.place(x=30, y=y_position)
+                y_position += tutor_label.winfo_reqheight()
+
+                # Add other labels to display other data as needed
+
+                separator = Frame(new_window, height=2, bd=1, relief=SUNKEN)
+                separator.pack(fill=X, padx=5, pady=5)
+                y_position += 10
+
+        else:
+            messagebox.showinfo(
+                "Info", "Data is not available for module_id '123Eth'")
+
+    except requests.exceptions.RequestException as e:
+        messagebox.showerror("Error", f"Error fetching data from the API: {e}")
 button_image_11 = PhotoImage(
     file=("button_11.png"))
 button_11 = Button(
     image=button_image_11,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_11 clicked"),
-    relief="flat"
+    command=soft001,
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(684, 755, anchor="nw", window=button_11)
 
@@ -567,7 +745,7 @@ canvas.create_text(
     683.4825439453125,
     714.3814086914062,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our \nIntroduction to User Experience Design course. Dive into the world of\ninteractive design, learn the fundamentals of user-centered thinking\n, and acquire the skills to create intuitive,",
+ text="Discover the art of crafting exceptional user experiences with \nour Introduction to User Experience Design course. Dive into the \nworld of interactive design, learn the fundamentals of user-centered \nthinking, and acquire the skills to create intuitive,",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -592,7 +770,7 @@ canvas.create_text(
     685.5076293945312,
     990.7295532226562,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="BBC Languages",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -620,7 +798,8 @@ button_12 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_12 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(686, 1048, anchor="nw", window=button_12)
 
@@ -654,7 +833,7 @@ canvas.create_text(
     976.1047973632812,
     697.5265502929688,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="CSS Basics",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -682,7 +861,8 @@ button_13 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_13 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(977, 755, anchor="nw", window=button_13)
 
@@ -716,7 +896,7 @@ canvas.create_text(
     978.1298217773438,
     990.7295532226562,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Sqlite3 Database",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -744,7 +924,8 @@ button_14 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_14 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(979, 1048, anchor="nw", window=button_14)
 
@@ -768,15 +949,6 @@ canvas.create_rectangle(
     outline="")
 
 canvas.create_text(
-    56.0,
-    1776.0,
-    anchor="nw",
-    text="VirtuEdu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 25 * -1)
-)
-
-canvas.create_text(
     97.0,
     1161.0,
     anchor="nw",
@@ -794,77 +966,7 @@ canvas.create_text(
     font=("Poppins SemiBold", 25 * -1)
 )
 
-canvas.create_text(
-    461.0,
-    1785.0,
-    anchor="nw",
-    text="Menu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 17 * -1)
-)
 
-canvas.create_text(
-    745.0,
-    1787.0,
-    anchor="nw",
-    text="Menu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 17 * -1)
-)
-
-canvas.create_text(
-    974.0,
-    1787.0,
-    anchor="nw",
-    text="Menu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 17 * -1)
-)
-
-canvas.create_text(
-    63.0,
-    1804.0,
-    anchor="nw",
-    text="Learn Anywhere, Achieve Everywhere",
-    fill="#FFFFFF",
-    font=("Poppins Regular", 6 * -1)
-)
-
-canvas.create_text(
-    63.0,
-    1824.0,
-    anchor="nw",
-    text="Our innovative online learning platform empowers students to pursue their educational goals from anywhere in the world. With flexible schedules and high-quality courses, we provide the tools and resources necessary for you to excel in your studies and succeed in any endeavor. Join our global community of learners and unlock your full potential with Virtu Edu.",
-    fill="#FFFFFF",
-    font=("Poppins Medium", 6 * -1)
-)
-
-canvas.create_text(
-    464.0,
-    1817.0,
-    anchor="nw",
-    text="Home\nAbout Us\nCourses\nEvents\nRoutine",
-    fill="#FFFFFF",
-    font=("Poppins Medium", 6 * -1)
-)
-
-canvas.create_text(
-    756.0,
-    1817.0,
-    anchor="nw",
-    text="Terms and Condition\nPrivacy and Policy\nSupport\nContact Us",
-    fill="#FFFFFF",
-    font=("Poppins Medium", 6 * -1)
-)
-
-canvas.create_text(
-    979.0,
-    1817.0,
-    anchor="nw",
-    text="CDEN\nIOE\nTU\nCoventry University",
-    fill="#FFFFFF",
-    font=("Poppins Medium", 6 * -1)
-)
 
 canvas.create_rectangle(
     90.0,
@@ -890,7 +992,8 @@ button_15 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=coursesfile,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(507, 1091, anchor="nw", window=button_15)
 
@@ -903,7 +1006,8 @@ button_16 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=tutorsfile,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(525, 1616, anchor="nw", window=button_16)
 
@@ -916,16 +1020,7 @@ canvas.create_rectangle(
     fill="#FFFFFF",
     outline="")
 
-button_image_17 = PhotoImage(
-    file=("button_17.png"))
-button_17 = Button(
-    image=button_image_17,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_17 clicked"),
-    relief="flat"
-)
-canvas.create_window(116, 1486, anchor="nw", window=button_17)
+
 
 canvas.create_text(
     131.0,
@@ -946,7 +1041,7 @@ canvas.create_text(
 )
 
 canvas.create_text(
-    157.239990234375,
+    170.239990234375,
     1522.649658203125,
     anchor="nw",
     text="2069",
@@ -961,22 +1056,12 @@ button_18 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_18 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(262, 1514, anchor="nw", window=button_18)
 
 
-
-button_image_19 = PhotoImage(
-    file=("button_19.png"))
-button_19 = Button(
-    image=button_image_19,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_19 clicked"),
-    relief="flat"
-)
-canvas.create_window(262, 1465, anchor="nw", window=button_19)
 
 
 
@@ -1003,7 +1088,8 @@ button_20 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_20 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(420, 1516, anchor="nw", window=button_20)
 
@@ -1066,7 +1152,8 @@ button_21 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=main,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(115, 1514, anchor="nw", window=button_21)
 
@@ -1106,7 +1193,8 @@ button_22 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_22 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(566, 1514, anchor="nw", window=button_22)
 
@@ -1135,7 +1223,8 @@ button_23 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_23 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 
 canvas.create_window(700, 1510, anchor="nw", window=button_23)
@@ -1175,7 +1264,8 @@ button_24 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_24 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(846, 1508, anchor="nw", window=button_24)
 
@@ -1204,7 +1294,8 @@ button_25 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_25 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(986, 1510, anchor="nw", window=button_25)
 
@@ -1243,7 +1334,8 @@ button_26 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_26 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(1132, 1508, anchor="nw", window=button_26)
 
@@ -1330,10 +1422,11 @@ button_3 = Button(
     highlightthickness=0,
     command=Homes,
     relief="flat",
+    cursor="hand2",
     text= "Home",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+   
     
 )
 canvas.create_window(506, 1830, anchor="nw", window=button_3)
@@ -1363,7 +1456,8 @@ button_111 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=home,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(751, 2687, anchor="nw", window=button_111)
 
@@ -1376,10 +1470,11 @@ button_112 = Button(
     highlightthickness=0,
     command=create_gui,
     relief="flat",
+    cursor="hand2",
     text= "About Us",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+  
     
 
 )
@@ -1405,10 +1500,11 @@ coursesbtn = Button(
     highlightthickness=0,
     command=Courses,
     relief="flat",
+    cursor="hand2",
     text= "Courses",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+  
     
 
 )
@@ -1423,10 +1519,11 @@ eventbtn = Button(
     highlightthickness=0,
     command=create_gui,
     relief="flat",
+    cursor="hand2",
     text= "Events",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
@@ -1449,10 +1546,11 @@ routinebtn = Button(
     highlightthickness=0,
     command=Routines,
     relief="flat",
+    cursor="hand2",
     text= "Routines",    
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
@@ -1475,10 +1573,11 @@ termsandcon = Button(
     highlightthickness=0,
     command=termsandcondition,
     relief="flat",
+    cursor="hand2",
     text= "Terms and Conditions",  
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+ 
 
     
 
@@ -1495,10 +1594,11 @@ privacy = Button(
     highlightthickness=0,
     command=alert1,
     relief="flat",
+    cursor="hand2",
     text= "Privacy Policy",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+   
     
 
 )
@@ -1521,10 +1621,11 @@ support = Button(
     highlightthickness=0,
     command=Support,
     relief="flat",
+    cursor="hand2",
     text= "Support",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
@@ -1547,10 +1648,11 @@ contact = Button(
     highlightthickness=0,
     command=Contact,
     relief="flat",
+    cursor="hand2",
     text= "Contact Us",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
@@ -1562,10 +1664,11 @@ cden = Button(
     highlightthickness=0,
     command=lambda: webbrowser.open_new(r"http://www.cden.org.np"),
     relief="flat",
+    cursor="hand2",
     text= "CDEN",
        bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
@@ -1577,10 +1680,11 @@ ioe = Button(
     highlightthickness=0,
     command=lambda: webbrowser.open_new(r"http://www.ioe.edu.np"),
     relief="flat",
+    cursor="hand2",
     text= "IOE",
        bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
@@ -1592,10 +1696,11 @@ tu = Button(
     highlightthickness=0,
     command=lambda: webbrowser.open_new(r"http://www.tu.edu.np"),
     relief="flat",
+    cursor="hand2",
     text= "TU",
        bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
@@ -1607,48 +1712,17 @@ cu = Button(
     highlightthickness=0,
     command=lambda: webbrowser.open_new(r"http://www.coventry.ac.uk"),
     relief="flat",
+    cursor="hand2",
     text= "Coventry University",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
 canvas.create_window(1010, 1920, anchor="nw", window=cu)
 
-button_image_113 = PhotoImage(
-    file=("button_13.png"))
-button_113 = Button(
-    image=button_image_13,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_113 clicked"),
-    relief="flat"
-)
-canvas.create_window(518, 2665, anchor="nw", window=button_113)
 
-button_image_114 = PhotoImage(
-    file=("button_14.png"))
-button_114 = Button(
-    image=button_image_114,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_14 clicked"),
-    relief="flat"
-)
-canvas.create_window(518, 2690, anchor="nw", window=button_114)
-
-
-button_image_115 = PhotoImage(
-    file=("button_15.png"))
-button_115 = Button(
-    image=button_image_115,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_15 clicked"),
-    relief="flat"
-)
-canvas.create_window(518, 2715, anchor="nw", window=button_115)
 
 
 
