@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import ttk
-import os,sys,subprocess
+import os,sys,subprocess, webbrowser
 window = Tk()
 window.geometry("1280x800")
 window.configure(bg="#EEEFF3")
@@ -1305,7 +1305,7 @@ canvas.create_text(
 def Homes():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","homepage"))
+        next_folder = os.path.join(os.getcwd().replace("termsandconditions","homepage"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1357,7 +1357,7 @@ canvas.create_window(506, 1330, anchor="nw", window=button_112)
 def Courses():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","secondmainpage(courses_page)"))
+        next_folder = os.path.join(os.getcwd().replace("termsandconditions","secondmainpage(courses_page)"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1404,7 +1404,7 @@ canvas.create_window(506, 1394, anchor="nw", window=eventbtn)
 def Routines():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","routines"))
+        next_folder = os.path.join(os.getcwd().replace("termsandconditions","routines"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1430,7 +1430,7 @@ canvas.create_window(506, 1424, anchor="nw", window=routinebtn)
 def termsandcondition():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","termsandconditions"))
+        next_folder = os.path.join(os.getcwd().replace("termsandconditions","termsandconditions"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1476,7 +1476,7 @@ canvas.create_window(740, 1334, anchor="nw", window=privacy)
 def Support():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","support"))
+        next_folder = os.path.join(os.getcwd().replace("termsandconditions","support"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1502,7 +1502,7 @@ canvas.create_window(740, 1364, anchor="nw", window=support)
 def Contact():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","contact_us"))
+        next_folder = os.path.join(os.getcwd().replace("termsandconditions","contact_us"))
         os.chdir(next_folder)
 
         # Run the gui.py file
