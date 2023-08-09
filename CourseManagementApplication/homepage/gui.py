@@ -1,3 +1,4 @@
+from tkinter import messagebox
 from tkinter import *
 
 import os
@@ -17,6 +18,7 @@ canvas.configure(yscrollcommand=scrollbar.set)
 scrollbar.pack(side="right", fill="y")
 canvas.pack(fill="both", expand=True)
 
+
 def on_mousewheel(event):
     # Get the current scroll position
     current_pos = canvas.canvasy(0)
@@ -34,6 +36,7 @@ def on_mousewheel(event):
     elif event.delta >= 0 and current_pos >= 0:
         # Scroll up if not at the top
         canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+
 
 # Bind the mousewheel event to scroll the canvas
 canvas.bind_all("<MouseWheel>", on_mousewheel)
@@ -71,7 +74,7 @@ canvas.create_text(
 #     file=("profile.png")
 # )
 # button_1 = Button(
-#     canvas, 
+#     canvas,
 #     image= profile,
 #     command=lambda: print("profile button clicked")
 # )
@@ -108,24 +111,16 @@ entry_1 = Entry(
     bg="#FFFFFF",
     fg="#000716",
     highlightthickness=0,
-    font=("lexend deca",16)
+    font=("lexend deca", 16)
 )
 canvas.create_window(717, 16, anchor="nw", window=entry_1)
 
 
-
-from tkinter import messagebox
-
-
-    
-
 def create_gui():
-    
-    messagebox.showinfo("Alert", "Feature is not available right now")
-    
 
-    
-    
+    messagebox.showinfo("Alert", "Feature is not available right now")
+
+
 # entry_image_2 = PhotoImage(
 #     file=("entry_2.png"))
 # entry_bg_2 = canvas.create_image(
@@ -145,7 +140,6 @@ def create_gui():
 #     width=270.0,
 #     height=19.0
 # )
-
 button_image_2 = PhotoImage(
     file=("notification.png"))
 button_2 = Button(
@@ -163,16 +157,20 @@ canvas.create_window(1100, 31.615699768066406, anchor="nw", window=button_2)
 #     width=29.694091796875,
 #     height=29.550003051757812
 # )
+
+
 def buildfile():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("homepage","build"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(os.getcwd().replace("homepage", "build"))
+    os.chdir(next_folder)
 
-        window.destroy()
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
+
+
 button_image_3 = PhotoImage(
     file=("home.png"))
 button_3 = Button(
@@ -191,84 +189,97 @@ canvas.create_window(388, 31, anchor="nw", window=button_3)
 #     width=61.0,
 #     height=28.0
 # )
+
+
 def routinesfile():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("homepage","routines"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(os.getcwd().replace("homepage", "routines"))
+    os.chdir(next_folder)
 
-        window.destroy()
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
+
 
 def requestsfile():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("homepage","requests_notdone"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(
+        os.getcwd().replace("homepage", "requests_notdone"))
+    os.chdir(next_folder)
 
-        window.destroy()
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
+
 
 def computingfile():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("homepage","computing_wala"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
-      
-        window.destroy()
+    # Change to the next folder
+    next_folder = os.path.join(
+        os.getcwd().replace("homepage", "computing_wala"))
+    os.chdir(next_folder)
+
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
+
 
 def multimediafile():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("homepage","multimedia_wala"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(
+        os.getcwd().replace("homepage", "multimedia_wala"))
+    os.chdir(next_folder)
 
-        window.destroy()
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
+
 
 def marketingfile():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("homepage","marketing_wala"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(
+        os.getcwd().replace("homepage", "marketing_wala"))
+    os.chdir(next_folder)
 
-        window.destroy()
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
 
 
 def languagefile():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("homepage","language_wala"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(
+        os.getcwd().replace("homepage", "language_wala"))
+    os.chdir(next_folder)
 
-        window.destroy() 
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
 
 
 def designingfile():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("homepage","designing_wala"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(
+        os.getcwd().replace("homepage", "designing_wala"))
+    os.chdir(next_folder)
 
-        window.destroy() 
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
+
 
 button_image_4 = PhotoImage(
     file=("routines.png"))
@@ -279,7 +290,7 @@ button_4 = Button(
     highlightthickness=0,
     command=routinesfile,
     relief="flat",
-  
+
 )
 canvas.create_window(546, 34, anchor="nw", window=button_4)
 
@@ -352,7 +363,6 @@ image_2 = canvas.create_image(
     339.415283203125,
     image=image_image_2
 )
-
 
 
 button_image_7 = PhotoImage(
@@ -507,7 +517,7 @@ canvas.create_text(
     107.0,
     691.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Ethical Hacking and CyberSecurity",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -530,6 +540,8 @@ canvas.create_window(107, 661.12548828125, anchor="nw", window=button_13)
 #     width=87.0,
 #     height=11.9024658203125
 # )
+
+
 def get_data_from_api():
     response = requests.get('http://127.0.0.1:8000/api_virtuedu/modules/')
     return response.json()
@@ -545,8 +557,6 @@ def get_data_from_api():
 #     for item in data:
 #         data_window.insert(END, f"module ID: {item['module_id']}, module Name: {item['module_name']}")
 #     data_window.mainloop()
-    
-
 
 
 def fetch_data_from_api1():
@@ -556,7 +566,8 @@ def fetch_data_from_api1():
         data_list = response.json()
 
         # Check if any data has 'module_id' as '123Eth'
-        found_data = [data for data in data_list if data.get('module_id') == '123Ethical']
+        found_data = [data for data in data_list if data.get(
+            'module_id') == '123Ethical']
 
         if found_data:
             new_window = Toplevel()
@@ -568,17 +579,17 @@ def fetch_data_from_api1():
             # Format and display the data in labels
             for data in found_data:
                 title_label = Label(new_window, text=f"Title: {data.get('module_name')}",
-                                       font=("Lexend deca", 15, "bold"), wraplength=400, justify=LEFT)
+                                    font=("Lexend deca", 15, "bold"), wraplength=400, justify=LEFT)
                 title_label.place(x=30, y=y_position)
                 y_position += title_label.winfo_reqheight()
 
                 description_label = Label(new_window, text=f"Description: {data.get('module_description')}",
-                                             wraplength=400, justify=LEFT)
+                                          wraplength=400, justify=LEFT)
                 description_label.place(x=30, y=y_position)
                 y_position += description_label.winfo_reqheight()
 
-                tutor_label =Label(new_window, text=f"Tutor: {data.get('tutor_name')}",
-                                        wraplength=400, justify=LEFT)
+                tutor_label = Label(new_window, text=f"Tutor: {data.get('tutor_name')}",
+                                    wraplength=400, justify=LEFT)
                 tutor_label.place(x=30, y=y_position)
                 y_position += tutor_label.winfo_reqheight()
 
@@ -589,13 +600,13 @@ def fetch_data_from_api1():
                 y_position += 10
 
         else:
-            messagebox.showinfo("Info", "Data is not available for module_id '123Eth'")
+            messagebox.showinfo(
+                "Info", "Data is not available for module_id '123Eth'")
 
     except requests.exceptions.RequestException as e:
         messagebox.showerror("Error", f"Error fetching data from the API: {e}")
 
 
-        
 button_image_14 = PhotoImage(
     file=("button_14.png"))
 button_14 = Button(
@@ -603,7 +614,7 @@ button_14 = Button(
     image=button_image_14,
     borderwidth=0,
     highlightthickness=0,
-    
+
     command=fetch_data_from_api1,
     relief="flat"
 )
@@ -620,7 +631,7 @@ canvas.create_text(
     107.0,
     708.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with \nour Introduction to User Experience Design course. Dive into the \nworld of interactive design, learn the fundamentals of user-centered \nthinking, and acquire the skills to create intuitive,",
+    text="Discover the world of cybersecurity with \nour course. Dive into the world of security, \nlearn the fundamentals of pen-testing to create secure \nenvironments",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -645,7 +656,7 @@ canvas.create_text(
     409.0,
     691.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Data Analytics",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -669,6 +680,7 @@ canvas.create_window(409, 661, anchor="nw", window=button_15)
 #     height=11.9024658203125
 # )
 
+
 def fetch_data_from_api2():
     try:
         # Replace 'YOUR_API_URL' with the actual API endpoint URL
@@ -676,7 +688,8 @@ def fetch_data_from_api2():
         data_list = response.json()
 
         # Check if any data has 'module_id' as '123Eth'
-        found_data = [data for data in data_list if data.get('module_id') == '2301PaA']
+        found_data = [data for data in data_list if data.get(
+            'module_id') == '2301PaA']
 
         if found_data:
             new_window = Toplevel()
@@ -688,17 +701,17 @@ def fetch_data_from_api2():
             # Format and display the data in labels
             for data in found_data:
                 title_label = Label(new_window, text=f"Title: {data.get('module_name')}",
-                                       font=("Lexend deca", 15, "bold"), wraplength=400, justify=LEFT)
+                                    font=("Lexend deca", 15, "bold"), wraplength=400, justify=LEFT)
                 title_label.place(x=30, y=y_position)
                 y_position += title_label.winfo_reqheight()
 
                 description_label = Label(new_window, text=f"Description: {data.get('module_description')}",
-                                             wraplength=400, justify=LEFT)
+                                          wraplength=400, justify=LEFT)
                 description_label.place(x=30, y=y_position)
                 y_position += description_label.winfo_reqheight()
 
-                tutor_label =Label(new_window, text=f"Tutor: {data.get('tutor_name')}",
-                                        wraplength=400, justify=LEFT)
+                tutor_label = Label(new_window, text=f"Tutor: {data.get('tutor_name')}",
+                                    wraplength=400, justify=LEFT)
                 tutor_label.place(x=30, y=y_position)
                 y_position += tutor_label.winfo_reqheight()
 
@@ -709,10 +722,12 @@ def fetch_data_from_api2():
                 y_position += 10
 
         else:
-            messagebox.showinfo("Info", "Data is not available for module_id '2301PaA'")
+            messagebox.showinfo(
+                "Info", "Data is not available for module_id '2301PaA'")
 
     except requests.exceptions.RequestException as e:
         messagebox.showerror("Error", f"Error fetching data from the API: {e}")
+
 
 button_image_16 = PhotoImage(
     file=("button_16.png"))
@@ -737,7 +752,7 @@ canvas.create_text(
     409.0,
     708.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with \nour Introduction to User Experience Design course. Dive into the \nworld of interactive design, learn the fundamentals of user-centered \nthinking, and acquire the skills to create intuitive,",
+    text="Discover the world of data with \nour Data Analytics course. Dive into the \nworld of interactive data, learn the fundamentals of big data \n and acquire the skills to visualise and display data.",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -762,7 +777,7 @@ canvas.create_text(
     691.0,
     691.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Ethical Hacking and CyberSecurity II",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -786,6 +801,7 @@ canvas.create_window(691, 661, anchor="nw", window=button_17)
 #     height=11.9024658203125
 # )
 
+
 def fetch_data_from_api3():
     try:
         # Replace 'YOUR_API_URL' with the actual API endpoint URL
@@ -793,7 +809,8 @@ def fetch_data_from_api3():
         data_list = response.json()
 
         # Check if any data has 'module_id' as '123Eth'
-        found_data = [data for data in data_list if data.get('module_id') == '123Eth']
+        found_data = [data for data in data_list if data.get(
+            'module_id') == '123Eth']
 
         if found_data:
             new_window = Toplevel()
@@ -805,17 +822,17 @@ def fetch_data_from_api3():
             # Format and display the data in labels
             for data in found_data:
                 title_label = Label(new_window, text=f"Title: {data.get('module_name')}",
-                                       font=("Lexend deca", 15, "bold"), wraplength=400, justify=LEFT)
+                                    font=("Lexend deca", 15, "bold"), wraplength=400, justify=LEFT)
                 title_label.place(x=30, y=y_position)
                 y_position += title_label.winfo_reqheight()
 
                 description_label = Label(new_window, text=f"Description: {data.get('module_description')}",
-                                             wraplength=400, justify=LEFT)
+                                          wraplength=400, justify=LEFT)
                 description_label.place(x=30, y=y_position)
                 y_position += description_label.winfo_reqheight()
 
-                tutor_label =Label(new_window, text=f"Tutor: {data.get('tutor_name')}",
-                                        wraplength=400, justify=LEFT)
+                tutor_label = Label(new_window, text=f"Tutor: {data.get('tutor_name')}",
+                                    wraplength=400, justify=LEFT)
                 tutor_label.place(x=30, y=y_position)
                 y_position += tutor_label.winfo_reqheight()
 
@@ -826,10 +843,12 @@ def fetch_data_from_api3():
                 y_position += 10
 
         else:
-            messagebox.showinfo("Info", "Data is not available for module_id '123Eth'")
+            messagebox.showinfo(
+                "Info", "Data is not available for module_id '123Eth'")
 
     except requests.exceptions.RequestException as e:
         messagebox.showerror("Error", f"Error fetching data from the API: {e}")
+
 
 button_image_18 = PhotoImage(
     file=("button_18.png"))
@@ -854,7 +873,7 @@ canvas.create_text(
     691.0,
     708.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with \nour Introduction to User Experience Design course. Dive into the \nworld of interactive design, learn the fundamentals of user-centered \nthinking, and acquire the skills to create intuitive,",
+    text="Discover the world of cybersecurity with \nour course. Dive into the world of security, \nlearn the fundamentals of pen-testing to create secure \nenvironments",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -879,7 +898,7 @@ canvas.create_text(
     980.0,
     691.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Bsc.(Hons) Computing",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -903,6 +922,7 @@ canvas.create_window(980, 661, anchor="nw", window=button_19)
 #     height=11.9024658203125
 # )
 
+
 def fetch_data_from_api4():
     try:
         # Replace 'YOUR_API_URL' with the actual API endpoint URL
@@ -910,7 +930,8 @@ def fetch_data_from_api4():
         data_list = response.json()
 
         # Check if any data has 'module_id' as '123Eth'
-        found_data = [data for data in data_list if data.get('module_id') == '123Com']
+        found_data = [data for data in data_list if data.get(
+            'module_id') == '123Com']
 
         if found_data:
             new_window = Toplevel()
@@ -922,17 +943,17 @@ def fetch_data_from_api4():
             # Format and display the data in labels
             for data in found_data:
                 title_label = Label(new_window, text=f"Title: {data.get('module_name')}",
-                                       font=("Lexend deca", 15, "bold"), wraplength=400, justify=LEFT)
+                                    font=("Lexend deca", 15, "bold"), wraplength=400, justify=LEFT)
                 title_label.place(x=30, y=y_position)
                 y_position += title_label.winfo_reqheight()
 
                 description_label = Label(new_window, text=f"Description: {data.get('module_description')}",
-                                             wraplength=400, justify=LEFT)
+                                          wraplength=400, justify=LEFT)
                 description_label.place(x=30, y=y_position)
                 y_position += description_label.winfo_reqheight()
 
-                tutor_label =Label(new_window, text=f"Tutor: {data.get('tutor_name')}",
-                                        wraplength=400, justify=LEFT)
+                tutor_label = Label(new_window, text=f"Tutor: {data.get('tutor_name')}",
+                                    wraplength=400, justify=LEFT)
                 tutor_label.place(x=30, y=y_position)
                 y_position += tutor_label.winfo_reqheight()
 
@@ -943,10 +964,12 @@ def fetch_data_from_api4():
                 y_position += 10
 
         else:
-            messagebox.showinfo("Info", "Data is not available for module_id '123Com'")
+            messagebox.showinfo(
+                "Info", "Data is not available for module_id '123Com'")
 
     except requests.exceptions.RequestException as e:
         messagebox.showerror("Error", f"Error fetching data from the API: {e}")
+
 
 button_image_20 = PhotoImage(
     file=("button_20.png"))
@@ -971,7 +994,7 @@ canvas.create_text(
     980.0,
     708.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with \nour Introduction to User Experience Design course. Dive into the \nworld of interactive design, learn the fundamentals of user-centered \nthinking, and acquire the skills to create intuitive,",
+    text="Learn about the basics of Computing and leave \nas a job-ready graduate with a certificate from coventry university. ",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -1000,7 +1023,7 @@ canvas.create_text(
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
-#overflow part
+# overflow part
 button_image_21 = PhotoImage(
     file=("button_21.png"))
 button_21 = Button(
@@ -2215,7 +2238,7 @@ button_50 = Button(
     highlightthickness=0,
     command=lambda: print("button_50 clicked"),
     relief="flat"
-) 
+)
 canvas.create_window(790, 1644, anchor="nw", window=button_50)
 
 # button_50.place(
@@ -2311,9 +2334,8 @@ canvas.create_rectangle(
 # button_52 = Button(
 #     window,
 #     text="Home",
-    
-  
-    
+
+
 # )
 # canvas.create_window(464, 1817, anchor="nw", window=button_52)
 
@@ -2546,7 +2568,6 @@ canvas.create_rectangle(
 # canvas.create_window(979, 1856, anchor="nw", window=button_64)
 
 
-
 canvas.create_text(
     62.0,
     1750.0,
@@ -2601,19 +2622,23 @@ canvas.create_text(
     font=("Poppins Medium", 12 * -1)
 )
 
+
 def alert1():
-    messagebox.showinfo("Alert", "You are on Same page now") 
+    messagebox.showinfo("Alert", "You are on Same page now")
+
 
 def privacypolicy():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("homepage", "PrivacyPolicy"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(
+        os.getcwd().replace("homepage", "PrivacyPolicy"))
+    os.chdir(next_folder)
 
-        window.destroy()
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
+
 
 button_image_3 = PhotoImage(
     file=("button_3.png"))
@@ -2623,11 +2648,11 @@ button_3 = Button(
     highlightthickness=0,
     command=alert1,
     relief="flat",
-    text= "Home",
+    text="Home",
     bg="#3532A7",
     fg="#fff",
     cursor="hand2"
-    
+
 )
 canvas.create_window(506, 1830, anchor="nw", window=button_3)
 
@@ -2638,16 +2663,19 @@ canvas.create_window(506, 1830, anchor="nw", window=button_3)
 #     height=15.0
 # )
 
+
 def home():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","homepage"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(
+        os.getcwd().replace("PrivacyPolicy", "homepage"))
+    os.chdir(next_folder)
 
-        window.destroy()
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
+
 
 button_image_11 = PhotoImage(
     file=("button_11.png"))
@@ -2666,7 +2694,6 @@ button_11.place(
 )
 
 
-
 button_image_12 = PhotoImage(
     file=("button_3.png"))
 button_12 = Button(
@@ -2675,25 +2702,27 @@ button_12 = Button(
     highlightthickness=0,
     command=create_gui,
     relief="flat",
-    text= "About Us",
+    text="About Us",
     bg="#3532A7",
     fg="#fff",
     cursor="hand2"
-    
+
 
 )
 canvas.create_window(506, 1860, anchor="nw", window=button_12)
 
+
 def Courses():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("homepage","secondmainpage(courses_page)"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(os.getcwd().replace(
+        "homepage", "secondmainpage(courses_page)"))
+    os.chdir(next_folder)
 
-        window.destroy()
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
 
 
 courses = PhotoImage(
@@ -2704,11 +2733,11 @@ coursesbtn = Button(
     highlightthickness=0,
     command=Courses,
     relief="flat",
-    text= "Courses",
+    text="Courses",
     bg="#3532A7",
     fg="#fff",
     cursor="hand2"
-    
+
 
 )
 canvas.create_window(506, 1890, anchor="nw", window=coursesbtn)
@@ -2722,25 +2751,27 @@ eventbtn = Button(
     highlightthickness=0,
     command=create_gui,
     relief="flat",
-    text= "Events",
+    text="Events",
     bg="#3532A7",
     fg="#fff",
     cursor="hand2"
-    
+
 
 )
 canvas.create_window(506, 1920, anchor="nw", window=eventbtn)
 
+
 def Routines():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("homepage","routines"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(os.getcwd().replace("homepage", "routines"))
+    os.chdir(next_folder)
 
-        window.destroy()
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
+
 
 routinebtn = Button(
     # image=button_image_3,
@@ -2748,25 +2779,28 @@ routinebtn = Button(
     highlightthickness=0,
     command=Routines,
     relief="flat",
-    text= "Routines",    
+    text="Routines",
     bg="#3532A7",
     fg="#fff",
     cursor="hand2"
-    
+
 
 )
 canvas.create_window(506, 1950, anchor="nw", window=routinebtn)
 
+
 def termsandcondition():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("homepage","termsandconditions"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(os.getcwd().replace(
+        "homepage", "termsandconditions"))
+    os.chdir(next_folder)
 
-        window.destroy()
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
+
 
 termsandcon = Button(
     # image=button_image_3,
@@ -2774,17 +2808,15 @@ termsandcon = Button(
     highlightthickness=0,
     command=termsandcondition,
     relief="flat",
-    text= "Terms and Conditions",  
+    text="Terms and Conditions",
     bg="#3532A7",
     fg="#fff",
     cursor="hand2"
 
-    
+
 
 )
 canvas.create_window(740, 1830, anchor="nw", window=termsandcon)
-
-
 
 
 privacy = Button(
@@ -2793,25 +2825,27 @@ privacy = Button(
     highlightthickness=0,
     command=privacypolicy,
     relief="flat",
-    text= "Privacy Policy",
+    text="Privacy Policy",
     bg="#3532A7",
     fg="#fff",
     cursor="hand2"
-    
+
 
 )
 canvas.create_window(740, 1860, anchor="nw", window=privacy)
 
+
 def Support():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("homepage","support"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(os.getcwd().replace("homepage", "support"))
+    os.chdir(next_folder)
 
-        window.destroy()
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
+
 
 support = Button(
     # image=button_image_3,
@@ -2819,25 +2853,27 @@ support = Button(
     highlightthickness=0,
     command=Support,
     relief="flat",
-    text= "Support",
+    text="Support",
     bg="#3532A7",
     fg="#fff",
     cursor="hand2"
-    
+
 
 )
 canvas.create_window(740, 1890, anchor="nw", window=support)
 
+
 def Contact():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("homepage","contact_us"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(os.getcwd().replace("homepage", "contact_us"))
+    os.chdir(next_folder)
 
-        window.destroy()
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
+
 
 contact = Button(
     # image=button_image_3,
@@ -2845,11 +2881,11 @@ contact = Button(
     highlightthickness=0,
     command=Contact,
     relief="flat",
-    text= "Contact Us",
+    text="Contact Us",
     bg="#3532A7",
     fg="#fff",
     cursor="hand2"
-    
+
 
 )
 canvas.create_window(740, 1920, anchor="nw", window=contact)
@@ -2860,11 +2896,11 @@ cden = Button(
     highlightthickness=0,
     command=lambda: webbrowser.open_new(r"http://www.cden.org.np"),
     relief="flat",
-    text= "CDEN",
-       bg="#3532A7",
+    text="CDEN",
+    bg="#3532A7",
     fg="#fff",
     cursor="hand2"
-    
+
 
 )
 canvas.create_window(1010, 1830, anchor="nw", window=cden)
@@ -2875,11 +2911,11 @@ ioe = Button(
     highlightthickness=0,
     command=lambda: webbrowser.open_new(r"http://www.ioe.edu.np"),
     relief="flat",
-    text= "IOE",
-       bg="#3532A7",
+    text="IOE",
+    bg="#3532A7",
     fg="#fff",
     cursor="hand2"
-    
+
 
 )
 canvas.create_window(1010, 1860, anchor="nw", window=ioe)
@@ -2890,11 +2926,11 @@ tu = Button(
     highlightthickness=0,
     command=lambda: webbrowser.open_new(r"http://www.tu.edu.np"),
     relief="flat",
-    text= "TU",
-       bg="#3532A7",
+    text="TU",
+    bg="#3532A7",
     fg="#fff",
     cursor="hand2"
-    
+
 
 )
 canvas.create_window(1010, 1890, anchor="nw", window=tu)
@@ -2905,11 +2941,11 @@ cu = Button(
     highlightthickness=0,
     command=lambda: webbrowser.open_new(r"http://www.coventry.ac.uk"),
     relief="flat",
-    text= "Coventry University",
+    text="Coventry University",
     bg="#3532A7",
     fg="#fff",
     cursor="hand2"
-    
+
 
 )
 canvas.create_window(1010, 1920, anchor="nw", window=cu)
