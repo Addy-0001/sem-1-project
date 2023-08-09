@@ -1,0 +1,7 @@
+canvas.create_rectangle(
+    0.0,
+    1748.0,
+    1280.0,
+    1987.0,
+    fill="#3532A7",
+    outline="")
