@@ -1,6 +1,9 @@
+from tkinter import messagebox
 from tkinter import *
 from tkinter import ttk
-import os,sys,subprocess
+import os
+import sys
+import subprocess
 window = Tk()
 window.geometry("1280x800")
 window.configure(bg="#EEEFF3")
@@ -11,14 +14,13 @@ scrollbar = Scrollbar(window, orient="vertical", command=canvas.yview)
 canvas.configure(yscrollcommand=scrollbar.set)
 scrollbar.pack(side="right", fill="y")
 canvas.pack(fill="both", expand=True)
-from tkinter import messagebox
 
-
-    
 
 def create_gui():
-    
+
     messagebox.showinfo("Alert", "Feature is not available right now")
+
+
 def on_mousewheel(event):
     # Get the current scroll position
     current_pos = canvas.canvasy(0)
@@ -36,6 +38,7 @@ def on_mousewheel(event):
     elif event.delta >= 0 and current_pos >= 0:
         # Scroll up if not at the top
         canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+
 
 # Bind the mousewheel event to scroll the canvas
 canvas.bind_all("<MouseWheel>", on_mousewheel)
@@ -100,7 +103,7 @@ entry_1 = Entry(
     bg="#FFFFFF",
     fg="#000716",
     highlightthickness=0,
-    font=("lexend deca",16)
+    font=("lexend deca", 16)
 )
 canvas.create_window(717, 16, anchor="nw", window=entry_1)
 
@@ -124,97 +127,108 @@ canvas.create_window(1157, 23, anchor="nw", window=button_2)
 
 
 def routinesfile():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("computing_wala","routines"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(
+        os.getcwd().replace("computing_wala", "routines"))
+    os.chdir(next_folder)
 
-        window.destroy()
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
+
 
 def requestsfile():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("computing_wala","requests_notdone"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(os.getcwd().replace(
+        "computing_wala", "requests_notdone"))
+    os.chdir(next_folder)
 
-        window.destroy()
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
+
 
 def computingfile():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("computing_wala","computing_wala"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
-      
-        window.destroy()
+    # Change to the next folder
+    next_folder = os.path.join(os.getcwd().replace(
+        "computing_wala", "computing_wala"))
+    os.chdir(next_folder)
+
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
+
 
 def multimediafile():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("computing_wala","multimedia_wala"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(os.getcwd().replace(
+        "computing_wala", "multimedia_wala"))
+    os.chdir(next_folder)
 
-        window.destroy()
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
+
 
 def marketingfile():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("computing_wala","marketing_wala"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(os.getcwd().replace(
+        "computing_wala", "marketing_wala"))
+    os.chdir(next_folder)
 
-        window.destroy()
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
 
 
 def languagefile():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("computing_wala","language_wala"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(os.getcwd().replace(
+        "computing_wala", "language_wala"))
+    os.chdir(next_folder)
 
-        window.destroy() 
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
 
 
 def designingfile():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("computing_wala","designing_wala"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(os.getcwd().replace(
+        "computing_wala", "designing_wala"))
+    os.chdir(next_folder)
 
-        window.destroy() 
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
 
 
 def homefile():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("computing_wala", "homepage"))
-        print(next_folder)
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(
+        os.getcwd().replace("computing_wala", "homepage"))
+    print(next_folder)
+    os.chdir(next_folder)
 
-        window.destroy() 
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
 
+    window.destroy()
 
 
 button_image_3 = PhotoImage(
@@ -367,9 +381,6 @@ button_10 = Button(
 canvas.create_window(660, 457, anchor="nw", window=button_10)
 
 
-
-
-
 button_image_11 = PhotoImage(
     file=("button_11.png"))
 button_11 = Button(
@@ -380,7 +391,6 @@ button_11 = Button(
     relief="flat"
 )
 canvas.create_window(785, 457, anchor="nw", window=button_11)
-
 
 
 button_image_12 = PhotoImage(
@@ -545,7 +555,7 @@ canvas.create_text(
     107.0,
     691.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Bsc. Hons. Computing",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -554,7 +564,7 @@ canvas.create_text(
     107.0,
     988.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="BSc. (Hons.) Computing",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -563,7 +573,7 @@ canvas.create_text(
     401.0,
     691.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="BSc. (Hons.) Computing",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -572,7 +582,7 @@ canvas.create_text(
     401.0,
     988.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="BSc. (Hons.) Computing",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -581,7 +591,7 @@ canvas.create_text(
     704.0,
     691.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="BSc. (Hons.) Computing",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -590,7 +600,7 @@ canvas.create_text(
     704.0,
     988.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="BSc. (Hons.) Computing",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -599,7 +609,7 @@ canvas.create_text(
     1000.0,
     693.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="BSc. (Hons.) Computing",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -608,7 +618,7 @@ canvas.create_text(
     1000.0,
     990.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="BSc. (Hons.) Computing",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -624,7 +634,6 @@ button_13 = Button(
 )
 
 canvas.create_window(107, 661, anchor="nw", window=button_13)
-
 
 
 button_image_14 = PhotoImage(
@@ -665,7 +674,6 @@ button_16 = Button(
 canvas.create_window(401, 958, anchor="nw", window=button_16)
 
 
-
 button_image_17 = PhotoImage(
     file=("button_17.png"))
 button_17 = Button(
@@ -679,7 +687,6 @@ button_17 = Button(
 canvas.create_window(704, 661, anchor="nw", window=button_17)
 
 
-
 button_image_18 = PhotoImage(
     file=("button_18.png"))
 button_18 = Button(
@@ -690,7 +697,6 @@ button_18 = Button(
     relief="flat"
 )
 canvas.create_window(704, 958, anchor="nw", window=button_18)
-
 
 
 button_image_19 = PhotoImage(
@@ -716,7 +722,6 @@ button_20 = Button(
     relief="flat"
 )
 canvas.create_window(1000, 960, anchor="nw", window=button_20)
-
 
 
 image_image_12 = PhotoImage(
@@ -851,7 +856,7 @@ canvas.create_text(
     107.0,
     708.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Learn about the basics of Computing and leave \nas a job-ready graduate with a certificate from coventry university. ",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -860,7 +865,7 @@ canvas.create_text(
     107.0,
     1005.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Learn about the basics of Computing and leave \nas a job-ready graduate with a certificate from coventry university. ",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -869,7 +874,7 @@ canvas.create_text(
     401.0,
     708.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Learn about the basics of Computing and leave \nas a job-ready graduate with a certificate from coventry university. ",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -878,7 +883,7 @@ canvas.create_text(
     401.0,
     1005.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Learn about the basics of Computing and leave \nas a job-ready graduate with a certificate from coventry university. ",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -887,7 +892,7 @@ canvas.create_text(
     704.0,
     708.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Learn about the basics of Computing and leave \nas a job-ready graduate with a certificate from coventry university. ",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -896,7 +901,7 @@ canvas.create_text(
     704.0,
     1005.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Learn about the basics of Computing and leave \nas a job-ready graduate with a certificate from coventry university. ",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -905,7 +910,7 @@ canvas.create_text(
     1000.0,
     710.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Learn about the basics of Computing and leave \nas a job-ready graduate with a certificate from coventry university. ",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -914,7 +919,7 @@ canvas.create_text(
     1000.0,
     1007.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Learn about the basics of Computing and leave \nas a job-ready graduate with a certificate from coventry university. ",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -1073,7 +1078,6 @@ button_26 = Button(
 canvas.create_window(989, 1338, anchor="nw", window=button_26)
 
 
-
 button_image_27 = PhotoImage(
     file=("button_27.png"))
 button_27 = Button(
@@ -1110,7 +1114,6 @@ button_29 = Button(
 canvas.create_window(716, 1338, anchor="nw", window=button_29)
 
 
-
 button_image_30 = PhotoImage(
     file=("button_30.png"))
 button_30 = Button(
@@ -1133,7 +1136,6 @@ button_31 = Button(
     relief="flat"
 )
 canvas.create_window(483, 1316, anchor="nw", window=button_31)
-
 
 
 button_image_32 = PhotoImage(
