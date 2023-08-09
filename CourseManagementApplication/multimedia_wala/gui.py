@@ -1,6 +1,10 @@
+from tkinter import messagebox
 from tkinter import *
 from tkinter import ttk
-import os,sys,subprocess
+import os
+import sys
+import subprocess
+import requests
 window = Tk()
 window.geometry("1280x800")
 window.configure(bg="#EEEFF3")
@@ -11,14 +15,13 @@ scrollbar = Scrollbar(window, orient="vertical", command=canvas.yview)
 canvas.configure(yscrollcommand=scrollbar.set)
 scrollbar.pack(side="right", fill="y")
 canvas.pack(fill="both", expand=True)
-from tkinter import messagebox
 
-
-    
 
 def create_gui():
-    
+
     messagebox.showinfo("Alert", "Feature is not available right now")
+
+
 def on_mousewheel(event):
     # Get the current scroll position
     current_pos = canvas.canvasy(0)
@@ -36,6 +39,7 @@ def on_mousewheel(event):
     elif event.delta >= 0 and current_pos >= 0:
         # Scroll up if not at the top
         canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+
 
 # Bind the mousewheel event to scroll the canvas
 canvas.bind_all("<MouseWheel>", on_mousewheel)
@@ -90,105 +94,114 @@ canvas.create_window(1160, 20, anchor="nw", window=button_1)
 
 
 def routinesfile():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("multimedia_wala","routines"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(
+        os.getcwd().replace("multimedia_wala", "routines"))
+    os.chdir(next_folder)
 
-        window.destroy()
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
+
 
 def requestsfile():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("multimedia_wala","requests_notdone"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(os.getcwd().replace(
+        "multimedia_wala", "requests_notdone"))
+    os.chdir(next_folder)
 
-        window.destroy()
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
+
 
 def computingfile():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("multimedia_wala","computing_wala"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
-      
-        window.destroy()
+    # Change to the next folder
+    next_folder = os.path.join(os.getcwd().replace(
+        "multimedia_wala", "computing_wala"))
+    os.chdir(next_folder)
+
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
+
 
 def multimediafile():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("multimedia_wala","multimedia_wala"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(os.getcwd().replace(
+        "multimedia_wala", "multimedia_wala"))
+    os.chdir(next_folder)
 
-        window.destroy()
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
+
 
 def marketingfile():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("multimedia_wala","marketing_wala"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(os.getcwd().replace(
+        "multimedia_wala", "marketing_wala"))
+    os.chdir(next_folder)
 
-        window.destroy()
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
 
 
 def languagefile():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("multimedia_wala","language_wala"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(os.getcwd().replace(
+        "multimedia_wala", "language_wala"))
+    os.chdir(next_folder)
 
-        window.destroy() 
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
 
 
 def designingfile():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("multimedia_wala","designing_wala"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(os.getcwd().replace(
+        "multimedia_wala", "designing_wala"))
+    os.chdir(next_folder)
 
-        window.destroy() 
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
 
 
 def homefile():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("multimedia_wala", "homepage"))
-        print(next_folder)
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(
+        os.getcwd().replace("multimedia_wala", "homepage"))
+    print(next_folder)
+    os.chdir(next_folder)
 
-        window.destroy() 
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
 
-
-
+    window.destroy()
 
 
 entry_image_1 = PhotoImage(
     file=("entry_1.png"))
 entry_bg_1 = canvas.create_image(
-   
+
     854.5,
     41.0,
     image=entry_image_1
@@ -314,7 +327,7 @@ canvas.create_window(459, 31, anchor="nw", window=button_6)
 #     height=28.0
 # )
 
-##header ends
+# header ends
 
 image_image_1 = PhotoImage(
     file=("image_1.png"))
@@ -331,7 +344,6 @@ image_2 = canvas.create_image(
     300.21270751953125,
     image=image_image_2
 )
-
 
 
 button_image_7 = PhotoImage(
@@ -574,7 +586,7 @@ canvas.create_text(
     401.0,
     691.731689453125,
     anchor="nw",
-    text="Computing React Course",
+    text="Introduction to Multimedia",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -784,13 +796,64 @@ image_18 = canvas.create_image(
     image=image_image_18
 )
 
+# Code for fetching api data of multimedia
+
+
+def bbc():
+    try:
+        # Replace 'YOUR_API_URL' with the actual API endpoint URL
+        response = requests.get('https://virtuedu.com/api_virtuedu/modules/')
+        data_list = response.json()
+
+        # Check if any data has 'module_id' as '123Eth'
+        found_data = [data for data in data_list if data.get(
+            'module_id') == 'bbc']
+
+        if found_data:
+            new_window = Toplevel()
+            new_window.geometry("500x500")
+            new_window.title("Fetched Data")
+
+            y_position = 30
+
+            # Format and display the data in labels
+            for data in found_data:
+                title_label = Label(new_window, text=f"Title: {data.get('module_name')}",
+                                    font=("Lexend deca", 15, "bold"), wraplength=400, justify=LEFT)
+                title_label.place(x=30, y=y_position)
+                y_position += title_label.winfo_reqheight()
+
+                description_label = Label(new_window, text=f"Description: {data.get('module_description')}",
+                                          wraplength=400, justify=LEFT)
+                description_label.place(x=30, y=y_position)
+                y_position += description_label.winfo_reqheight()
+
+                tutor_label = Label(new_window, text=f"Tutor: {data.get('tutor_name')}",
+                                    wraplength=400, justify=LEFT)
+                tutor_label.place(x=30, y=y_position)
+                y_position += tutor_label.winfo_reqheight()
+
+                # Add other labels to display other data as needed
+
+                separator = Frame(new_window, height=2, bd=1, relief=SUNKEN)
+                separator.pack(fill=X, padx=5, pady=5)
+                y_position += 10
+
+        else:
+            messagebox.showinfo(
+                "Info", "Data is not available for module_id '123Eth'")
+
+    except requests.exceptions.RequestException as e:
+        messagebox.showerror("Error", f"Error fetching data from the API: {e}")
+
+
 button_image_21 = PhotoImage(
     file=("button_21.png"))
 button_21 = Button(
     image=button_image_21,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_21 clicked"),
+    command=bbc,
     relief="flat"
 )
 canvas.create_window(108, 747, anchor="nw", window=button_21)
@@ -807,6 +870,56 @@ button_22 = Button(
 )
 canvas.create_window(108, 1044, anchor="nw", window=button_22)
 
+# Code for fetching API of Intro to multimedia module
+
+
+def multi001():
+    try:
+        # Replace 'YOUR_API_URL' with the actual API endpoint URL
+        response = requests.get('https://virtuedu.com/api_virtuedu/modules/')
+        data_list = response.json()
+
+        # Check if any data has 'module_id' as '123Eth'
+        found_data = [data for data in data_list if data.get(
+            'module_id') == 'multi001']
+
+        if found_data:
+            new_window = Toplevel()
+            new_window.geometry("500x500")
+            new_window.title("Fetched Data")
+
+            y_position = 30
+
+            # Format and display the data in labels
+            for data in found_data:
+                title_label = Label(new_window, text=f"Title: {data.get('module_name')}",
+                                    font=("Lexend deca", 15, "bold"), wraplength=400, justify=LEFT)
+                title_label.place(x=30, y=y_position)
+                y_position += title_label.winfo_reqheight()
+
+                description_label = Label(new_window, text=f"Description: {data.get('module_description')}",
+                                          wraplength=400, justify=LEFT)
+                description_label.place(x=30, y=y_position)
+                y_position += description_label.winfo_reqheight()
+
+                tutor_label = Label(new_window, text=f"Tutor: {data.get('tutor_name')}",
+                                    wraplength=400, justify=LEFT)
+                tutor_label.place(x=30, y=y_position)
+                y_position += tutor_label.winfo_reqheight()
+
+                # Add other labels to display other data as needed
+
+                separator = Frame(new_window, height=2, bd=1, relief=SUNKEN)
+                separator.pack(fill=X, padx=5, pady=5)
+                y_position += 10
+
+        else:
+            messagebox.showinfo(
+                "Info", "Data is not available for module_id '123Eth'")
+
+    except requests.exceptions.RequestException as e:
+        messagebox.showerror("Error", f"Error fetching data from the API: {e}")
+
 
 button_image_23 = PhotoImage(
     file=("button_23.png"))
@@ -814,7 +927,7 @@ button_23 = Button(
     image=button_image_23,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_23 clicked"),
+    command=multi001,
     relief="flat"
 )
 canvas.create_window(402, 747, anchor="nw", window=button_23)
@@ -831,6 +944,56 @@ button_24 = Button(
 )
 canvas.create_window(402, 1044, anchor="nw", window=button_24)
 
+# Code to fetch api of Email Marketing Certification
+
+
+def inbound():
+    try:
+        # Replace 'YOUR_API_URL' with the actual API endpoint URL
+        response = requests.get('https://virtuedu.com/api_virtuedu/modules/')
+        data_list = response.json()
+
+        # Check if any data has 'module_id' as '123Eth'
+        found_data = [data for data in data_list if data.get(
+            'module_id') == 'inbound']
+
+        if found_data:
+            new_window = Toplevel()
+            new_window.geometry("500x500")
+            new_window.title("Fetched Data")
+
+            y_position = 30
+
+            # Format and display the data in labels
+            for data in found_data:
+                title_label = Label(new_window, text=f"Title: {data.get('module_name')}",
+                                    font=("Lexend deca", 15, "bold"), wraplength=400, justify=LEFT)
+                title_label.place(x=30, y=y_position)
+                y_position += title_label.winfo_reqheight()
+
+                description_label = Label(new_window, text=f"Description: {data.get('module_description')}",
+                                          wraplength=400, justify=LEFT)
+                description_label.place(x=30, y=y_position)
+                y_position += description_label.winfo_reqheight()
+
+                tutor_label = Label(new_window, text=f"Tutor: {data.get('tutor_name')}",
+                                    wraplength=400, justify=LEFT)
+                tutor_label.place(x=30, y=y_position)
+                y_position += tutor_label.winfo_reqheight()
+
+                # Add other labels to display other data as needed
+
+                separator = Frame(new_window, height=2, bd=1, relief=SUNKEN)
+                separator.pack(fill=X, padx=5, pady=5)
+                y_position += 10
+
+        else:
+            messagebox.showinfo(
+                "Info", "Data is not available for module_id '123Eth'")
+
+    except requests.exceptions.RequestException as e:
+        messagebox.showerror("Error", f"Error fetching data from the API: {e}")
+
 
 button_image_25 = PhotoImage(
     file=("button_25.png"))
@@ -838,7 +1001,7 @@ button_25 = Button(
     image=button_image_25,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_25 clicked"),
+    command=inbound,
     relief="flat"
 )
 canvas.create_window(705, 747, anchor="nw", window=button_25)
