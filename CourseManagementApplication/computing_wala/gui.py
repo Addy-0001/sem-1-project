@@ -3,7 +3,8 @@ from tkinter import *
 from tkinter import ttk
 import os
 import sys
-import subprocess
+import subprocess, webbrowser
+import requests
 window = Tk()
 window.geometry("1280x800")
 window.configure(bg="#EEEFF3")
@@ -232,16 +233,19 @@ def homefile():
 
     window.destroy()
 
+
 def buildfile():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("computing_wala","build"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(os.getcwd().replace("computing_wala", "build"))
+    os.chdir(next_folder)
 
-        window.destroy()
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
+
+
 button_image_3 = PhotoImage(
     file=("home.png"))
 button_3 = Button(
@@ -576,7 +580,7 @@ canvas.create_text(
     107.0,
     691.731689453125,
     anchor="nw",
-    text="Bsc. Hons. Computing",
+    text="PostgreSQL with Django",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -594,7 +598,7 @@ canvas.create_text(
     401.0,
     691.731689453125,
     anchor="nw",
-    text="BSc. (Hons.) Computing",
+    text="HTML Basics",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -612,7 +616,7 @@ canvas.create_text(
     704.0,
     691.731689453125,
     anchor="nw",
-    text="BSc. (Hons.) Computing",
+    text="Flutter Basics",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -630,7 +634,7 @@ canvas.create_text(
     1000.0,
     693.731689453125,
     anchor="nw",
-    text="BSc. (Hons.) Computing",
+    text="CSS Basics",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -897,60 +901,6 @@ canvas.create_rectangle(
     fill="#3532A7",
     outline="")
 
-canvas.create_text(
-    31.0,
-    1224.0,
-    anchor="nw",
-    text="VirtuEdu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 32 * -1)
-)
-
-canvas.create_text(
-    471.0,
-    1223.0,
-    anchor="nw",
-    text="Menu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 24 * -1)
-)
-
-canvas.create_text(
-    705.0,
-    1223.0,
-    anchor="nw",
-    text="Menu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 24 * -1)
-)
-
-canvas.create_text(
-    975.0,
-    1223.0,
-    anchor="nw",
-    text="Menu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 24 * -1)
-)
-
-canvas.create_text(
-    53.0,
-    1266.0,
-    anchor="nw",
-    text="Learn Anywhere, Achieve Everywhere",
-    fill="#FFFFFF",
-    font=("Poppins Regular", 11 * -1)
-)
-
-canvas.create_text(
-    53.0,
-    1291.0,
-    anchor="nw",
-    text="\nour innovative online learning platform empowers students to pursue their educational goals from anywhere in the \nworld. With flexible schedules and high-quality courses, we provide the tools and resources necessary for you to excel \nin your studies and succeed in any endeavor. Join our global community of learners and unlock your full potential with \n Virtu Edu.",
-    fill="#FFFFFF",
-    font=("Poppins Medium", 12 * -1)
-)
-
 button_image_21 = PhotoImage(
     file=("button_21.png"))
 button_21 = Button(
@@ -1048,72 +998,6 @@ button_26 = Button(
 )
 canvas.create_window(989, 1338, anchor="nw", window=button_26)
 
-
-button_image_27 = PhotoImage(
-    file=("button_27.png"))
-button_27 = Button(
-    image=button_image_27,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_27 clicked"),
-    relief="flat",
-    cursor="hand2"
-)
-canvas.create_window(716, 1288, anchor="nw", window=button_27)
-
-
-button_image_28 = PhotoImage(
-    file=("button_28.png"))
-button_28 = Button(
-    image=button_image_28,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_28 clicked"),
-    relief="flat",
-    cursor="hand2"
-)
-canvas.create_window(716, 1313, anchor="nw", window=button_28)
-
-
-button_image_29 = PhotoImage(
-    file=("button_29.png"))
-button_29 = Button(
-    image=button_image_29,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_29 clicked"),
-    relief="flat",
-    cursor="hand2"
-)
-canvas.create_window(716, 1338, anchor="nw", window=button_29)
-
-
-button_image_30 = PhotoImage(
-    file=("button_30.png"))
-button_30 = Button(
-    image=button_image_30,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_30 clicked"),
-    relief="flat",
-    cursor="hand2"
-)
-canvas.create_window(483, 1291, anchor="nw", window=button_30)
-
-
-button_image_31 = PhotoImage(
-    file=("button_31.png"))
-button_31 = Button(
-    image=button_image_31,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_31 clicked"),
-    relief="flat",
-    cursor="hand2"
-)
-canvas.create_window(483, 1316, anchor="nw", window=button_31)
-
-
 button_image_32 = PhotoImage(
     file=("button_32.png"))
 button_32 = Button(
@@ -1149,8 +1033,52 @@ button_33.place(
 )
 
 
+def Web005():
+    try:
+        # Replace 'YOUR_API_URL' with the actual API endpoint URL
+        response = requests.get('https://virtuedu.com/api_virtuedu/modules/')
+        data_list = response.json()
 
+        # Check if any data has 'module_id' as '123Eth'
+        found_data = [data for data in data_list if data.get(
+            'module_id') == 'Web005']
 
+        if found_data:
+            new_window = Toplevel()
+            new_window.geometry("500x500")
+            new_window.title("Fetched Data")
+
+            y_position = 30
+
+            # Format and display the data in labels
+            for data in found_data:
+                title_label = Label(new_window, text=f"Title: {data.get('module_name')}",
+                                    font=("Lexend deca", 15, "bold"), wraplength=400, justify=LEFT)
+                title_label.place(x=30, y=y_position)
+                y_position += title_label.winfo_reqheight()
+
+                description_label = Label(new_window, text=f"Description: {data.get('module_description')}",
+                                          wraplength=400, justify=LEFT)
+                description_label.place(x=30, y=y_position)
+                y_position += description_label.winfo_reqheight()
+
+                tutor_label = Label(new_window, text=f"Tutor: {data.get('tutor_name')}",
+                                    wraplength=400, justify=LEFT)
+                tutor_label.place(x=30, y=y_position)
+                y_position += tutor_label.winfo_reqheight()
+
+                # Add other labels to display other data as needed
+
+                separator = Frame(new_window, height=2, bd=1, relief=SUNKEN)
+                separator.pack(fill=X, padx=5, pady=5)
+                y_position += 10
+
+        else:
+            messagebox.showinfo(
+                "Info", "Data is not available for module_id '123Eth'")
+
+    except requests.exceptions.RequestException as e:
+        messagebox.showerror("Error", f"Error fetching data from the API: {e}")
 
 
 button_image_34 = PhotoImage(
@@ -1159,7 +1087,7 @@ button_34 = Button(
     image=button_image_34,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_34 clicked"),
+    command=Web005,
     relief="flat",
     cursor="hand2"
 )
@@ -1178,13 +1106,62 @@ button_35 = Button(
 )
 canvas.create_window(108, 1044, anchor="nw", window=button_22)
 
+
+def Web001():
+    try:
+        # Replace 'YOUR_API_URL' with the actual API endpoint URL
+        response = requests.get('https://virtuedu.com/api_virtuedu/modules/')
+        data_list = response.json()
+
+        # Check if any data has 'module_id' as '123Eth'
+        found_data = [data for data in data_list if data.get(
+            'module_id') == 'Web001']
+
+        if found_data:
+            new_window = Toplevel()
+            new_window.geometry("500x500")
+            new_window.title("Fetched Data")
+
+            y_position = 30
+
+            # Format and display the data in labels
+            for data in found_data:
+                title_label = Label(new_window, text=f"Title: {data.get('module_name')}",
+                                    font=("Lexend deca", 15, "bold"), wraplength=400, justify=LEFT)
+                title_label.place(x=30, y=y_position)
+                y_position += title_label.winfo_reqheight()
+
+                description_label = Label(new_window, text=f"Description: {data.get('module_description')}",
+                                          wraplength=400, justify=LEFT)
+                description_label.place(x=30, y=y_position)
+                y_position += description_label.winfo_reqheight()
+
+                tutor_label = Label(new_window, text=f"Tutor: {data.get('tutor_name')}",
+                                    wraplength=400, justify=LEFT)
+                tutor_label.place(x=30, y=y_position)
+                y_position += tutor_label.winfo_reqheight()
+
+                # Add other labels to display other data as needed
+
+                separator = Frame(new_window, height=2, bd=1, relief=SUNKEN)
+                separator.pack(fill=X, padx=5, pady=5)
+                y_position += 10
+
+        else:
+            messagebox.showinfo(
+                "Info", "Data is not available for module_id '123Eth'")
+
+    except requests.exceptions.RequestException as e:
+        messagebox.showerror("Error", f"Error fetching data from the API: {e}")
+
+
 button_image_36 = PhotoImage(
     file=("button_400.png"))
 button_36 = Button(
     image=button_image_36,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_36 clicked"),
+    command=Web001,
     relief="flat",
     cursor="hand2"
 )
@@ -1204,13 +1181,61 @@ button_37 = Button(
 canvas.create_window(402, 1044, anchor="nw", window=button_24)
 
 
+def Mobile001():
+    try:
+        # Replace 'YOUR_API_URL' with the actual API endpoint URL
+        response = requests.get('https://virtuedu.com/api_virtuedu/modules/')
+        data_list = response.json()
+
+        # Check if any data has 'module_id' as '123Eth'
+        found_data = [data for data in data_list if data.get(
+            'module_id') == 'Mobile001']
+
+        if found_data:
+            new_window = Toplevel()
+            new_window.geometry("500x500")
+            new_window.title("Fetched Data")
+
+            y_position = 30
+
+            # Format and display the data in labels
+            for data in found_data:
+                title_label = Label(new_window, text=f"Title: {data.get('module_name')}",
+                                    font=("Lexend deca", 15, "bold"), wraplength=400, justify=LEFT)
+                title_label.place(x=30, y=y_position)
+                y_position += title_label.winfo_reqheight()
+
+                description_label = Label(new_window, text=f"Description: {data.get('module_description')}",
+                                          wraplength=400, justify=LEFT)
+                description_label.place(x=30, y=y_position)
+                y_position += description_label.winfo_reqheight()
+
+                tutor_label = Label(new_window, text=f"Tutor: {data.get('tutor_name')}",
+                                    wraplength=400, justify=LEFT)
+                tutor_label.place(x=30, y=y_position)
+                y_position += tutor_label.winfo_reqheight()
+
+                # Add other labels to display other data as needed
+
+                separator = Frame(new_window, height=2, bd=1, relief=SUNKEN)
+                separator.pack(fill=X, padx=5, pady=5)
+                y_position += 10
+
+        else:
+            messagebox.showinfo(
+                "Info", "Data is not available for module_id '123Eth'")
+
+    except requests.exceptions.RequestException as e:
+        messagebox.showerror("Error", f"Error fetching data from the API: {e}")
+
+
 button_image_38 = PhotoImage(
     file=("button_400.png"))
 button_38 = Button(
     image=button_image_38,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_38 clicked"),
+    command=Mobile001,
     relief="flat",
     cursor="hand2"
 )
@@ -1230,13 +1255,61 @@ button_39 = Button(
 canvas.create_window(705, 1044, anchor="nw", window=button_26)
 
 
+def Web002():
+    try:
+        # Replace 'YOUR_API_URL' with the actual API endpoint URL
+        response = requests.get('https://virtuedu.com/api_virtuedu/modules/')
+        data_list = response.json()
+
+        # Check if any data has 'module_id' as '123Eth'
+        found_data = [data for data in data_list if data.get(
+            'module_id') == 'Web002']
+
+        if found_data:
+            new_window = Toplevel()
+            new_window.geometry("500x500")
+            new_window.title("Fetched Data")
+
+            y_position = 30
+
+            # Format and display the data in labels
+            for data in found_data:
+                title_label = Label(new_window, text=f"Title: {data.get('module_name')}",
+                                    font=("Lexend deca", 15, "bold"), wraplength=400, justify=LEFT)
+                title_label.place(x=30, y=y_position)
+                y_position += title_label.winfo_reqheight()
+
+                description_label = Label(new_window, text=f"Description: {data.get('module_description')}",
+                                          wraplength=400, justify=LEFT)
+                description_label.place(x=30, y=y_position)
+                y_position += description_label.winfo_reqheight()
+
+                tutor_label = Label(new_window, text=f"Tutor: {data.get('tutor_name')}",
+                                    wraplength=400, justify=LEFT)
+                tutor_label.place(x=30, y=y_position)
+                y_position += tutor_label.winfo_reqheight()
+
+                # Add other labels to display other data as needed
+
+                separator = Frame(new_window, height=2, bd=1, relief=SUNKEN)
+                separator.pack(fill=X, padx=5, pady=5)
+                y_position += 10
+
+        else:
+            messagebox.showinfo(
+                "Info", "Data is not available for module_id '123Eth'")
+
+    except requests.exceptions.RequestException as e:
+        messagebox.showerror("Error", f"Error fetching data from the API: {e}")
+
+
 button_image_40 = PhotoImage(
     file=("button_400.png"))
 button_40 = Button(
     image=button_image_40,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_40 clicked"),
+    command=Web002,
     relief="flat",
     cursor="hand2"
 )
@@ -1291,6 +1364,350 @@ button_44 = Button(
     cursor="hand2"
 )
 canvas.create_window(705, 1046, anchor="nw", window=button_44)
+
+
+# footer
+
+
+
+canvas.create_text(
+    62.0,
+    1214.0,
+    anchor="nw",
+    text="VirtuEdu",
+    fill="#FFFFFF",
+    font=("Poppins SemiBold", 32 * -1)
+)
+
+canvas.create_text(
+    506.0,
+    1254.0,
+    anchor="nw",
+    text="Menu",
+    fill="#fff",
+    font=("Poppins SemiBold", 24 * -1)
+)
+
+canvas.create_text(
+    740.0,
+    1254.0,
+    anchor="nw",
+    text="Menu",
+    fill="#fff",
+    font=("Poppins SemiBold", 24 * -1)
+)
+
+canvas.create_text(
+    1010.0,
+    1254.0,
+    anchor="nw",
+    text="Menu",
+    fill="#FFFFFF",
+    font=("Poppins SemiBold", 24 * -1)
+)
+
+canvas.create_text(
+    88.0,
+    1254.0,
+    anchor="nw",
+    text="Learn Anywhere, Achieve Everywhere",
+    fill="#FFFFFF",
+    font=("Poppins Regular", 11 * -1)
+)
+
+canvas.create_text(
+    50.0,
+    1254.0,
+    anchor="nw",
+    text="Our innovative online learning platform empowers students\nto pursue their educational goals from anywhere in the world.\nWith flexible schedules and high-quality courses, we provide the\ntools and resources necessary for you to excel in your studies\nand succeed in any endeavor. Join our global community of\nlearners and unlock your full potential with Virtu Edu.",
+    fill="#fff",
+    font=("Poppins Medium", 12 * -1)
+)
+
+
+def Homes():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","homepage"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
+button_image_3 = PhotoImage(
+    file=("button_3.png"))
+button_3 = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=Homes,
+    relief="flat",
+    text= "Home",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+)
+canvas.create_window(506, 1304, anchor="nw", window=button_3)
+
+# button_3.place(
+#     x=518.0,
+#     y=2615.0,
+#     width=30.0,
+#     height=15.0
+# )
+
+
+button_image_112 = PhotoImage(
+    file=("button_3.png"))
+button_112 = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=create_gui,
+    relief="flat",
+    text= "About Us",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(506, 1330, anchor="nw", window=button_112)
+
+def Courses():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","secondmainpage(courses_page)"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
+
+courses = PhotoImage(
+    file=("button_3.png"))
+coursesbtn = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=Courses,
+    relief="flat",
+    text= "Courses",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(506, 1364, anchor="nw", window=coursesbtn)
+
+
+events = PhotoImage(
+    file=("button_3.png"))
+eventbtn = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=create_gui,
+    relief="flat",
+    text= "Events",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(506, 1394, anchor="nw", window=eventbtn)
+
+def Routines():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","routines"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
+routinebtn = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=Routines,
+    relief="flat",
+    text= "Routines",    
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(506, 1424, anchor="nw", window=routinebtn)
+
+def termsandcondition():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","termsandconditions"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
+termsandcon = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=termsandcondition,
+    relief="flat",
+    text= "Terms and Conditions",  
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+
+    
+
+)
+canvas.create_window(740, 1304, anchor="nw", window=termsandcon)
+
+
+def alert1():
+    messagebox.showinfo("Alert", "You are on Same page now") 
+
+privacy = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=alert1,
+    relief="flat",
+    text= "Privacy Policy",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(740, 1334, anchor="nw", window=privacy)
+
+def Support():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","support"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
+support = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=Support,
+    relief="flat",
+    text= "Support",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(740, 1364, anchor="nw", window=support)
+
+def Contact():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","contact_us"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
+contact = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=Contact,
+    relief="flat",
+    text= "Contact Us",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(740, 1394, anchor="nw", window=contact)
+
+cden = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: webbrowser.open_new(r"http://www.cden.org.np"),
+    relief="flat",
+    text= "CDEN",
+       bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(1010, 1304, anchor="nw", window=cden)
+
+ioe = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: webbrowser.open_new(r"http://www.ioe.edu.np"),
+    relief="flat",
+    text= "IOE",
+       bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(1010, 1334, anchor="nw", window=ioe)
+
+tu = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: webbrowser.open_new(r"http://www.tu.edu.np"),
+    relief="flat",
+    text= "TU",
+       bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(1010, 1364, anchor="nw", window=tu)
+
+cu = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: webbrowser.open_new(r"http://www.coventry.ac.uk"),
+    relief="flat",
+    text= "Coventry University",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(1010, 1394, anchor="nw", window=cu)
+
 
 window.resizable(False, False)
 window.mainloop()

@@ -910,14 +910,7 @@ canvas.create_rectangle(
     fill="#3532A7",
     outline="")
 
-canvas.create_text(
-    56.0,
-    1776.0,
-    anchor="nw",
-    text="VirtuEdu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 25 * -1)
-)
+
 
 canvas.create_text(
     97.0,
@@ -937,68 +930,6 @@ canvas.create_text(
     font=("Poppins SemiBold", 25 * -1)
 )
 
-canvas.create_text(
-    461.0,
-    1785.0,
-    anchor="nw",
-    text="Menu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 20 * -1)
-)
-
-canvas.create_text(
-    745.0,
-    1787.0,
-    anchor="nw",
-    text="Menu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 20 * -1)
-)
-
-canvas.create_text(
-    974.0,
-    1787.0,
-    anchor="nw",
-    text="Menu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 20 * -1)
-)
-
-canvas.create_text(
-    63.0,
-    1824.0,
-    anchor="nw",
-    text="\nour innovative online learning platform empowers students to pursue their educational goals from anywhere in the \nworld. With flexible schedules and high-quality courses, we provide the tools and resources necessary for you to excel \nin your studies and succeed in any endeavor. Join our global community of learners and unlock your full potential with \n Virtu Edu.",
-    fill="#FFFFFF",
-    font=("Poppins Medium", 13 * -1)
-)
-
-canvas.create_text(
-    464.0,
-    1817.0,
-    anchor="nw",
-    text="Home\nAbout Us\nCourses\nEvents\nRoutine",
-    fill="#FFFFFF",
-    font=("Poppins Medium", 15 * -1)
-)
-
-canvas.create_text(
-    756.0,
-    1817.0,
-    anchor="nw",
-    text="Terms and Condition\nPrivacy and Policy\nSupport\nContact Us",
-    fill="#FFFFFF",
-    font=("Poppins Medium", 15 * -1)
-)
-
-canvas.create_text(
-    979.0,
-    1817.0,
-    anchor="nw",
-    text="CDEN\nIOE\nTU\nCoventry University",
-    fill="#FFFFFF",
-    font=("Poppins Medium", 15 * -1)
-)
 
 canvas.create_rectangle(
     123.0,
@@ -1388,14 +1319,351 @@ image_20 = canvas.create_image(
     image=image_image_20
 )
 
+
+
+#footer
+
+
 canvas.create_text(
-    63.0,
-    1804.0,
+    62.0,
+    1750.0,
+    anchor="nw",
+    text="VirtuEdu",
+    fill="#FFFFFF",
+    font=("Poppins SemiBold", 32 * -1)
+)
+
+canvas.create_text(
+    506.0,
+    1780.0,
+    anchor="nw",
+    text="Menu",
+    fill="#fff",
+    font=("Poppins SemiBold", 24 * -1)
+)
+
+canvas.create_text(
+    740.0,
+    1780.0,
+    anchor="nw",
+    text="Menu",
+    fill="#fff",
+    font=("Poppins SemiBold", 24 * -1)
+)
+
+canvas.create_text(
+    1010.0,
+    1780.0,
+    anchor="nw",
+    text="Menu",
+    fill="#FFFFFF",
+    font=("Poppins SemiBold", 24 * -1)
+)
+
+canvas.create_text(
+    88.0,
+    1790.0,
     anchor="nw",
     text="Learn Anywhere, Achieve Everywhere",
     fill="#FFFFFF",
-    font=("Poppins Regular", 6 * -1)
+    font=("Poppins Regular", 11 * -1)
 )
+
+canvas.create_text(
+    50.0,
+    1830.0,
+    anchor="nw",
+    text="Our innovative online learning platform empowers students\nto pursue their educational goals from anywhere in the world.\nWith flexible schedules and high-quality courses, we provide the\ntools and resources necessary for you to excel in your studies\nand succeed in any endeavor. Join our global community of\nlearners and unlock your full potential with Virtu Edu.",
+    fill="#fff",
+    font=("Poppins Medium", 12 * -1)
+)
+
+
+def Homes():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","homepage"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
+button_image_3 = PhotoImage(
+    file=("button_3.png"))
+button_3 = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=Homes,
+    relief="flat",
+    text= "Home",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+)
+canvas.create_window(506, 1830, anchor="nw", window=button_3)
+
+# button_3.place(
+#     x=518.0,
+#     y=2615.0,
+#     width=30.0,
+#     height=15.0
+# )
+
+
+button_image_112 = PhotoImage(
+    file=("button_3.png"))
+button_112 = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=create_gui,
+    relief="flat",
+    text= "About Us",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(506, 1860, anchor="nw", window=button_112)
+
+def Courses():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","secondmainpage(courses_page)"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
+
+courses = PhotoImage(
+    file=("button_3.png"))
+coursesbtn = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=Courses,
+    relief="flat",
+    text= "Courses",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(506, 1890, anchor="nw", window=coursesbtn)
+
+
+events = PhotoImage(
+    file=("button_3.png"))
+eventbtn = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=create_gui,
+    relief="flat",
+    text= "Events",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(506, 1920, anchor="nw", window=eventbtn)
+
+def Routines():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","routines"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
+routinebtn = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=Routines,
+    relief="flat",
+    text= "Routines",    
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(506, 1950, anchor="nw", window=routinebtn)
+
+def termsandcondition():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","termsandconditions"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
+termsandcon = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=termsandcondition,
+    relief="flat",
+    text= "Terms and Conditions",  
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+
+    
+
+)
+canvas.create_window(740, 1830, anchor="nw", window=termsandcon)
+
+
+def alert1():
+    messagebox.showinfo("Alert", "You are on Same page now") 
+
+privacy = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=alert1,
+    relief="flat",
+    text= "Privacy Policy",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(740, 1860, anchor="nw", window=privacy)
+
+def Support():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","support"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
+support = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=Support,
+    relief="flat",
+    text= "Support",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(740, 1890, anchor="nw", window=support)
+
+def Contact():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","contact_us"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
+contact = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=Contact,
+    relief="flat",
+    text= "Contact Us",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(740, 1920, anchor="nw", window=contact)
+
+cden = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: webbrowser.open_new(r"http://www.cden.org.np"),
+    relief="flat",
+    text= "CDEN",
+       bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(1010, 1830, anchor="nw", window=cden)
+
+ioe = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: webbrowser.open_new(r"http://www.ioe.edu.np"),
+    relief="flat",
+    text= "IOE",
+       bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(1010, 1860, anchor="nw", window=ioe)
+
+tu = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: webbrowser.open_new(r"http://www.tu.edu.np"),
+    relief="flat",
+    text= "TU",
+       bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(1010, 1890, anchor="nw", window=tu)
+
+cu = Button(
+    # image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: webbrowser.open_new(r"http://www.coventry.ac.uk"),
+    relief="flat",
+    text= "Coventry University",
+    bg="#3532A7",
+    fg="#fff",
+    cursor="hand2"
+    
+
+)
+canvas.create_window(1010, 1920, anchor="nw", window=cu)
+
+
+
 
 # Update the scroll region to include the entire frame
 frame.update_idletasks()
