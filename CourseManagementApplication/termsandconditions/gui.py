@@ -12,6 +12,39 @@ canvas.configure(yscrollcommand=scrollbar.set)
 scrollbar.pack(side="right", fill="y")
 canvas.pack(fill="both", expand=True)
 
+def routinesfile():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("designing_wala","routines"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+
+def requestsfile():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("designing_wala","requests_notdone"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
+def homefile():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("designing_wala", "homepage"))
+        print(next_folder)
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy() 
+
 def on_mousewheel(event):
     # Get the current scroll position
     current_pos = canvas.canvasy(0)
@@ -76,7 +109,7 @@ button_1 = Button(
     image=button_image_1,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_1 clicked"),
+    command=create_gui,
     relief="flat",
     cursor="hand2",
     bg="#82B4FF"
@@ -176,69 +209,67 @@ canvas.create_text(
 
 
 
+def buildfile():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("termsandconditions","build"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
 
 
 button_image_17 = PhotoImage(
-    file=("button_17.png"))
+    file=("home.png"))
 button_17 = Button(
     image=button_image_17,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_17 clicked"),
-    relief="flat",
-    cursor="hand2"
+    command=buildfile ,
+    relief="flat"
 )
-button_17.place(
-    x=385.0,
-    y=31.0,
-    width=43.0,
-    height=20.0
-)
+canvas.create_window(398, 30, anchor="nw", window=button_17)
 
-ioe = Button(
-    # image=button_image_3,
+
+button_image_4 = PhotoImage(
+    file=("routines.png"))
+button_4 = Button(
+    image=button_image_4,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_18 clicked"),
-    relief="flat",
-    cursor="hand2"
+    command=routinesfile,
+    relief="flat"
 )
-ioe.place(
-    x=533.0,
-    y=32.0,
-    width=65.0,
-    height=20.0
-)
+canvas.create_window(546, 31, anchor="nw", window=button_4)
 
-tu = Button(
-    # image=button_image_3,
+
+
+button_image_5 = PhotoImage(
+    file=("requests.png"))
+button_5 = Button(
+    image=button_image_5,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_19 clicked"),
-    relief="flat",
-    cursor="hand2"
+    command=requestsfile,
+    relief="flat"
 )
-tu.place(
-    x=446.0,
-    y=32.0,
-    width=69.0,
-    height=20.0
-)
+canvas.create_window(628, 31, anchor="nw", window=button_5)
 
-cu = Button(
-    # image=button_image_3,
+
+
+button_image_6 = PhotoImage(
+    file=("courses.png"))
+button_6 = Button(
+    image=button_image_6,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_20 clicked"),
-    relief="flat",
-    cursor="hand2"
+    command=homefile,
+    relief="flat"
 )
-cu.place(
-    x=610.0,
-    y=32.0,
-    width=83.0,
-    height=23.0
-)
+canvas.create_window(467, 29, anchor="nw", window=button_6)
+
 
 canvas.create_text(
     60.0,
@@ -340,7 +371,7 @@ button_3 = Button(
     text= "Home",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+ 
     
 )
 canvas.create_window(506, 2109, anchor="nw", window=button_3)
@@ -365,7 +396,7 @@ button_112 = Button(
     text= "About Us",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+    
     
 
 )
@@ -395,7 +426,7 @@ coursesbtn = Button(
     text= "Courses",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+    
     
 
 )
@@ -414,7 +445,7 @@ eventbtn = Button(
     text= "Events",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+ 
     
 
 )
@@ -441,7 +472,7 @@ routinebtn = Button(
     text= "Routines",    
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
@@ -468,7 +499,7 @@ termsandcon = Button(
     text= "Terms and Conditions",  
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
 
     
 
@@ -489,7 +520,7 @@ privacy = Button(
     text= "Privacy Policy",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
@@ -516,7 +547,7 @@ support = Button(
     text= "Support",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+ 
     
 
 )
@@ -543,7 +574,7 @@ contact = Button(
     text= "Contact Us",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
@@ -559,7 +590,7 @@ cden = Button(
     text= "CDEN",
        bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
@@ -575,7 +606,7 @@ ioe = Button(
     text= "IOE",
        bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+ 
     
 
 )
@@ -591,7 +622,7 @@ tu = Button(
     text= "TU",
        bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+ 
     
 
 )
@@ -607,7 +638,7 @@ cu = Button(
     text= "Coventry University",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
