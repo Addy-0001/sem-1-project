@@ -33,7 +33,7 @@ def post_data():
 
     # Make the POST request to the API
     try:
-        response = requests.post('http://127.0.0.1:8000/api_virtuedu/contact/', json=payload)
+        response = requests.post('https://virtuedu.com/api_virtuedu/contact/', json=payload)
         response.raise_for_status()  # Raise an exception for non-200 status codes
 
         # Handle the response (e.g., display a success message)
@@ -171,10 +171,12 @@ entry_bg_1 = canvas.create_image(
 
 entry_1 = Entry(
     bd=0,
+    
     bg="#FFFFFF",
     fg="#000716",
     highlightthickness=0,
     font=("lexend deca", 15)
+    
 )
 entry_1.place(
     x=826.0,
@@ -210,12 +212,14 @@ entry_bg_3 = canvas.create_image(
     1010.0,
     518.5,
     image=entry_image_3
+    
 )
-entry_3 = Entry(
+entry_3 = Text(
     bd=0,
     bg="#FFFFFF",
     fg="#000716",
-    highlightthickness=0
+    highlightthickness=0,
+    width=80
 )
 entry_3.place(
     x=826.0,

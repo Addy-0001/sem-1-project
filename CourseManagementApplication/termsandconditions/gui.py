@@ -182,53 +182,56 @@ button_17 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_17 clicked"),
-    relief="flat",
-    bg="#82B4FF"
+    relief="flat"
 )
-canvas.create_window(370,25,anchor="nw",window=button_17)
+button_17.place(
+    x=385.0,
+    y=31.0,
+    width=43.0,
+    height=20.0
+)
 
-
-button_image_18 = PhotoImage(
-    file=("button_18.png"))
-button_18 = Button(
-    image=button_image_18,
+ioe = Button(
+    # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_18 clicked"),
-    relief="flat",
-    bg="#82B4FF"
+    relief="flat"
 )
-canvas.create_window(533,32,anchor="nw",window=button_18)
+button_18.place(
+    x=533.0,
+    y=32.0,
+    width=65.0,
+    height=20.0
+)
 
-
-
-button_image_19 = PhotoImage(
-    file=("button_19.png"))
-button_19 = Button(
-    image=button_image_19,
+tu = Button(
+    # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_19 clicked"),
-    relief="flat",
-    bg="#82B4FF"
+    relief="flat"
 )
-canvas.create_window(446,32,anchor="nw",window=button_19)
+button_19.place(
+    x=446.0,
+    y=32.0,
+    width=69.0,
+    height=20.0
+)
 
-
-
-button_image_20 = PhotoImage(
-    file=("button_20.png"))
-button_20 = Button(
-    image=button_image_20,
+cu = Button(
+    # image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_20 clicked"),
-    relief="flat",
-    bg="#82B4FF"
-    
+    relief="flat"
 )
-canvas.create_window(610,32,anchor="nw",window=button_20)
-
+button_20.place(
+    x=610.0,
+    y=32.0,
+    width=83.0,
+    height=23.0
+)
 
 canvas.create_text(
     60.0,

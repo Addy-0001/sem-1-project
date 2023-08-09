@@ -1,3 +1,4 @@
+from tkinter import messagebox
 from tkinter import *
 from tkinter import ttk
 
@@ -12,10 +13,11 @@ canvas.configure(yscrollcommand=scrollbar.set)
 scrollbar.pack(side="right", fill="y")
 canvas.pack(fill="both", expand=True)
 
-from tkinter import messagebox
 
 def create_gui():
     messagebox.showinfo("Alert", "Feature is not available right now")
+
+
 def on_mousewheel(event):
     # Get the current scroll position
     current_pos = canvas.canvasy(0)
@@ -33,6 +35,7 @@ def on_mousewheel(event):
     elif event.delta >= 0 and current_pos >= 0:
         # Scroll up if not at the top
         canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+
 
 # Bind the mousewheel event to scroll the canvas
 canvas.bind_all("<MouseWheel>", on_mousewheel)
@@ -97,7 +100,7 @@ entry_1 = Entry(
     bg="#FFFFFF",
     fg="#000716",
     highlightthickness=0,
-    font=("lexend deca",16)
+    font=("lexend deca", 16)
 )
 canvas.create_window(717, 16, anchor="nw", window=entry_1)
 
@@ -575,7 +578,7 @@ canvas.create_text(
     340.0,
     614.0,
     anchor="nw",
-    text="VirtuEdu Facebook Page",
+    text="https://www.facebook.com/",
     fill="#3532A7",
     font=("Poppins SemiBold", 34 * -1)
 )
@@ -584,7 +587,7 @@ canvas.create_text(
     180.0,
     775.0,
     anchor="nw",
-    text="VirtuEdu Instagram page",
+    text="https://instagram.com/",
     fill="#3532A7",
     font=("Poppins SemiBold", 34 * -1)
 )
@@ -593,7 +596,7 @@ canvas.create_text(
     380.0,
     954.0,
     anchor="nw",
-    text="VirtuEdu Whatsapp Profile",
+    text="https://web.whatsapp.com/",
     fill="#3532A7",
     font=("Poppins SemiBold", 34 * -1)
 )

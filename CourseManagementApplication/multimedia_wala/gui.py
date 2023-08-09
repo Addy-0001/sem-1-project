@@ -547,7 +547,7 @@ canvas.create_text(
     107.0,
     691.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Digital Marketing",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -556,7 +556,7 @@ canvas.create_text(
     107.0,
     988.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Digital Marketing",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -565,7 +565,7 @@ canvas.create_text(
     401.0,
     691.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Computing React Course",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -574,7 +574,7 @@ canvas.create_text(
     401.0,
     988.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Computing React Course",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -583,7 +583,7 @@ canvas.create_text(
     704.0,
     691.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Mobile Development with Flutter",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -592,7 +592,7 @@ canvas.create_text(
     704.0,
     988.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Mobile Development with Flutter",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -601,7 +601,7 @@ canvas.create_text(
     1000.0,
     693.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Web Development with Django",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -610,7 +610,7 @@ canvas.create_text(
     1000.0,
     990.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Web Development with Django",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -875,7 +875,7 @@ canvas.create_text(
     107.0,
     708.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Learn about the basics of Multimedia Design \nand development with the help of this exceptional\ncourse. Get a certificate proving your dedication to the course.",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -884,7 +884,7 @@ canvas.create_text(
     107.0,
     1005.0,
     ancho="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Learn about the basics of Multimedia Design \nand development with the help of this exceptional\ncourse. Get a certificate proving your dedication to the course.",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -893,7 +893,7 @@ canvas.create_text(
     401.0,
     708.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Learn about the basics of Multimedia Design \nand development with the help of this exceptional\ncourse. Get a certificate proving your dedication to the course.",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -902,7 +902,7 @@ canvas.create_text(
     401.0,
     1005.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Learn about the basics of Multimedia Design \nand development with the help of this exceptional\ncourse. Get a certificate proving your dedication to the course.",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -911,7 +911,7 @@ canvas.create_text(
     704.0,
     708.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Learn about the basics of Multimedia Design \nand development with the help of this exceptional\ncourse. Get a certificate proving your dedication to the course.",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -920,7 +920,7 @@ canvas.create_text(
     704.0,
     1005.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Learn about the basics of Multimedia Design \nand development with the help of this exceptional\ncourse. Get a certificate proving your dedication to the course.",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -929,7 +929,7 @@ canvas.create_text(
     1000.0,
     710.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Learn about the basics of Multimedia Design \nand development with the help of this exceptional\ncourse. Get a certificate proving your dedication to the course.",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -938,7 +938,7 @@ canvas.create_text(
     1000.0,
     1007.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Learn about the basics of Multimedia Design \nand development with the help of this exceptional\ncourse. Get a certificate proving your dedication to the course.",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
