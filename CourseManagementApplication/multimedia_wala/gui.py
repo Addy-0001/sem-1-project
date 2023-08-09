@@ -1215,7 +1215,7 @@ canvas.create_text(
 
 canvas.create_text(
     88.0,
-    1254.0,
+    1260.0,
     anchor="nw",
     text="Learn Anywhere, Achieve Everywhere",
     fill="#FFFFFF",
@@ -1224,7 +1224,7 @@ canvas.create_text(
 
 canvas.create_text(
     50.0,
-    1254.0,
+    1274.0,
     anchor="nw",
     text="Our innovative online learning platform empowers students\nto pursue their educational goals from anywhere in the world.\nWith flexible schedules and high-quality courses, we provide the\ntools and resources necessary for you to excel in your studies\nand succeed in any endeavor. Join our global community of\nlearners and unlock your full potential with Virtu Edu.",
     fill="#fff",
