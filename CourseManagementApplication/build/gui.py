@@ -768,15 +768,6 @@ canvas.create_rectangle(
     outline="")
 
 canvas.create_text(
-    56.0,
-    1776.0,
-    anchor="nw",
-    text="VirtuEdu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 25 * -1)
-)
-
-canvas.create_text(
     97.0,
     1161.0,
     anchor="nw",
@@ -792,78 +783,6 @@ canvas.create_text(
     text="RECOMENDED COURSE",
     fill="#3532A7",
     font=("Poppins SemiBold", 25 * -1)
-)
-
-canvas.create_text(
-    461.0,
-    1785.0,
-    anchor="nw",
-    text="Menu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 17 * -1)
-)
-
-canvas.create_text(
-    745.0,
-    1787.0,
-    anchor="nw",
-    text="Menu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 17 * -1)
-)
-
-canvas.create_text(
-    974.0,
-    1787.0,
-    anchor="nw",
-    text="Menu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 17 * -1)
-)
-
-canvas.create_text(
-    63.0,
-    1804.0,
-    anchor="nw",
-    text="Learn Anywhere, Achieve Everywhere",
-    fill="#FFFFFF",
-    font=("Poppins Regular", 6 * -1)
-)
-
-canvas.create_text(
-    63.0,
-    1824.0,
-    anchor="nw",
-    text="Our innovative online learning platform empowers students to pursue their educational goals from anywhere in the world. With flexible schedules and high-quality courses, we provide the tools and resources necessary for you to excel in your studies and succeed in any endeavor. Join our global community of learners and unlock your full potential with Virtu Edu.",
-    fill="#FFFFFF",
-    font=("Poppins Medium", 6 * -1)
-)
-
-canvas.create_text(
-    464.0,
-    1817.0,
-    anchor="nw",
-    text="Home\nAbout Us\nCourses\nEvents\nRoutine",
-    fill="#FFFFFF",
-    font=("Poppins Medium", 6 * -1)
-)
-
-canvas.create_text(
-    756.0,
-    1817.0,
-    anchor="nw",
-    text="Terms and Condition\nPrivacy and Policy\nSupport\nContact Us",
-    fill="#FFFFFF",
-    font=("Poppins Medium", 6 * -1)
-)
-
-canvas.create_text(
-    979.0,
-    1817.0,
-    anchor="nw",
-    text="CDEN\nIOE\nTU\nCoventry University",
-    fill="#FFFFFF",
-    font=("Poppins Medium", 6 * -1)
 )
 
 canvas.create_rectangle(
