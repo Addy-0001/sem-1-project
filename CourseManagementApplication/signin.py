@@ -45,7 +45,7 @@ def authenticate_user():
         print('Authentication successful!')
 
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd(), 'homepage')
+        next_folder = os.path.join(os.getcwd(), 'build')
         os.chdir(next_folder)
 
         # Run the gui.py file

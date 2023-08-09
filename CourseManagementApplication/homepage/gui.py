@@ -43,6 +43,16 @@ canvas.bind_all("<MouseWheel>", on_mousewheel)
 # Create a frame inside the canvas to hold your content
 frame = Frame(canvas)
 canvas.create_window((0, 0), window=frame, anchor="nw")
+def buildfile():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("homepage","build"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
 
 def routinesfile():
  
@@ -1379,7 +1389,7 @@ button_25 = Button(
     image=button_image_25,
     borderwidth=0,
     highlightthickness=0,
-    command=homefile,
+    command=buildfile,
     relief="flat"
 )
 canvas.create_window(394, 31, anchor="nw", window=button_25)

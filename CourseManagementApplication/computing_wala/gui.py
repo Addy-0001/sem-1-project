@@ -230,14 +230,23 @@ def homefile():
 
     window.destroy()
 
+def buildfile():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("computing_wala","build"))
+        os.chdir(next_folder)
 
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
 button_image_3 = PhotoImage(
     file=("home.png"))
 button_3 = Button(
     image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("home clicked"),
+    command=buildfile,
     relief="flat"
 )
 canvas.create_window(398, 30, anchor="nw", window=button_3)

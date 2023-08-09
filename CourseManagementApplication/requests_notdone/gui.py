@@ -445,6 +445,16 @@ button_15.place(
     width=39.0,
     height=15.0
 )
+def buildfile():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("requests_notdone","build"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
 button_image_16 = PhotoImage(
     file=("home.png"))
 button_16 = Button(
@@ -452,7 +462,7 @@ button_16 = Button(
     image=button_image_16,
     borderwidth=0,
     highlightthickness=0,
-    command=homefile,
+    command=buildfile,
     relief="flat"
 )
 canvas.create_window(385, 31, anchor="nw", window=button_16)

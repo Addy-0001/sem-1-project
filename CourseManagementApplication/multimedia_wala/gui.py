@@ -228,7 +228,16 @@ canvas.create_window(1100, 31, anchor="nw", window=button_2)
 #     width=29.694091796875,
 #     height=29.550003051757812
 # )
+def buildfile():
+ 
+        # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("multimedia_wala","build"))
+        os.chdir(next_folder)
 
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
 button_image_3 = PhotoImage(
     file=("home.png"))
 button_3 = Button(
@@ -236,7 +245,7 @@ button_3 = Button(
     image=button_image_3,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_3 clicked"),
+    command=buildfile,
     relief="flat"
 )
 canvas.create_window(388, 31, anchor="nw", window=button_3)
