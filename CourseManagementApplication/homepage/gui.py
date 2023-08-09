@@ -472,12 +472,6 @@ button_12 = Button(
 )
 canvas.create_window(925, 457, anchor="nw", window=button_12)
 
-# button_12.place(
-#     x=925.0,
-#     y=457.0,
-#     width=121.0,
-#     height=35.0
-# )
 
 canvas.create_text(
     797.0,

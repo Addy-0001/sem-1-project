@@ -188,21 +188,6 @@ def homefile():
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 entry_image_1 = PhotoImage(
     file=("entry_1.png"))
 entry_bg_1 = canvas.create_image(
@@ -577,7 +562,7 @@ canvas.create_text(
     107.0,
     691.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Duolingo",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -586,7 +571,7 @@ canvas.create_text(
     107.0,
     988.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Rosetta Stone",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -595,7 +580,7 @@ canvas.create_text(
     401.0,
     691.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Coursera Language Courses",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -604,7 +589,7 @@ canvas.create_text(
     401.0,
     988.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Udemy Language Courses",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -613,7 +598,7 @@ canvas.create_text(
     704.0,
     691.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Transparent Language",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -622,7 +607,7 @@ canvas.create_text(
     704.0,
     988.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Rocket Languages ",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -631,7 +616,7 @@ canvas.create_text(
     1000.0,
     693.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="BBC Languages",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -640,7 +625,7 @@ canvas.create_text(
     1000.0,
     990.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="FluentU ",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -920,7 +905,7 @@ canvas.create_text(
     107.0,
     708.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Whether you're an aspiring marketer or a professional looking\nto enhance your skills, this course offers a deep dive into the\nstrategies, tools, and techniques that drive successful marketing\ncampaigns.",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -928,7 +913,7 @@ canvas.create_text(
     107.0,
     1005.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Whether you're an aspiring marketer or a professional looking\nto enhance your skills, this course offers a deep dive into the\nstrategies, tools, and techniques that drive successful marketing\ncampaigns.",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -937,7 +922,7 @@ canvas.create_text(
     401.0,
     708.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Whether you're an aspiring marketer or a professional looking\nto enhance your skills, this course offers a deep dive into the\nstrategies, tools, and techniques that drive successful marketing\ncampaigns.",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -946,7 +931,7 @@ canvas.create_text(
     401.0,
     1005.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Whether you're an aspiring marketer or a professional looking\nto enhance your skills, this course offers a deep dive into the\nstrategies, tools, and techniques that drive successful marketing\ncampaigns.",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -955,7 +940,7 @@ canvas.create_text(
     704.0,
     708.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Whether you're an aspiring marketer or a professional looking\nto enhance your skills, this course offers a deep dive into the\nstrategies, tools, and techniques that drive successful marketing\ncampaigns.",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -964,7 +949,7 @@ canvas.create_text(
     704.0,
     1005.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Whether you're an aspiring marketer or a professional looking\nto enhance your skills, this course offers a deep dive into the\nstrategies, tools, and techniques that drive successful marketing\ncampaigns.",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -973,7 +958,7 @@ canvas.create_text(
     1000.0,
     710.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Whether you're an aspiring marketer or a professional looking\nto enhance your skills, this course offers a deep dive into the\nstrategies, tools, and techniques that drive successful marketing\ncampaigns.",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -982,7 +967,7 @@ canvas.create_text(
     1000.0,
     1007.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Whether you're an aspiring marketer or a professional looking\nto enhance your skills, this course offers a deep dive into the\nstrategies, tools, and techniques that drive successful marketing\ncampaigns.",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -1044,7 +1029,7 @@ canvas.create_text(
     53.0,
     1291.0,
     anchor="nw",
-    text="Our innovative online learning platform empowers students to pursue their educational goals from anywhere in the world. With flexible schedules and high-quality courses, we provide the tools and resources necessary for you to excel in your studies and succeed in any endeavor. Join our global community of learners and unlock your full potential with Virtu Edu.",
+    text="Our innovative online learning platform empowers\nstudents to pursue their educational goals from anywhere\nin the world. With flexible schedules and high-quality courses,\nwe provide the tools and resources necessary for you to excel\nin your studies and succeed in any endeavor. Join our global\ncommunity of learners and unlock your full potential with Virtu Edu.",
     fill="#FFFFFF",
     font=("Poppins Medium", 12 * -1)
 )
