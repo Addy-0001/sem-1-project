@@ -79,7 +79,8 @@ button_1 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=create_gui,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(1194, 12, anchor="nw", window=button_1)
 
@@ -114,7 +115,8 @@ button_2 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=create_gui,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(1157, 23, anchor="nw", window=button_2)
 
@@ -247,7 +249,8 @@ button_3 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=buildfile,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(398, 30, anchor="nw", window=button_3)
 
@@ -265,7 +268,8 @@ button_4 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=routinesfile,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(546, 31, anchor="nw", window=button_4)
 
@@ -283,7 +287,8 @@ button_5 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=requestsfile,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(628, 31, anchor="nw", window=button_5)
 
@@ -301,7 +306,8 @@ button_6 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("courses clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(453, 29, anchor="nw", window=button_6)
 
@@ -343,7 +349,8 @@ button_7 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_7 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(400, 457, anchor="nw", window=button_7)
 
@@ -355,7 +362,8 @@ button_8 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=homefile,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(260, 456, anchor="nw", window=button_8)
 
@@ -373,7 +381,8 @@ button_9 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=multimediafile,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(526, 457, anchor="nw", window=button_9)
 
@@ -385,7 +394,8 @@ button_10 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=designingfile,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(660, 457, anchor="nw", window=button_10)
 
@@ -397,7 +407,8 @@ button_11 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=languagefile,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(785, 457, anchor="nw", window=button_11)
 
@@ -409,7 +420,8 @@ button_12 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=marketingfile,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(925, 457, anchor="nw", window=button_12)
 
@@ -639,7 +651,8 @@ button_13 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_13 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 
 canvas.create_window(107, 661, anchor="nw", window=button_13)
@@ -652,7 +665,8 @@ button_14 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_14 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 
 canvas.create_window(107, 958, anchor="nw", window=button_14)
@@ -665,7 +679,8 @@ button_15 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_15 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(401, 661, anchor="nw", window=button_15)
 
@@ -677,7 +692,8 @@ button_16 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_16 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 
 canvas.create_window(401, 958, anchor="nw", window=button_16)
@@ -690,7 +706,8 @@ button_17 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_17 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 
 canvas.create_window(704, 661, anchor="nw", window=button_17)
@@ -703,7 +720,8 @@ button_18 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_18 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(704, 958, anchor="nw", window=button_18)
 
@@ -715,7 +733,8 @@ button_19 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_19 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 
 canvas.create_window(1000, 663, anchor="nw", window=button_19)
@@ -728,7 +747,8 @@ button_20 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_20 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(1000, 960, anchor="nw", window=button_20)
 
@@ -795,70 +815,6 @@ image_19 = canvas.create_image(
     1108.0,
     982.8292236328125,
     image=image_image_19
-)
-
-image_image_20 = PhotoImage(
-    file=("image_20.png"))
-image_20 = canvas.create_image(
-    141.0,
-    756.79443359375,
-    image=image_image_20
-)
-
-image_image_21 = PhotoImage(
-    file=("image_21.png"))
-image_21 = canvas.create_image(
-    141.0,
-    1053.79443359375,
-    image=image_image_21
-)
-
-image_image_22 = PhotoImage(
-    file=("image_22.png"))
-image_22 = canvas.create_image(
-    435.0,
-    756.79443359375,
-    image=image_image_22
-)
-
-image_image_23 = PhotoImage(
-    file=("image_23.png"))
-image_23 = canvas.create_image(
-    435.0,
-    1053.79443359375,
-    image=image_image_23
-)
-
-image_image_24 = PhotoImage(
-    file=("image_24.png"))
-image_24 = canvas.create_image(
-    738.0,
-    756.79443359375,
-    image=image_image_24
-)
-
-image_image_25 = PhotoImage(
-    file=("image_25.png"))
-image_25 = canvas.create_image(
-    738.0,
-    1053.79443359375,
-    image=image_image_25
-)
-
-image_image_26 = PhotoImage(
-    file=("image_26.png"))
-image_26 = canvas.create_image(
-    1034.0,
-    758.79443359375,
-    image=image_image_26
-)
-
-image_image_27 = PhotoImage(
-    file=("image_27.png"))
-image_27 = canvas.create_image(
-    1034.0,
-    1055.79443359375,
-    image=image_image_27
 )
 
 canvas.create_text(
@@ -1002,7 +958,8 @@ button_21 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_21 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_21.place(
     x=483.0,
@@ -1018,7 +975,8 @@ button_22 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_22 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_22.place(
     x=714.0,
@@ -1034,7 +992,8 @@ button_23 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_23 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_23.place(
     x=988.0,
@@ -1050,7 +1009,8 @@ button_24 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_24 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_24.place(
     x=988.0,
@@ -1066,7 +1026,8 @@ button_25 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_25 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_25.place(
     x=989.0,
@@ -1082,7 +1043,8 @@ button_26 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_26 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(989, 1338, anchor="nw", window=button_26)
 
@@ -1094,7 +1056,8 @@ button_27 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_27 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(716, 1288, anchor="nw", window=button_27)
 
@@ -1106,7 +1069,8 @@ button_28 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_28 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(716, 1313, anchor="nw", window=button_28)
 
@@ -1118,7 +1082,8 @@ button_29 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_29 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(716, 1338, anchor="nw", window=button_29)
 
@@ -1130,7 +1095,8 @@ button_30 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_30 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(483, 1291, anchor="nw", window=button_30)
 
@@ -1142,7 +1108,8 @@ button_31 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_31 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(483, 1316, anchor="nw", window=button_31)
 
@@ -1154,7 +1121,8 @@ button_32 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_32 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_32.place(
     x=483.0,
@@ -1170,7 +1138,8 @@ button_33 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_33 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_33.place(
     x=483.0,
@@ -1178,5 +1147,150 @@ button_33.place(
     width=39.0,
     height=15.0
 )
+
+
+
+
+
+
+button_image_34 = PhotoImage(
+    file=("button_400.png"))
+button_34 = Button(
+    image=button_image_34,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("button_34 clicked"),
+    relief="flat",
+    cursor="hand2"
+)
+canvas.create_window(108, 747, anchor="nw", window=button_34)
+
+
+button_image_35 = PhotoImage(
+    file=("button_400.png"))
+button_35 = Button(
+    image=button_image_35,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("button_35 clicked"),
+    relief="flat",
+    cursor="hand2"
+)
+canvas.create_window(108, 1044, anchor="nw", window=button_22)
+
+button_image_36 = PhotoImage(
+    file=("button_400.png"))
+button_36 = Button(
+    image=button_image_36,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("button_36 clicked"),
+    relief="flat",
+    cursor="hand2"
+)
+canvas.create_window(402, 747, anchor="nw", window=button_36)
+
+
+button_image_37 = PhotoImage(
+    file=("button_400.png"))
+button_37 = Button(
+    image=button_image_37,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("button_37 clicked"),
+    relief="flat",
+    cursor="hand2"
+)
+canvas.create_window(402, 1044, anchor="nw", window=button_24)
+
+
+button_image_38 = PhotoImage(
+    file=("button_400.png"))
+button_38 = Button(
+    image=button_image_38,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("button_38 clicked"),
+    relief="flat",
+    cursor="hand2"
+)
+canvas.create_window(705, 747, anchor="nw", window=button_38)
+
+
+button_image_39 = PhotoImage(
+    file=("button_400.png"))
+button_39 = Button(
+    image=button_image_39,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("button_39 clicked"),
+    relief="flat",
+    cursor="hand2"
+)
+canvas.create_window(705, 1044, anchor="nw", window=button_26)
+
+
+button_image_40 = PhotoImage(
+    file=("button_400.png"))
+button_40 = Button(
+    image=button_image_40,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("button_40 clicked"),
+    relief="flat",
+    cursor="hand2"
+)
+canvas.create_window(1001, 749, anchor="nw", window=button_40)
+
+
+button_image_41 = PhotoImage(
+    file=("button_400.png"))
+button_41 = Button(
+    image=button_image_41,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("button_41 clicked"),
+    relief="flat",
+    cursor="hand2"
+)
+canvas.create_window(1001, 1046, anchor="nw", window=button_41)
+
+button_image_42 = PhotoImage(
+    file=("button_400.png"))
+button_42 = Button(
+    image=button_image_42,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("button_42 clicked"),
+    relief="flat",
+    cursor="hand2"
+)
+canvas.create_window(402, 1046, anchor="nw", window=button_42)
+
+button_image_43 = PhotoImage(
+    file=("button_400.png"))
+button_43 = Button(
+    image=button_image_43,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("button_43 clicked"),
+    relief="flat",
+    cursor="hand2"
+)
+canvas.create_window(108, 1046, anchor="nw", window=button_43)
+
+
+button_image_44 = PhotoImage(
+    file=("button_400.png"))
+button_44 = Button(
+    image=button_image_44,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("button_44 clicked"),
+    relief="flat",
+    cursor="hand2"
+)
+canvas.create_window(705, 1046, anchor="nw", window=button_44)
+
 window.resizable(False, False)
 window.mainloop()
