@@ -241,16 +241,20 @@ canvas.create_window(1100, 31, anchor="nw", window=button_2)
 #     width=29.694091796875,
 #     height=29.550003051757812
 # )
+
+
 def buildfile():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("multimedia_wala","build"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(os.getcwd().replace("multimedia_wala", "build"))
+    os.chdir(next_folder)
 
-        window.destroy()
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
+
+
 button_image_3 = PhotoImage(
     file=("home.png"))
 button_3 = Button(
@@ -604,7 +608,7 @@ canvas.create_text(
     704.0,
     691.731689453125,
     anchor="nw",
-    text="Mobile Development with Flutter",
+    text="Inbound Marketing",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -953,7 +957,6 @@ def inbound():
         response = requests.get('https://virtuedu.com/api_virtuedu/modules/')
         data_list = response.json()
 
-        # Check if any data has 'module_id' as '123Eth'
         found_data = [data for data in data_list if data.get(
             'module_id') == 'inbound']
 
