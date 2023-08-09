@@ -11,6 +11,14 @@ scrollbar = Scrollbar(window, orient="vertical", command=canvas.yview)
 canvas.configure(yscrollcommand=scrollbar.set)
 scrollbar.pack(side="right", fill="y")
 canvas.pack(fill="both", expand=True)
+canvas.create_rectangle(
+    0.0,
+    2450.0,
+    1280.0,
+    2206.0,
+    fill="#3532A7",
+    outline="")
+
 
 def routinesfile():
  
@@ -282,7 +290,7 @@ canvas.create_text(
 
 canvas.create_text(
     42.0,
-    1945.0,
+    2130.0,
     anchor="nw",
     text="All other terms and conditions as applicable under the Terms and Conditions of Us will be applicable\nto You and will be read along with this Privacy Policy.",
     fill="#000000",
@@ -295,7 +303,7 @@ canvas.create_text(
 
 canvas.create_text(
     62.0,
-    2029.0,
+    2200.0,
     anchor="nw",
     text="VirtuEdu",
     fill="#FFFFFF",
@@ -304,7 +312,7 @@ canvas.create_text(
 
 canvas.create_text(
     506.0,
-    2059.0,
+    2200.0,
     anchor="nw",
     text="Menu",
     fill="#fff",
@@ -313,7 +321,7 @@ canvas.create_text(
 
 canvas.create_text(
     740.0,
-    2059.0,
+    2200.0,
     anchor="nw",
     text="Menu",
     fill="#fff",
@@ -322,7 +330,7 @@ canvas.create_text(
 
 canvas.create_text(
     1010.0,
-    2059.0,
+    2200.0,
     anchor="nw",
     text="Menu",
     fill="#FFFFFF",
@@ -331,7 +339,7 @@ canvas.create_text(
 
 canvas.create_text(
     88.0,
-    2069.0,
+    2240.0,
     anchor="nw",
     text="Learn Anywhere, Achieve Everywhere",
     fill="#FFFFFF",
@@ -340,7 +348,7 @@ canvas.create_text(
 
 canvas.create_text(
     50.0,
-    2069.0,
+    2270.0,
     anchor="nw",
     text="Our innovative online learning platform empowers students\nto pursue their educational goals from anywhere in the world.\nWith flexible schedules and high-quality courses, we provide the\ntools and resources necessary for you to excel in your studies\nand succeed in any endeavor. Join our global community of\nlearners and unlock your full potential with Virtu Edu.",
     fill="#fff",
@@ -374,7 +382,7 @@ button_3 = Button(
  
     
 )
-canvas.create_window(506, 2109, anchor="nw", window=button_3)
+canvas.create_window(506, 2240, anchor="nw", window=button_3)
 
 # button_3.place(
 #     x=518.0,
@@ -400,7 +408,7 @@ button_112 = Button(
     
 
 )
-canvas.create_window(506, 2139, anchor="nw", window=button_112)
+canvas.create_window(506, 2270, anchor="nw", window=button_112)
 
 def Courses():
  
@@ -430,7 +438,7 @@ coursesbtn = Button(
     
 
 )
-canvas.create_window(506, 2169, anchor="nw", window=coursesbtn)
+canvas.create_window(506, 2300, anchor="nw", window=coursesbtn)
 
 
 events = PhotoImage(
@@ -449,7 +457,7 @@ eventbtn = Button(
     
 
 )
-canvas.create_window(506, 2199, anchor="nw", window=eventbtn)
+canvas.create_window(506, 2330, anchor="nw", window=eventbtn)
 
 def Routines():
  
@@ -476,7 +484,7 @@ routinebtn = Button(
     
 
 )
-canvas.create_window(506, 2229, anchor="nw", window=routinebtn)
+canvas.create_window(506, 2360, anchor="nw", window=routinebtn)
 
 def termsandcondition():
  
@@ -504,7 +512,7 @@ termsandcon = Button(
     
 
 )
-canvas.create_window(740, 2109, anchor="nw", window=termsandcon)
+canvas.create_window(740, 2330, anchor="nw", window=termsandcon)
 
 
 def alert1():
@@ -524,7 +532,7 @@ privacy = Button(
     
 
 )
-canvas.create_window(740, 2139, anchor="nw", window=privacy)
+canvas.create_window(740, 2240, anchor="nw", window=privacy)
 
 def Support():
  
@@ -551,7 +559,7 @@ support = Button(
     
 
 )
-canvas.create_window(740, 2169, anchor="nw", window=support)
+canvas.create_window(740, 2270, anchor="nw", window=support)
 
 def Contact():
  
@@ -578,7 +586,7 @@ contact = Button(
     
 
 )
-canvas.create_window(740, 2199, anchor="nw", window=contact)
+canvas.create_window(740, 2300, anchor="nw", window=contact)
 
 cden = Button(
     # image=button_image_3,
@@ -594,7 +602,7 @@ cden = Button(
     
 
 )
-canvas.create_window(1010, 2109, anchor="nw", window=cden)
+canvas.create_window(1010, 2240, anchor="nw", window=cden)
 
 ioe = Button(
     # image=button_image_3,
@@ -610,7 +618,7 @@ ioe = Button(
     
 
 )
-canvas.create_window(1010, 2139, anchor="nw", window=ioe)
+canvas.create_window(1010, 2270, anchor="nw", window=ioe)
 
 tu = Button(
     # image=button_image_3,
@@ -626,7 +634,7 @@ tu = Button(
     
 
 )
-canvas.create_window(1010, 2169, anchor="nw", window=tu)
+canvas.create_window(1010, 2300, anchor="nw", window=tu)
 
 cu = Button(
     # image=button_image_3,
@@ -642,16 +650,8 @@ cu = Button(
     
 
 )
-canvas.create_window(1010, 2199, anchor="nw", window=cu)
+canvas.create_window(1010, 2330, anchor="nw", window=cu)
 
-
-canvas.create_rectangle(
-    0.0,
-    2027.0,
-    1280.0,
-    2266.0,
-    fill="#3532A7",
-    outline="")
 
 
 
