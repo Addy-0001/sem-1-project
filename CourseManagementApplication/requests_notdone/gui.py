@@ -562,13 +562,7 @@ image_4 = canvas.create_image(
     image=image_image_4
 )
 
-image_image_5 = PhotoImage(
-    file=("image_5.png"))
-image_5 = canvas.create_image(
-    206.0,
-    1394.0,
-    image=image_image_5
-)
+
 
 
 image_image_9 = PhotoImage(
