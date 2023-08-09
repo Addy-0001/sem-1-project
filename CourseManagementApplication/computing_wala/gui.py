@@ -4,6 +4,7 @@ from tkinter import ttk
 import os
 import sys
 import subprocess
+import requests
 window = Tk()
 window.geometry("1280x800")
 window.configure(bg="#EEEFF3")
@@ -232,16 +233,19 @@ def homefile():
 
     window.destroy()
 
+
 def buildfile():
- 
-        # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("computing_wala","build"))
-        os.chdir(next_folder)
 
-        # Run the gui.py file
-        subprocess.Popen([sys.executable, 'gui.py'])
+    # Change to the next folder
+    next_folder = os.path.join(os.getcwd().replace("computing_wala", "build"))
+    os.chdir(next_folder)
 
-        window.destroy()
+    # Run the gui.py file
+    subprocess.Popen([sys.executable, 'gui.py'])
+
+    window.destroy()
+
+
 button_image_3 = PhotoImage(
     file=("home.png"))
 button_3 = Button(
@@ -576,7 +580,7 @@ canvas.create_text(
     107.0,
     691.731689453125,
     anchor="nw",
-    text="Bsc. Hons. Computing",
+    text="PostgreSQL with Django",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -594,7 +598,7 @@ canvas.create_text(
     401.0,
     691.731689453125,
     anchor="nw",
-    text="BSc. (Hons.) Computing",
+    text="HTML Basics",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -612,7 +616,7 @@ canvas.create_text(
     704.0,
     691.731689453125,
     anchor="nw",
-    text="BSc. (Hons.) Computing",
+    text="Flutter Basics",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -630,7 +634,7 @@ canvas.create_text(
     1000.0,
     693.731689453125,
     anchor="nw",
-    text="BSc. (Hons.) Computing",
+    text="CSS Basics",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -1149,8 +1153,52 @@ button_33.place(
 )
 
 
+def Web005():
+    try:
+        # Replace 'YOUR_API_URL' with the actual API endpoint URL
+        response = requests.get('https://virtuedu.com/api_virtuedu/modules/')
+        data_list = response.json()
 
+        # Check if any data has 'module_id' as '123Eth'
+        found_data = [data for data in data_list if data.get(
+            'module_id') == 'Web005']
 
+        if found_data:
+            new_window = Toplevel()
+            new_window.geometry("500x500")
+            new_window.title("Fetched Data")
+
+            y_position = 30
+
+            # Format and display the data in labels
+            for data in found_data:
+                title_label = Label(new_window, text=f"Title: {data.get('module_name')}",
+                                    font=("Lexend deca", 15, "bold"), wraplength=400, justify=LEFT)
+                title_label.place(x=30, y=y_position)
+                y_position += title_label.winfo_reqheight()
+
+                description_label = Label(new_window, text=f"Description: {data.get('module_description')}",
+                                          wraplength=400, justify=LEFT)
+                description_label.place(x=30, y=y_position)
+                y_position += description_label.winfo_reqheight()
+
+                tutor_label = Label(new_window, text=f"Tutor: {data.get('tutor_name')}",
+                                    wraplength=400, justify=LEFT)
+                tutor_label.place(x=30, y=y_position)
+                y_position += tutor_label.winfo_reqheight()
+
+                # Add other labels to display other data as needed
+
+                separator = Frame(new_window, height=2, bd=1, relief=SUNKEN)
+                separator.pack(fill=X, padx=5, pady=5)
+                y_position += 10
+
+        else:
+            messagebox.showinfo(
+                "Info", "Data is not available for module_id '123Eth'")
+
+    except requests.exceptions.RequestException as e:
+        messagebox.showerror("Error", f"Error fetching data from the API: {e}")
 
 
 button_image_34 = PhotoImage(
@@ -1159,7 +1207,7 @@ button_34 = Button(
     image=button_image_34,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_34 clicked"),
+    command=Web005,
     relief="flat",
     cursor="hand2"
 )
@@ -1178,13 +1226,62 @@ button_35 = Button(
 )
 canvas.create_window(108, 1044, anchor="nw", window=button_22)
 
+
+def Web001():
+    try:
+        # Replace 'YOUR_API_URL' with the actual API endpoint URL
+        response = requests.get('https://virtuedu.com/api_virtuedu/modules/')
+        data_list = response.json()
+
+        # Check if any data has 'module_id' as '123Eth'
+        found_data = [data for data in data_list if data.get(
+            'module_id') == 'Web001']
+
+        if found_data:
+            new_window = Toplevel()
+            new_window.geometry("500x500")
+            new_window.title("Fetched Data")
+
+            y_position = 30
+
+            # Format and display the data in labels
+            for data in found_data:
+                title_label = Label(new_window, text=f"Title: {data.get('module_name')}",
+                                    font=("Lexend deca", 15, "bold"), wraplength=400, justify=LEFT)
+                title_label.place(x=30, y=y_position)
+                y_position += title_label.winfo_reqheight()
+
+                description_label = Label(new_window, text=f"Description: {data.get('module_description')}",
+                                          wraplength=400, justify=LEFT)
+                description_label.place(x=30, y=y_position)
+                y_position += description_label.winfo_reqheight()
+
+                tutor_label = Label(new_window, text=f"Tutor: {data.get('tutor_name')}",
+                                    wraplength=400, justify=LEFT)
+                tutor_label.place(x=30, y=y_position)
+                y_position += tutor_label.winfo_reqheight()
+
+                # Add other labels to display other data as needed
+
+                separator = Frame(new_window, height=2, bd=1, relief=SUNKEN)
+                separator.pack(fill=X, padx=5, pady=5)
+                y_position += 10
+
+        else:
+            messagebox.showinfo(
+                "Info", "Data is not available for module_id '123Eth'")
+
+    except requests.exceptions.RequestException as e:
+        messagebox.showerror("Error", f"Error fetching data from the API: {e}")
+
+
 button_image_36 = PhotoImage(
     file=("button_400.png"))
 button_36 = Button(
     image=button_image_36,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_36 clicked"),
+    command=Web001,
     relief="flat",
     cursor="hand2"
 )
@@ -1204,13 +1301,61 @@ button_37 = Button(
 canvas.create_window(402, 1044, anchor="nw", window=button_24)
 
 
+def Mobile001():
+    try:
+        # Replace 'YOUR_API_URL' with the actual API endpoint URL
+        response = requests.get('https://virtuedu.com/api_virtuedu/modules/')
+        data_list = response.json()
+
+        # Check if any data has 'module_id' as '123Eth'
+        found_data = [data for data in data_list if data.get(
+            'module_id') == 'Mobile001']
+
+        if found_data:
+            new_window = Toplevel()
+            new_window.geometry("500x500")
+            new_window.title("Fetched Data")
+
+            y_position = 30
+
+            # Format and display the data in labels
+            for data in found_data:
+                title_label = Label(new_window, text=f"Title: {data.get('module_name')}",
+                                    font=("Lexend deca", 15, "bold"), wraplength=400, justify=LEFT)
+                title_label.place(x=30, y=y_position)
+                y_position += title_label.winfo_reqheight()
+
+                description_label = Label(new_window, text=f"Description: {data.get('module_description')}",
+                                          wraplength=400, justify=LEFT)
+                description_label.place(x=30, y=y_position)
+                y_position += description_label.winfo_reqheight()
+
+                tutor_label = Label(new_window, text=f"Tutor: {data.get('tutor_name')}",
+                                    wraplength=400, justify=LEFT)
+                tutor_label.place(x=30, y=y_position)
+                y_position += tutor_label.winfo_reqheight()
+
+                # Add other labels to display other data as needed
+
+                separator = Frame(new_window, height=2, bd=1, relief=SUNKEN)
+                separator.pack(fill=X, padx=5, pady=5)
+                y_position += 10
+
+        else:
+            messagebox.showinfo(
+                "Info", "Data is not available for module_id '123Eth'")
+
+    except requests.exceptions.RequestException as e:
+        messagebox.showerror("Error", f"Error fetching data from the API: {e}")
+
+
 button_image_38 = PhotoImage(
     file=("button_400.png"))
 button_38 = Button(
     image=button_image_38,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_38 clicked"),
+    command=Mobile001,
     relief="flat",
     cursor="hand2"
 )
@@ -1230,13 +1375,61 @@ button_39 = Button(
 canvas.create_window(705, 1044, anchor="nw", window=button_26)
 
 
+def Web002():
+    try:
+        # Replace 'YOUR_API_URL' with the actual API endpoint URL
+        response = requests.get('https://virtuedu.com/api_virtuedu/modules/')
+        data_list = response.json()
+
+        # Check if any data has 'module_id' as '123Eth'
+        found_data = [data for data in data_list if data.get(
+            'module_id') == 'Web002']
+
+        if found_data:
+            new_window = Toplevel()
+            new_window.geometry("500x500")
+            new_window.title("Fetched Data")
+
+            y_position = 30
+
+            # Format and display the data in labels
+            for data in found_data:
+                title_label = Label(new_window, text=f"Title: {data.get('module_name')}",
+                                    font=("Lexend deca", 15, "bold"), wraplength=400, justify=LEFT)
+                title_label.place(x=30, y=y_position)
+                y_position += title_label.winfo_reqheight()
+
+                description_label = Label(new_window, text=f"Description: {data.get('module_description')}",
+                                          wraplength=400, justify=LEFT)
+                description_label.place(x=30, y=y_position)
+                y_position += description_label.winfo_reqheight()
+
+                tutor_label = Label(new_window, text=f"Tutor: {data.get('tutor_name')}",
+                                    wraplength=400, justify=LEFT)
+                tutor_label.place(x=30, y=y_position)
+                y_position += tutor_label.winfo_reqheight()
+
+                # Add other labels to display other data as needed
+
+                separator = Frame(new_window, height=2, bd=1, relief=SUNKEN)
+                separator.pack(fill=X, padx=5, pady=5)
+                y_position += 10
+
+        else:
+            messagebox.showinfo(
+                "Info", "Data is not available for module_id '123Eth'")
+
+    except requests.exceptions.RequestException as e:
+        messagebox.showerror("Error", f"Error fetching data from the API: {e}")
+
+
 button_image_40 = PhotoImage(
     file=("button_400.png"))
 button_40 = Button(
     image=button_image_40,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_40 clicked"),
+    command=Web002,
     relief="flat",
     cursor="hand2"
 )
