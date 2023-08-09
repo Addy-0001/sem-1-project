@@ -12,7 +12,7 @@ canvas.configure(yscrollcommand=scrollbar.set)
 scrollbar.pack(side="right", fill="y")
 canvas.pack(fill="both", expand=True)
 from tkinter import messagebox
-
+import webbrowser
 
     
 
@@ -377,7 +377,7 @@ canvas.create_rectangle(
     0.0,
     1813.0,
     1280.0,
-    2007.0,
+    2103.0,
     fill="#3532A7",
     outline="")
 
@@ -1611,16 +1611,7 @@ def home():
 
         window.destroy()
 
-button_image_111 = PhotoImage(
-    file=("button_11.png"))
-button_111 = Button(
-    image=button_image_111,
-    borderwidth=0,
-    highlightthickness=0,
-    command=home,
-    relief="flat"
-)
-canvas.create_window(751, 2875, anchor="nw", window=button_111)
+
 
 
 button_image_112 = PhotoImage(
@@ -1854,7 +1845,7 @@ tu = Button(
     
 
 )
-canvas.create_window(1010, 1986, anchor="nw", window=tu)
+canvas.create_window(1010, 2025, anchor="nw", window=tu)
 
 cu = Button(
     # image=button_image_3,
