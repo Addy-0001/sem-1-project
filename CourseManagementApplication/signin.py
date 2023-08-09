@@ -155,6 +155,7 @@ button_1 = Button(
     highlightthickness=0,
     command=authenticate_user,
     relief="flat",
+    cursor="hand2",
     font=("lexend deca",20)
 
 )
@@ -286,7 +287,8 @@ eye = Button(
     borderwidth=0,
     highlightthickness=0,
     command=toggle_password,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 eye.place(
     x=1137.523681640625,
@@ -318,7 +320,8 @@ button_3 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_3 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_3.place(
     x=881.0,

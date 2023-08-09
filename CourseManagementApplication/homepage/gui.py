@@ -126,7 +126,7 @@ def marketingfile():
 def languagefile():
 
     # Change to the next folder
-    next_folder = os.path.join(os.getcwd().replace("homepage", "homepage"))
+    next_folder = os.path.join(os.getcwd().replace("homepage", "language_wala"))
     os.chdir(next_folder)
 
     # Run the gui.py file
@@ -193,7 +193,8 @@ button_1 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=create_gui,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(1194, 12, anchor="nw", window=button_1)
 
@@ -221,7 +222,8 @@ button_2 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=create_gui,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(1110, 31, anchor="nw", window=button_2)
 
@@ -241,7 +243,8 @@ button_3 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=computingfile,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(400, 457, anchor="nw", window=button_3)
 
@@ -253,7 +256,8 @@ button_4 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=homefile,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(260, 456, anchor="nw", window=button_4)
 
@@ -265,7 +269,8 @@ button_5 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=multimediafile,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(526, 457, anchor="nw", window=button_5)
 
@@ -277,7 +282,8 @@ button_6 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=designingfile,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(660, 457, anchor="nw", window=button_6)
 
@@ -288,7 +294,8 @@ button_7 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=languagefile,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(785, 457, anchor="nw", window=button_7)
 
@@ -300,7 +307,8 @@ button_8 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=marketingfile,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(925, 457, anchor="nw", window=button_8)
 
@@ -986,7 +994,8 @@ button_9 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_9 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_9.place(
     x=986.0,
@@ -1002,7 +1011,8 @@ button_10 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_10 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(983, 1331, anchor="nw", window=button_10)
 
@@ -1020,7 +1030,8 @@ button_11 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_11 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(986, 1030, anchor="nw", window=button_11)
 
@@ -1080,7 +1091,8 @@ button_12 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=Web001,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(986, 745, anchor="nw", window=button_12)
 
@@ -1092,7 +1104,8 @@ button_13 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_13 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(685, 1645, anchor="nw", window=button_13)
 
@@ -1104,7 +1117,8 @@ button_14 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_14 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(682, 1130, anchor="nw", window=button_14)
 
@@ -1115,7 +1129,8 @@ button_15 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_15 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(685, 1030, anchor="nw", window=button_15)
 
@@ -1175,7 +1190,8 @@ button_16 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=Web002,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(685, 745, anchor="nw", window=button_16)
 
@@ -1187,7 +1203,8 @@ button_17 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_17 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(377, 1645, anchor="nw", window=button_17)
 
@@ -1199,7 +1216,8 @@ button_18 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_18 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(374, 1330, anchor="nw", window=button_18)
 
@@ -1210,7 +1228,8 @@ button_19 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_19 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(377, 1030, anchor="nw", window=button_19)
 
@@ -1270,7 +1289,8 @@ button_20 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=soft002,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(377, 745, anchor="nw", window=button_20)
 
@@ -1282,7 +1302,8 @@ button_21 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_21 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(68, 1645, anchor="nw", window=button_21)
 
@@ -1294,7 +1315,8 @@ button_22 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_22 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(65, 1330, anchor="nw", window=button_22)
 
@@ -1306,7 +1328,8 @@ button_23 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_23 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(68, 1030, anchor="nw", window=button_23)
 
@@ -1367,7 +1390,8 @@ button_24 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=Web003,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(68, 745, anchor="nw", window=button_24)
 
@@ -1591,7 +1615,8 @@ button_25 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=buildfile,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(394, 31, anchor="nw", window=button_25)
 
@@ -1603,7 +1628,8 @@ button_26 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=routinesfile,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(542, 32, anchor="nw", window=button_26)
 
@@ -1615,7 +1641,8 @@ button_27 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=requestsfile,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(624, 32, anchor="nw", window=button_27)
 
@@ -1627,7 +1654,8 @@ button_28 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=homefile,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(460, 32, anchor="nw", window=button_28)
 

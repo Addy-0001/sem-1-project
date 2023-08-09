@@ -450,7 +450,8 @@ eye = Button(
     borderwidth=0,
     highlightthickness=0,
     command=toggle_password,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 
 eye.place(

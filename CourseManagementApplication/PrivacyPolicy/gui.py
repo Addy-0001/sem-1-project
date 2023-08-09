@@ -85,7 +85,8 @@ button_1 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_1 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(1154, 20, anchor="nw", window=button_1)
 
@@ -116,7 +117,8 @@ button_2 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_2 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(1100, 38, anchor="nw", window=button_2)
 
@@ -163,7 +165,8 @@ button_4 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_4 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_4.place(
     x=749.0,
@@ -179,7 +182,8 @@ button_5 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_5 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_5.place(
     x=1023.0,
@@ -195,7 +199,8 @@ button_6 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_6 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_6.place(
     x=1023.0,
@@ -211,7 +216,8 @@ button_7 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_7 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_7.place(
     x=1024.0,
@@ -227,7 +233,8 @@ button_8 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_8 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_8.place(
     x=1024.0,
@@ -243,7 +250,8 @@ button_9 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_9 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_9.place(
     x=751.0,
@@ -259,7 +267,8 @@ button_10 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_10 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_10.place(
     x=751.0,
@@ -343,6 +352,7 @@ button_3 = Button(
     highlightthickness=0,
     command=Homes,
     relief="flat",
+    cursor="hand2",
     text= "Home",
     bg="#3532A7",
     fg="#fff",
@@ -376,7 +386,8 @@ button_11 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=home,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_11.place(
     x=751.0,
@@ -395,6 +406,7 @@ button_12 = Button(
     highlightthickness=0,
     command=create_gui,
     relief="flat",
+    cursor="hand2",
     text= "About Us",
     bg="#3532A7",
     fg="#fff",
@@ -424,6 +436,7 @@ coursesbtn = Button(
     highlightthickness=0,
     command=Courses,
     relief="flat",
+    cursor="hand2",
     text= "Courses",
     bg="#3532A7",
     fg="#fff",
@@ -442,6 +455,7 @@ eventbtn = Button(
     highlightthickness=0,
     command=create_gui,
     relief="flat",
+    cursor="hand2",
     text= "Events",
     bg="#3532A7",
     fg="#fff",
@@ -468,6 +482,7 @@ routinebtn = Button(
     highlightthickness=0,
     command=Routines,
     relief="flat",
+    cursor="hand2",
     text= "Routines",    
     bg="#3532A7",
     fg="#fff",
@@ -494,6 +509,7 @@ termsandcon = Button(
     highlightthickness=0,
     command=termsandcondition,
     relief="flat",
+    cursor="hand2",
     text= "Terms and Conditions",  
     bg="#3532A7",
     fg="#fff",
@@ -514,6 +530,7 @@ privacy = Button(
     highlightthickness=0,
     command=alert1,
     relief="flat",
+    cursor="hand2",
     text= "Privacy Policy",
     bg="#3532A7",
     fg="#fff",
@@ -540,6 +557,7 @@ support = Button(
     highlightthickness=0,
     command=Support,
     relief="flat",
+    cursor="hand2",
     text= "Support",
     bg="#3532A7",
     fg="#fff",
@@ -566,6 +584,7 @@ contact = Button(
     highlightthickness=0,
     command=Contact,
     relief="flat",
+    cursor="hand2",
     text= "Contact Us",
     bg="#3532A7",
     fg="#fff",
@@ -581,6 +600,7 @@ cden = Button(
     highlightthickness=0,
     command=lambda: webbrowser.open_new(r"http://www.cden.org.np"),
     relief="flat",
+    cursor="hand2",
     text= "CDEN",
        bg="#3532A7",
     fg="#fff",
@@ -596,6 +616,7 @@ ioe = Button(
     highlightthickness=0,
     command=lambda: webbrowser.open_new(r"http://www.ioe.edu.np"),
     relief="flat",
+    cursor="hand2",
     text= "IOE",
        bg="#3532A7",
     fg="#fff",
@@ -611,6 +632,7 @@ tu = Button(
     highlightthickness=0,
     command=lambda: webbrowser.open_new(r"http://www.tu.edu.np"),
     relief="flat",
+    cursor="hand2",
     text= "TU",
        bg="#3532A7",
     fg="#fff",
@@ -626,6 +648,7 @@ cu = Button(
     highlightthickness=0,
     command=lambda: webbrowser.open_new(r"http://www.coventry.ac.uk"),
     relief="flat",
+    cursor="hand2",
     text= "Coventry University",
     bg="#3532A7",
     fg="#fff",
@@ -642,7 +665,8 @@ button_13 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_13 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_13.place(
     x=518.0,
@@ -658,7 +682,8 @@ button_14 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_14 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_14.place(
     x=518.0,
@@ -674,7 +699,8 @@ button_15 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_15 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_15.place(
     x=518.0,
@@ -699,7 +725,8 @@ button_16 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=buildfile,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(385, 31, anchor="nw", window=button_16)
 
@@ -712,7 +739,8 @@ button_17 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("routines clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(533, 32, anchor="nw", window=button_17)
 
@@ -724,7 +752,8 @@ button_18 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("courses clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(446, 32, anchor="nw", window=button_18)
 
@@ -737,7 +766,8 @@ button_19 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_19 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(610, 32, anchor="nw", window=button_19)
 

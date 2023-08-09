@@ -76,7 +76,8 @@ button_1 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=create_gui,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_1.place(
      x=1160.0,
@@ -118,7 +119,8 @@ button_3 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=create_gui,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_3.place(
     x=1100.0,
@@ -143,7 +145,8 @@ button_4 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=buildfile,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_4.place(
     x=388.0,
@@ -160,6 +163,7 @@ button_5 = Button(
     highlightthickness=0,
     command=lambda: print("button_5 clicked"),
     relief="flat",
+    cursor="hand2",
     bg="#83b4ff"
 )
 button_5.place(
@@ -177,6 +181,7 @@ button_6 = Button(
     highlightthickness=0,
     command=lambda: print("button_6 clicked"),
     relief="flat",
+    cursor="hand2",
     bg="#83b4ff"
 )
 button_6.place(
@@ -194,6 +199,7 @@ button_7 = Button(
     highlightthickness=0,
     command=lambda: print("button_7 clicked"),
     relief="flat",
+    cursor="hand2",
     bg="#83b4ff"
 )
 button_7.place(
@@ -252,7 +258,8 @@ button_8 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_8 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_8.place(
     x=454.0,
@@ -268,7 +275,8 @@ button_9 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_9 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_9.place(
     x=501.0,
@@ -284,7 +292,8 @@ button_10 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_10 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_10.place(
     x=547.0,
@@ -300,7 +309,8 @@ button_11 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_11 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_11.place(
     x=593.0,
@@ -316,7 +326,8 @@ button_12 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_12 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_12.place(
     x=741.0,
@@ -332,7 +343,8 @@ button_13 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_13 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_13.place(
     x=826.0,
@@ -348,7 +360,8 @@ button_14 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_14 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_14.place(
     x=787.0,
@@ -364,7 +377,8 @@ button_15 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_15 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_15.place(
     x=639.0,
@@ -396,7 +410,8 @@ button_16 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_16 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_16.place(
     x=102.43994140625,
@@ -439,7 +454,8 @@ button_17 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_17 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_17.place(
     x=248.0,
@@ -471,7 +487,8 @@ button_18 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_18 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_18.place(
     x=102.43994140625,
@@ -514,7 +531,8 @@ button_19 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_19 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_19.place(
     x=248.0,
@@ -546,7 +564,8 @@ button_20 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_20 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_20.place(
     x=102.43994140625,
@@ -613,7 +632,8 @@ button_21 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_21 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_21.place(
     x=406.43994140625,
@@ -656,7 +676,8 @@ button_22 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_22 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_22.place(
     x=552.0,
@@ -688,7 +709,8 @@ button_23 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_23 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_23.place(
     x=406.43994140625,
@@ -731,7 +753,8 @@ button_24 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_24 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_24.place(
     x=552.0,
@@ -763,7 +786,8 @@ button_25 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_25 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_25.place(
     x=406.43994140625,
@@ -806,7 +830,8 @@ button_26 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_26 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_26.place(
     x=552.0,
@@ -838,7 +863,8 @@ button_27 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_27 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_27.place(
     x=686.43994140625,
@@ -881,7 +907,8 @@ button_28 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_28 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_28.place(
     x=832.0,
@@ -913,7 +940,8 @@ button_29 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_29 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_29.place(
     x=686.43994140625,
@@ -980,7 +1008,8 @@ button_30 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_30 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_30.place(
     x=686.43994140625,
@@ -1023,7 +1052,8 @@ button_31 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_31 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_31.place(
     x=832.0,
@@ -1055,7 +1085,8 @@ button_32 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_32 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_32.place(
     x=972.43994140625,
@@ -1098,7 +1129,8 @@ button_33 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_33 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_33.place(
     x=1118.0,
@@ -1130,7 +1162,8 @@ button_34 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_34 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_34.place(
     x=972.43994140625,
@@ -1173,7 +1206,8 @@ button_35 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_35 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_35.place(
     x=1118.0,
@@ -1205,7 +1239,8 @@ button_36 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_36 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_36.place(
     x=972.43994140625,
@@ -1248,7 +1283,8 @@ button_37 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_37 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_37.place(
     x=1118.0,
@@ -1272,7 +1308,8 @@ button_38 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_38 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_38.place(
     x=536.0,
@@ -1288,7 +1325,8 @@ button_39 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_39 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_39.place(
     x=536.0,
@@ -1304,7 +1342,8 @@ button_40 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_40 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_40.place(
     x=536.0,
@@ -1320,7 +1359,8 @@ button_41 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_41 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_41.place(
     x=536.0,
@@ -1336,7 +1376,8 @@ button_42 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_42 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_42.place(
     x=536.0,
@@ -1352,7 +1393,8 @@ button_43 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_43 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_43.place(
     x=536.0,
@@ -1368,7 +1410,8 @@ button_44 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_44 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_44.place(
     x=789.0,
@@ -1384,7 +1427,8 @@ button_45 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_45 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_45.place(
     x=789.0,
@@ -1400,7 +1444,8 @@ button_46 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_46 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_46.place(
     x=796.0,
@@ -1416,7 +1461,8 @@ button_47 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_47 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_47.place(
     x=789.0,
@@ -1432,7 +1478,8 @@ button_48 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_48 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_48.place(
     x=1060.0,
@@ -1448,7 +1495,8 @@ button_49 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_49 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_49.place(
     x=1060.0,
@@ -1465,6 +1513,7 @@ button_50 = Button(
     highlightthickness=0,
     command=lambda: print("button_50 clicked"),
     relief="flat",
+    cursor="hand2",
     
 )
 button_50.place(
@@ -1481,7 +1530,8 @@ button_51 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_51 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_51.place(
     x=1060.0,
@@ -1497,7 +1547,8 @@ button_52 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=lambda: print("button_52 clicked"),
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 button_52.place(
     x=788.0,
@@ -1585,6 +1636,7 @@ button_3 = Button(
     highlightthickness=0,
     command=Homes,
     relief="flat",
+    cursor="hand2",
     text= "Home",
     bg="#3532A7",
     fg="#fff",
@@ -1622,6 +1674,7 @@ button_112 = Button(
     highlightthickness=0,
     command=create_gui,
     relief="flat",
+    cursor="hand2",
     text= "About Us",
     bg="#3532A7",
     fg="#fff",
@@ -1651,6 +1704,7 @@ coursesbtn = Button(
     highlightthickness=0,
     command=Courses,
     relief="flat",
+    cursor="hand2",
     text= "Courses",
     bg="#3532A7",
     fg="#fff",
@@ -1669,6 +1723,7 @@ eventbtn = Button(
     highlightthickness=0,
     command=create_gui,
     relief="flat",
+    cursor="hand2",
     text= "Events",
     bg="#3532A7",
     fg="#fff",
@@ -1695,6 +1750,7 @@ routinebtn = Button(
     highlightthickness=0,
     command=Routines,
     relief="flat",
+    cursor="hand2",
     text= "Routines",    
     bg="#3532A7",
     fg="#fff",
@@ -1721,6 +1777,7 @@ termsandcon = Button(
     highlightthickness=0,
     command=termsandcondition,
     relief="flat",
+    cursor="hand2",
     text= "Terms and Conditions",  
     bg="#3532A7",
     fg="#fff",
@@ -1741,6 +1798,7 @@ privacy = Button(
     highlightthickness=0,
     command=alert1,
     relief="flat",
+    cursor="hand2",
     text= "Privacy Policy",
     bg="#3532A7",
     fg="#fff",
@@ -1767,6 +1825,7 @@ support = Button(
     highlightthickness=0,
     command=Support,
     relief="flat",
+    cursor="hand2",
     text= "Support",
     bg="#3532A7",
     fg="#fff",
@@ -1793,6 +1852,7 @@ contact = Button(
     highlightthickness=0,
     command=Contact,
     relief="flat",
+    cursor="hand2",
     text= "Contact Us",
     bg="#3532A7",
     fg="#fff",
@@ -1808,6 +1868,7 @@ cden = Button(
     highlightthickness=0,
     command=lambda: webbrowser.open_new(r"http://www.cden.org.np"),
     relief="flat",
+    cursor="hand2",
     text= "CDEN",
        bg="#3532A7",
     fg="#fff",
@@ -1823,6 +1884,7 @@ ioe = Button(
     highlightthickness=0,
     command=lambda: webbrowser.open_new(r"http://www.ioe.edu.np"),
     relief="flat",
+    cursor="hand2",
     text= "IOE",
        bg="#3532A7",
     fg="#fff",
@@ -1838,6 +1900,7 @@ tu = Button(
     highlightthickness=0,
     command=lambda: webbrowser.open_new(r"http://www.tu.edu.np"),
     relief="flat",
+    cursor="hand2",
     text= "TU",
        bg="#3532A7",
     fg="#fff",
@@ -1853,6 +1916,7 @@ cu = Button(
     highlightthickness=0,
     command=lambda: webbrowser.open_new(r"http://www.coventry.ac.uk"),
     relief="flat",
+    cursor="hand2",
     text= "Coventry University",
     bg="#3532A7",
     fg="#fff",
@@ -1869,7 +1933,8 @@ canvas.create_window(1010, 2014, anchor="nw", window=cu)
 #     borderwidth=0,
 #     highlightthickness=0,
 #     command=lambda: print("button_113 clicked"),
-#     relief="flat"
+#     relief="flat",
+    cursor="hand2"
 # )
 # canvas.create_window(518, 2665, anchor="nw", window=button_113)
 
@@ -1880,7 +1945,8 @@ canvas.create_window(1010, 2014, anchor="nw", window=cu)
 #     borderwidth=0,
 #     highlightthickness=0,
 #     command=lambda: print("button_14 clicked"),
-#     relief="flat"
+#     relief="flat",
+    cursor="hand2"
 # )
 # canvas.create_window(518, 2690, anchor="nw", window=button_114)
 
@@ -1892,7 +1958,8 @@ canvas.create_window(1010, 2014, anchor="nw", window=cu)
 #     borderwidth=0,
 #     highlightthickness=0,
 #     command=lambda: print("button_15 clicked"),
-#     relief="flat"
+#     relief="flat",
+    cursor="hand2"
 # )
 # canvas.create_window(518, 2715, anchor="nw", window=button_115)
 

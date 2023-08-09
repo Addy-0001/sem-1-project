@@ -111,7 +111,8 @@ button_1 = Button(
     borderwidth=0,
     highlightthickness=0,
     command=post_data,
-    relief="flat"
+    relief="flat",
+    cursor="hand2"
 )
 canvas.create_window(912, 684, anchor="nw", window=button_1)
 
