@@ -496,37 +496,7 @@ canvas.create_rectangle(
     fill="#FFFFFF",
     outline="")
 
-canvas.create_rectangle(
-    85.0,
-    1332.0,
-    327.0,
-    1576.0,
-    fill="#FFFFFF",
-    outline="")
 
-canvas.create_rectangle(
-    385.0,
-    1332.0,
-    627.0,
-    1576.0,
-    fill="#FFFFFF",
-    outline="")
-
-canvas.create_rectangle(
-    683.0,
-    1332.0,
-    925.0,
-    1576.0,
-    fill="#FFFFFF",
-    outline="")
-
-canvas.create_rectangle(
-    982.0,
-    1332.0,
-    1224.0,
-    1576.0,
-    fill="#FFFFFF",
-    outline="")
 
 canvas.create_rectangle(
     84.0,
@@ -600,29 +570,6 @@ image_5 = canvas.create_image(
     image=image_image_5
 )
 
-image_image_6 = PhotoImage(
-    file=("image_6.png"))
-image_6 = canvas.create_image(
-    506.0,
-    1394.0,
-    image=image_image_6
-)
-
-image_image_7 = PhotoImage(
-    file=("image_7.png"))
-image_7 = canvas.create_image(
-    804.0,
-    1394.0,
-    image=image_image_7
-)
-
-image_image_8 = PhotoImage(
-    file=("image_8.png"))
-image_8 = canvas.create_image(
-    1103.0,
-    1394.0,
-    image=image_image_8
-)
 
 image_image_9 = PhotoImage(
     file=("image_9.png"))
@@ -689,41 +636,6 @@ canvas.create_text(
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
 
-canvas.create_text(
-    98.0,
-    1492.731689453125,
-    anchor="nw",
-    text="Introduction to User Experience Design",
-    fill="#000000",
-    font=("OpenSans SemiboldItalic", 12 * -1)
-)
-
-canvas.create_text(
-    398.0,
-    1492.731689453125,
-    anchor="nw",
-    text="Introduction to User Experience Design",
-    fill="#000000",
-    font=("OpenSans SemiboldItalic", 12 * -1)
-)
-
-canvas.create_text(
-    696.0,
-    1492.731689453125,
-    anchor="nw",
-    text="Introduction to User Experience Design",
-    fill="#000000",
-    font=("OpenSans SemiboldItalic", 12 * -1)
-)
-
-canvas.create_text(
-    995.0,
-    1492.731689453125,
-    anchor="nw",
-    text="Introduction to User Experience Design",
-    fill="#000000",
-    font=("OpenSans SemiboldItalic", 12 * -1)
-)
 
 canvas.create_text(
     97.0,
@@ -807,78 +719,6 @@ canvas.create_window(97, 731, anchor="nw", window=button_20)
 #     width=87.0,
 #     height=11.9024658203125
 # )
-
-button_image_21 = PhotoImage(
-    file=("button_21.png"))
-button_21 = Button(
-    image=button_image_21,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_21 clicked"),
-    relief="flat",
-    cursor="hand2"
-)
-canvas.create_window(98, 1462, anchor="nw", window=button_21)
-
-# button_21.place(
-#     x=98.0,
-#     y=1462.12548828125,
-#     width=87.0,
-#     height=11.9024658203125
-# )
-
-button_image_22 = PhotoImage(
-    file=("button_22.png"))
-button_22 = Button(
-    image=button_image_22,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_22 clicked"),
-    relief="flat",
-    cursor="hand2"
-)
-
-canvas.create_window(397, 1462, anchor="nw", window=button_22)
-
-# button_22.place(
-#     x=398.0,
-#     y=1462.12548828125,
-#     width=87.0,
-#     height=11.9024658203125
-# )
-
-button_image_23 = PhotoImage(
-    file=("button_23.png"))
-button_23 = Button(
-    image=button_image_23,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_23 clicked"),
-    relief="flat",
-    cursor="hand2"
-)
-
-canvas.create_window(697, 1462, anchor="nw", window=button_23)
-
-# button_23.place(
-#     x=696.0,
-#     y=1462.12548828125,
-#     width=87.0,
-#     height=11.9024658203125
-# )
-
-button_image_24 = PhotoImage(
-    file=("button_24.png"))
-button_24 = Button(
-    image=button_image_24,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_24 clicked"),
-    relief="flat",
-    cursor="hand2"
-)
-
-canvas.create_window(995, 1462, anchor="nw", window=button_24)
 
 # button_24.place(
 #     x=995.0,
@@ -1034,37 +874,7 @@ image_16 = canvas.create_image(
     image=image_image_16
 )
 
-image_image_17 = PhotoImage(
-    file=("image_17.png"))
-image_17 = canvas.create_image(
-    206.0,
-    1484.8292236328125,
-    image=image_image_17
-)
 
-image_image_18 = PhotoImage(
-    file=("image_18.png"))
-image_18 = canvas.create_image(
-    506.0,
-    1484.8292236328125,
-    image=image_image_18
-)
-
-image_image_19 = PhotoImage(
-    file=("image_19.png"))
-image_19 = canvas.create_image(
-    804.0,
-    1484.8292236328125,
-    image=image_image_19
-)
-
-image_image_20 = PhotoImage(
-    file=("image_20.png"))
-image_20 = canvas.create_image(
-    1103.0,
-    1484.8292236328125,
-    image=image_image_20
-)
 
 image_image_21 = PhotoImage(
     file=("image_21.png"))
@@ -1142,85 +952,6 @@ canvas.create_window(97, 781, anchor="nw", window=button_32)
 #     height=18.0740966796875
 # )
 
-button_image_33 = PhotoImage(
-    file=("button_33.png"))
-button_33 = Button(
-    image=button_image_33,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_33 clicked"),
-    relief="flat",
-    cursor="hand2"
-)
-canvas.create_window(98, 1512, anchor="nw", window=button_33)
-
-
-# button_33.place(
-#     x=98.0,
-#     y=1512.0,
-#     width=80.5115966796875,
-#     height=18.073974609375
-# )
-
-button_image_34 = PhotoImage(
-    file=("button_34.png"))
-button_34 = Button(
-    image=button_image_34,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_34 clicked"),
-    relief="flat",
-    cursor="hand2"
-)
-canvas.create_window(398, 1512, anchor="nw", window=button_34)
-
-
-# button_34.place(
-#     x=398.0,
-#     y=1512.0,
-#     width=80.5115966796875,
-#     height=18.073974609375
-# )
-
-button_image_35 = PhotoImage(
-    file=("button_35.png"))
-button_35 = Button(
-    image=button_image_35,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_35 clicked"),
-    relief="flat",
-    cursor="hand2"
-)
-
-canvas.create_window(696, 1512, anchor="nw", window=button_35)
-
-# button_35.place(
-#     x=696.0,
-#     y=1512.0,
-#     width=80.5115966796875,
-#     height=18.073974609375
-# )
-
-button_image_36 = PhotoImage(
-    file=("button_36.png"))
-button_36 = Button(
-    image=button_image_36,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_36 clicked"),
-    relief="flat",
-    cursor="hand2"
-)
-
-canvas.create_window(995, 1512, anchor="nw", window=button_36)
-
-# button_36.place(
-#     x=995.0,
-#     y=1512.0,
-#     width=80.51171875,
-#     height=18.073974609375
-# )
 
 button_image_37 = PhotoImage(
     file=("button_37.png"))
@@ -1376,78 +1107,7 @@ canvas.create_window(133, 805, anchor="nw", window=button_44)
 #     height=25.0
 # )
 
-button_image_45 = PhotoImage(
-    file=("button_45.png"))
-button_45 = Button(
-    image=button_image_45,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_45 clicked"),
-    relief="flat",
-    cursor="hand2"
-)
 
-canvas.create_window(133, 1536, anchor="nw", window=button_45)
-
-# button_45.place(
-#     x=134.0,
-#     y=1536.0,
-#     width=144.0,
-#     height=25.0
-# )
-
-button_image_46 = PhotoImage(
-    file=("button_46.png"))
-button_46 = Button(
-    image=button_image_46,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_46 clicked"),
-    relief="flat",
-    cursor="hand2"
-)
-
-canvas.create_window(434, 1536, anchor="nw", window=button_46)
-
-# button_46.place(
-#     x=434.0,
-#     y=1536.0,
-#     width=144.0,
-#     height=25.0
-# )
-
-button_image_47 = PhotoImage(
-    file=("button_47.png"))
-button_47 = Button(
-    image=button_image_47,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_47 clicked"),
-    relief="flat",
-    cursor="hand2"
-)
-
-canvas.create_window(732, 1536, anchor="nw", window=button_47)
-
-# button_47.place(
-#     x=732.0,
-#     y=1536.0,
-#     width=144.0,
-#     height=25.0
-# )
-
-button_image_48 = PhotoImage(
-    file=("button_48.png"))
-button_48 = Button(
-    image=button_image_48,
-    borderwidth=0,
-    highlightthickness=0,
-    command=lambda: print("button_48 clicked"),
-    relief="flat",
-    cursor="hand2"
-)
-
-canvas.create_window(1031, 1536, anchor="nw", window=button_48)
 
 # button_48.place(
 #     x=1031.0,
