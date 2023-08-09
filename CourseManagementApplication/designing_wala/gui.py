@@ -608,7 +608,7 @@ canvas.create_text(
     107.0,
     691.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Graphic Design Specialization ",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -617,7 +617,7 @@ canvas.create_text(
     107.0,
     988.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="UX Design Course",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -626,7 +626,7 @@ canvas.create_text(
     401.0,
     691.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Web Design for Beginners",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -644,7 +644,7 @@ canvas.create_text(
     704.0,
     691.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Interior Design Course",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -653,7 +653,7 @@ canvas.create_text(
     704.0,
     988.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Fashion Design Course",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -662,7 +662,7 @@ canvas.create_text(
     1000.0,
     693.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Digital Illustration Course",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -671,7 +671,7 @@ canvas.create_text(
     1000.0,
     990.731689453125,
     anchor="nw",
-    text="Introduction to User Experience Design",
+    text="Motion Graphics Course",
     fill="#000000",
     font=("OpenSans SemiboldItalic", 12 * -1)
 )
@@ -951,7 +951,7 @@ canvas.create_text(
     107.0,
     708.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Whether you're a budding designer or seeking to enhance your\ndesign skills, this course provides an immersive journey into\nthe world of visual aesthetics, digital tools, and design principles.",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -960,7 +960,7 @@ canvas.create_text(
     107.0,
     1005.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Whether you're a budding designer or seeking to enhance your\ndesign skills, this course provides an immersive journey into\nthe world of visual aesthetics, digital tools, and design principles.",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -969,7 +969,7 @@ canvas.create_text(
     401.0,
     708.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Whether you're a budding designer or seeking to enhance your\ndesign skills, this course provides an immersive journey into\nthe world of visual aesthetics, digital tools, and design principles.",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -978,7 +978,7 @@ canvas.create_text(
     401.0,
     1005.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Whether you're a budding designer or seeking to enhance your\ndesign skills, this course provides an immersive journey into\nthe world of visual aesthetics, digital tools, and design principles.",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -987,7 +987,7 @@ canvas.create_text(
     704.0,
     708.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Whether you're a budding designer or seeking to enhance your\ndesign skills, this course provides an immersive journey into\nthe world of visual aesthetics, digital tools, and design principles.",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -996,7 +996,7 @@ canvas.create_text(
     704.0,
     1005.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Whether you're a budding designer or seeking to enhance your\ndesign skills, this course provides an immersive journey into\nthe world of visual aesthetics, digital tools, and design principles.",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -1005,7 +1005,7 @@ canvas.create_text(
     1000.0,
     710.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Whether you're a budding designer or seeking to enhance your\ndesign skills, this course provides an immersive journey into\nthe world of visual aesthetics, digital tools, and design principles.",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )
@@ -1014,7 +1014,7 @@ canvas.create_text(
     1000.0,
     1007.0,
     anchor="nw",
-    text="Discover the art of crafting exceptional user experiences with our Introduction to User Experience Design course. Dive into the world of interactive design, learn the fundamentals of user-centered thinking, and acquire the skills to create intuitive,",
+    text="Whether you're a budding designer or seeking to enhance your\ndesign skills, this course provides an immersive journey into\nthe world of visual aesthetics, digital tools, and design principles.",
     fill="#000000",
     font=("OpenSans Regular", 7 * -1)
 )

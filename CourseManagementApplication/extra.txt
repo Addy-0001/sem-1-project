@@ -1,0 +1,63 @@
+def get_data_from_api():
+    response = requests.get('http://127.0.0.1:8000/api_virtuedu/modules/')
+    return response.json()
+
+
+# def modulesfile():
+#     data = get_data_from_api()
+#     data_window = Tk()
+#     data_window.title(f"{data['module_name']}")
+#     data_window.geometry("500x500")
+#     # listbox = Listbox(data_window, width=10, height=40)
+#     # listbox.pack()
+#     for item in data:
+#         data_window.insert(END, f"module ID: {item['module_id']}, module Name: {item['module_name']}")
+#     data_window.mainloop()
+
+
+def fetch_data_from_api1():
+    try:
+        # Replace 'YOUR_API_URL' with the actual API endpoint URL
+        response = requests.get('https://virtuedu.com/api_virtuedu/modules/')
+        data_list = response.json()
+
+        # Check if any data has 'module_id' as '123Eth'
+        found_data = [data for data in data_list if data.get(
+            'module_id') == '123Ethical']
+
+        if found_data:
+            new_window = Toplevel()
+            new_window.geometry("500x500")
+            new_window.title("Fetched Data")
+
+            y_position = 30
+
+            # Format and display the data in labels
+            for data in found_data:
+                title_label = Label(new_window, text=f"Title: {data.get('module_name')}",
+                                    font=("Lexend deca", 15, "bold"), wraplength=400, justify=LEFT)
+                title_label.place(x=30, y=y_position)
+                y_position += title_label.winfo_reqheight()
+
+                description_label = Label(new_window, text=f"Description: {data.get('module_description')}",
+                                          wraplength=400, justify=LEFT)
+                description_label.place(x=30, y=y_position)
+                y_position += description_label.winfo_reqheight()
+
+                tutor_label = Label(new_window, text=f"Tutor: {data.get('tutor_name')}",
+                                    wraplength=400, justify=LEFT)
+                tutor_label.place(x=30, y=y_position)
+                y_position += tutor_label.winfo_reqheight()
+
+                # Add other labels to display other data as needed
+
+                separator = Frame(new_window, height=2, bd=1, relief=SUNKEN)
+                separator.pack(fill=X, padx=5, pady=5)
+                y_position += 10
+
+        else:
+            messagebox.showinfo(
+                "Info", "Data is not available for module_id '123Eth'")
+
+    except requests.exceptions.RequestException as e:
+        messagebox.showerror("Error", f"Error fetching data from the API: {e}")
