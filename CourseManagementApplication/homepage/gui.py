@@ -236,8 +236,9 @@ image_1 = canvas.create_image(
     image=image_image_1
 )
 
+
 button_image_3 = PhotoImage(
-    file=("button_3.png"))
+    file=("button_4.png"))
 button_3 = Button(
     image=button_image_3,
     borderwidth=0,
@@ -246,8 +247,7 @@ button_3 = Button(
     relief="flat",
     cursor="hand2"
 )
-canvas.create_window(400, 457, anchor="nw", window=button_3)
-
+canvas.create_window(390, 457, anchor="nw", window=button_3)
 
 button_image_4 = PhotoImage(
     file=("button_4.png"))
