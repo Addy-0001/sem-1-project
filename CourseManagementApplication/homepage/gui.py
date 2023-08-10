@@ -8,7 +8,7 @@ import requests
 window = Tk()
 window.geometry("1280x800")
 window.configure(bg="#EEEFF3")
-
+import webbrowser
 # Create a Canvas widget with a scrollbar
 canvas = Canvas(window, height=600)
 scrollbar = Scrollbar(window, orient="vertical", command=canvas.yview)
@@ -236,18 +236,38 @@ image_1 = canvas.create_image(
     image=image_image_1
 )
 
+# ... (Previous code)
 
-button_image_3 = PhotoImage(
-    file=("button_4.png"))
-button_3 = Button(
-    image=button_image_3,
-    borderwidth=0,
-    highlightthickness=0,
-    command=computingfile,
-    relief="flat",
-    cursor="hand2"
-)
-canvas.create_window(390, 457, anchor="nw", window=button_3)
+
+
+
+# ... (Rest of the code)
+
+# # ... (Rest of the code)
+
+# button_image_3 = PhotoImage(file=("button_4.png"))
+# button_3 = Button(
+#     canvas,
+#     image=button_image_3,
+#     borderwidth=0,
+#     highlightthickness=0,
+#     command=computingfile,
+#     relief="flat",
+#     cursor="hand2"
+# )
+# canvas.create_window(390, 457, anchor="nw", window=button_3)
+
+# # Add a label on top of the button to show the text
+# button_3_label = Label(
+#     canvas,
+#     text="Computing",  # Set the label text
+#     font=("Poppins Regular", 12),  # Set the desired font and size
+#     bg="#EEEFF3"  # Set the background color to match the canvas background
+# )
+# canvas.create_window(390 + button_image_3.width() // 2, 457 + button_image_3.height() // 2, anchor="center", window=button_3_label)
+
+# # ... (Rest of the code)
+
 
 button_image_4 = PhotoImage(
     file=("button_4.png"))
@@ -1667,7 +1687,7 @@ canvas.create_text(
 def Homes():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","homepage"))
+        next_folder = os.path.join(os.getcwd().replace("homepage","build"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1719,7 +1739,7 @@ canvas.create_window(506, 1860, anchor="nw", window=button_112)
 def Courses():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","secondmainpage(courses_page)"))
+        next_folder = os.path.join(os.getcwd().replace("homepage","homepage"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1766,7 +1786,7 @@ canvas.create_window(506, 1920, anchor="nw", window=eventbtn)
 def Routines():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","routines"))
+        next_folder = os.path.join(os.getcwd().replace("homepage","routines"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1792,7 +1812,7 @@ canvas.create_window(506, 1950, anchor="nw", window=routinebtn)
 def termsandcondition():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","termsandconditions"))
+        next_folder = os.path.join(os.getcwd().replace("homepage","termsandconditions"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1818,7 +1838,14 @@ canvas.create_window(740, 1830, anchor="nw", window=termsandcon)
 
 
 def alert1():
-    messagebox.showinfo("Alert", "You are on Same page now") 
+    # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("homepage","PrivacyPolicy"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
 
 privacy = Button(
     # image=button_image_3,
@@ -1838,7 +1865,7 @@ canvas.create_window(740, 1860, anchor="nw", window=privacy)
 def Support():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","support"))
+        next_folder = os.path.join(os.getcwd().replace("homepage","support"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1864,7 +1891,7 @@ canvas.create_window(740, 1890, anchor="nw", window=support)
 def Contact():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","contact_us"))
+        next_folder = os.path.join(os.getcwd().replace("homepage","contact_us"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1947,6 +1974,20 @@ cu = Button(
 )
 canvas.create_window(1010, 1920, anchor="nw", window=cu)
 
+button_image_3 = PhotoImage(file=("button_3.png"))
+button_3 = Button(
+    
+    image=button_image_3,
+    borderwidth=0,
+    highlightthickness=0,
+    command=computingfile,
+    relief="flat",
+    cursor="hand2",
+  
+)
+canvas.create_window(400, 457, anchor="nw", window=button_3)
+
+# ... (Rest of the button code)
 
 
 

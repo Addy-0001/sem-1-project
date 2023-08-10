@@ -1152,5 +1152,16 @@ button_44 = Button(
 )
 canvas.create_window(705, 1046, anchor="nw", window=button_44)
 
+button_image_225 = PhotoImage(
+    file=("home.png"))
+button_225 = Button(
+    image=button_image_225,
+    borderwidth=0,
+    highlightthickness=0,
+    command=buildfile,
+    relief="flat",
+    cursor="hand2"
+)
+canvas.create_window(388, 31, anchor="nw", window=button_225)
 window.resizable(False, False)
 window.mainloop()

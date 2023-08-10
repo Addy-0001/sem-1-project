@@ -359,7 +359,7 @@ canvas.create_text(
 def Homes():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","homepage"))
+        next_folder = os.path.join(os.getcwd().replace("termsandconditions","build"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -413,7 +413,7 @@ canvas.create_window(506, 2270, anchor="nw", window=button_112)
 def Courses():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","secondmainpage(courses_page)"))
+        next_folder = os.path.join(os.getcwd().replace("termsandconditions","homepage"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -462,7 +462,7 @@ canvas.create_window(506, 2330, anchor="nw", window=eventbtn)
 def Routines():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","routines"))
+        next_folder = os.path.join(os.getcwd().replace("termsandconditions","routines"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -489,7 +489,7 @@ canvas.create_window(506, 2360, anchor="nw", window=routinebtn)
 def termsandcondition():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","termsandconditions"))
+        next_folder = os.path.join(os.getcwd().replace("termandconditions","termsandconditions"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -537,7 +537,7 @@ canvas.create_window(740, 2240, anchor="nw", window=privacy)
 def Support():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","support"))
+        next_folder = os.path.join(os.getcwd().replace("termsandconditions","support"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -564,7 +564,7 @@ canvas.create_window(740, 2270, anchor="nw", window=support)
 def Contact():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","contact_us"))
+        next_folder = os.path.join(os.getcwd().replace("termsandconditions","contact_us"))
         os.chdir(next_folder)
 
         # Run the gui.py file

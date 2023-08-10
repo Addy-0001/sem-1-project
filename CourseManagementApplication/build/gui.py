@@ -966,77 +966,7 @@ canvas.create_text(
     font=("Poppins SemiBold", 25 * -1)
 )
 
-canvas.create_text(
-    461.0,
-    1785.0,
-    anchor="nw",
-    text="Menu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 17 * -1)
-)
 
-canvas.create_text(
-    745.0,
-    1787.0,
-    anchor="nw",
-    text="Menu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 17 * -1)
-)
-
-canvas.create_text(
-    974.0,
-    1787.0,
-    anchor="nw",
-    text="Menu",
-    fill="#FFFFFF",
-    font=("Poppins SemiBold", 17 * -1)
-)
-
-canvas.create_text(
-    63.0,
-    1804.0,
-    anchor="nw",
-    text="Learn Anywhere, Achieve Everywhere",
-    fill="#FFFFFF",
-    font=("Poppins Regular", 6 * -1)
-)
-
-canvas.create_text(
-    63.0,
-    1824.0,
-    anchor="nw",
-    text="Our innovative online learning platform empowers students to pursue their educational goals from anywhere in the world. With flexible schedules and high-quality courses, we provide the tools and resources necessary for you to excel in your studies and succeed in any endeavor. Join our global community of learners and unlock your full potential with Virtu Edu.",
-    fill="#FFFFFF",
-    font=("Poppins Medium", 6 * -1)
-)
-
-canvas.create_text(
-    464.0,
-    1817.0,
-    anchor="nw",
-    text="Home\nAbout Us\nCourses\nEvents\nRoutine",
-    fill="#FFFFFF",
-    font=("Poppins Medium", 6 * -1)
-)
-
-canvas.create_text(
-    756.0,
-    1817.0,
-    anchor="nw",
-    text="Terms and Condition\nPrivacy and Policy\nSupport\nContact Us",
-    fill="#FFFFFF",
-    font=("Poppins Medium", 6 * -1)
-)
-
-canvas.create_text(
-    979.0,
-    1817.0,
-    anchor="nw",
-    text="CDEN\nIOE\nTU\nCoventry University",
-    fill="#FFFFFF",
-    font=("Poppins Medium", 6 * -1)
-)
 
 canvas.create_rectangle(
     90.0,
@@ -1374,7 +1304,7 @@ canvas.create_text(
     1001.0,
     1433.0,
     anchor="nw",
-    text="SOME KAAMCHOR",
+    text="Diya Kc",
     fill="#000000",
     font=("OpenSans SemiBold", 16 * -1)
 )
@@ -1383,7 +1313,7 @@ canvas.create_text(
     1001.0,
     1463.0,
     anchor="nw",
-    text="EATING AND MAKING EXCUSES",
+    text="Documentation",
     fill="#5E5E5E",
     font=("OpenSans Regular", 12 * -1)
 )
@@ -1476,7 +1406,7 @@ canvas.create_text(
 def Homes():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","homepage"))
+        next_folder = os.path.join(os.getcwd().replace("build","homepage"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1511,7 +1441,7 @@ canvas.create_window(506, 1830, anchor="nw", window=button_3)
 def home():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","homepage"))
+        next_folder = os.path.join(os.getcwd().replace("build","homepage"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1553,7 +1483,7 @@ canvas.create_window(506, 1860, anchor="nw", window=button_112)
 def Courses():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","secondmainpage(courses_page)"))
+        next_folder = os.path.join(os.getcwd().replace("build","homepage"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1602,7 +1532,7 @@ canvas.create_window(506, 1920, anchor="nw", window=eventbtn)
 def Routines():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","routines"))
+        next_folder = os.path.join(os.getcwd().replace("build","routines"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1629,7 +1559,7 @@ canvas.create_window(506, 1950, anchor="nw", window=routinebtn)
 def termsandcondition():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","termsandconditions"))
+        next_folder = os.path.join(os.getcwd().replace("build","termsandconditions"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1656,7 +1586,14 @@ canvas.create_window(740, 1830, anchor="nw", window=termsandcon)
 
 
 def alert1():
-    messagebox.showinfo("Alert", "You are on Same page now") 
+    # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("build","PrivacyPolicy"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
 
 privacy = Button(
     # image=button_image_3,
@@ -1677,7 +1614,7 @@ canvas.create_window(740, 1860, anchor="nw", window=privacy)
 def Support():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","support"))
+        next_folder = os.path.join(os.getcwd().replace("build","support"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1704,7 +1641,7 @@ canvas.create_window(740, 1890, anchor="nw", window=support)
 def Contact():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","contact_us"))
+        next_folder = os.path.join(os.getcwd().replace("build","contact_us"))
         os.chdir(next_folder)
 
         # Run the gui.py file

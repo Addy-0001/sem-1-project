@@ -336,7 +336,7 @@ canvas.create_text(
 def Homes():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","homepage"))
+        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","build"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -356,7 +356,7 @@ button_3 = Button(
     text= "Home",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 )
 canvas.create_window(506, 1830, anchor="nw", window=button_3)
@@ -371,7 +371,7 @@ canvas.create_window(506, 1830, anchor="nw", window=button_3)
 def home():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","homepage"))
+        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","build"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -410,7 +410,7 @@ button_12 = Button(
     text= "About Us",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
@@ -419,7 +419,7 @@ canvas.create_window(506, 1860, anchor="nw", window=button_12)
 def Courses():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","secondmainpage(courses_page)"))
+        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","homepage"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -440,7 +440,7 @@ coursesbtn = Button(
     text= "Courses",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
@@ -459,7 +459,7 @@ eventbtn = Button(
     text= "Events",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+ 
     
 
 )
@@ -486,7 +486,7 @@ routinebtn = Button(
     text= "Routines",    
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
@@ -513,7 +513,7 @@ termsandcon = Button(
     text= "Terms and Conditions",  
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
 
     
 
@@ -534,7 +534,7 @@ privacy = Button(
     text= "Privacy Policy",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
@@ -561,7 +561,7 @@ support = Button(
     text= "Support",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
@@ -588,7 +588,7 @@ contact = Button(
     text= "Contact Us",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
@@ -604,7 +604,7 @@ cden = Button(
     text= "CDEN",
        bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
@@ -620,7 +620,7 @@ ioe = Button(
     text= "IOE",
        bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
@@ -636,7 +636,7 @@ tu = Button(
     text= "TU",
        bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
@@ -652,7 +652,7 @@ cu = Button(
     text= "Coventry University",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )

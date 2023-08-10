@@ -1317,7 +1317,7 @@ canvas.create_text(
 def Homes():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","homepage"))
+        next_folder = os.path.join(os.getcwd().replace("marketing_wala","build"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1369,7 +1369,7 @@ canvas.create_window(506, 1330, anchor="nw", window=button_112)
 def Courses():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","secondmainpage(courses_page)"))
+        next_folder = os.path.join(os.getcwd().replace("marketing_wala","homepage"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1416,7 +1416,7 @@ canvas.create_window(506, 1394, anchor="nw", window=eventbtn)
 def Routines():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","routines"))
+        next_folder = os.path.join(os.getcwd().replace("marketing_wala","routines"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1442,7 +1442,7 @@ canvas.create_window(506, 1424, anchor="nw", window=routinebtn)
 def termsandcondition():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","termsandconditions"))
+        next_folder = os.path.join(os.getcwd().replace("marketing_wala","termsandconditions"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1468,7 +1468,14 @@ canvas.create_window(740, 1304, anchor="nw", window=termsandcon)
 
 
 def alert1():
-    messagebox.showinfo("Alert", "You are on Same page now") 
+    # Change to the next folder
+        next_folder = os.path.join(os.getcwd().replace("marketing_wala","PrivacyPolicy"))
+        os.chdir(next_folder)
+
+        # Run the gui.py file
+        subprocess.Popen([sys.executable, 'gui.py'])
+
+        window.destroy()
 
 privacy = Button(
     # image=button_image_3,
@@ -1488,7 +1495,7 @@ canvas.create_window(740, 1334, anchor="nw", window=privacy)
 def Support():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","support"))
+        next_folder = os.path.join(os.getcwd().replace("marketing_wala","support"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1514,7 +1521,7 @@ canvas.create_window(740, 1364, anchor="nw", window=support)
 def Contact():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","contact_us"))
+        next_folder = os.path.join(os.getcwd().replace("marketing_wala","contact_us"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1598,6 +1605,17 @@ cu = Button(
 canvas.create_window(1010, 1394, anchor="nw", window=cu)
 
 
+button_image_225 = PhotoImage(
+    file=("home.png"))
+button_225 = Button(
+    image=button_image_225,
+    borderwidth=0,
+    highlightthickness=0,
+    command=buildfile,
+    relief="flat",
+    cursor="hand2"
+)
+canvas.create_window(388, 31, anchor="nw", window=button_225)
 
 
 window.resizable(False, False)

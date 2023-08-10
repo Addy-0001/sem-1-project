@@ -148,12 +148,9 @@ button_4 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_4.place(
-    x=388.0,
-    y=31.0,
-    width=61.0,
-    height=28.0
-)
+canvas.create_window(388, 31, anchor="nw", window=button_4)
+
+
 
 button_image_5 = PhotoImage(
     file=("button_5.png"))
@@ -166,12 +163,7 @@ button_5 = Button(
     cursor="hand2",
     bg="#83b4ff"
 )
-button_5.place(
-    x=546.0,
-    y=31.0,
-    width=65.0,
-    height=25.0
-)
+canvas.create_window(546, 31, anchor="nw", window=button_5)
 
 button_image_6 = PhotoImage(
     file=("button_6.png"))
@@ -184,12 +176,9 @@ button_6 = Button(
     cursor="hand2",
     bg="#83b4ff"
 )
-button_6.place(
-    x=628.0,
-    y=31.0,
-    width=65.0,
-    height=30.0
-)
+canvas.create_window(628, 31, anchor="nw", window=button_6)
+
+
 
 button_image_7 = PhotoImage(
     file=("button_7.png"))
@@ -202,12 +191,9 @@ button_7 = Button(
     cursor="hand2",
     bg="#83b4ff"
 )
-button_7.place(
-    x=459.0,
-    y=31.0,
-    width=69.0,
-    height= 25.0
-)
+canvas.create_window(459, 31, anchor="nw", window=button_7)
+
+
 
 image_image_1 = PhotoImage(
     file=("image_1.png"))
@@ -261,12 +247,9 @@ button_8 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_8.place(
-    x=454.0,
-    y=1747.0,
-    width=47.0,
-    height=45.0
-)
+canvas.create_window(454, 1747, anchor="nw", window=button_8)
+
+
 
 button_image_9 = PhotoImage(
     file=("button_9.png"))
@@ -278,12 +261,9 @@ button_9 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_9.place(
-    x=501.0,
-    y=1747.0,
-    width=47.0,
-    height=45.0
-)
+canvas.create_window(501, 1747, anchor="nw", window=button_9)
+
+
 
 button_image_10 = PhotoImage(
     file=("button_10.png"))
@@ -295,12 +275,8 @@ button_10 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_10.place(
-    x=547.0,
-    y=1747.0,
-    width=47.0,
-    height=45.0
-)
+canvas.create_window(547, 1747, anchor="nw", window=button_10)
+
 
 button_image_11 = PhotoImage(
     file=("button_11.png"))
@@ -312,12 +288,9 @@ button_11 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_11.place(
-    x=593.0,
-    y=1747.0,
-    width=47.0,
-    height=45.0
-)
+canvas.create_window(593, 1747, anchor="nw", window=button_11)
+
+
 
 button_image_12 = PhotoImage(
     file=("button_12.png"))
@@ -329,12 +302,8 @@ button_12 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_12.place(
-    x=741.0,
-    y=1747.0,
-    width=47.0,
-    height=45.0
-)
+canvas.create_window(741, 1747, anchor="nw", window=button_12)
+
 
 button_image_13 = PhotoImage(
     file=("button_13.png"))
@@ -346,12 +315,9 @@ button_13 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_13.place(
-    x=826.0,
-    y=1747.0,
-    width=91.0,
-    height=45.0
-)
+canvas.create_window(826, 1747, anchor="nw", window=button_13)
+
+
 
 button_image_14 = PhotoImage(
     file=("button_14.png"))
@@ -363,12 +329,8 @@ button_14 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_14.place(
-    x=787.0,
-    y=1747.0,
-    width=47.0,
-    height=45.0
-)
+canvas.create_window(787, 1747, anchor="nw", window=button_14)
+
 
 button_image_15 = PhotoImage(
     file=("button_15.png"))
@@ -380,12 +342,8 @@ button_15 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_15.place(
-    x=639.0,
-    y=1747.0,
-    width=103.0,
-    height=45.0
-)
+canvas.create_window(639, 1747, anchor="nw", window=button_15)
+
 
 canvas.create_rectangle(
     0.0,
@@ -413,12 +371,8 @@ button_16 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_16.place(
-    x=102.43994140625,
-    y=819.666748046875,
-    width=48.959991455078125,
-    height=35.897430419921875
-)
+canvas.create_window(102, 819, anchor="nw", window=button_16)
+
 
 canvas.create_text(
     116.719970703125,
@@ -457,12 +411,9 @@ button_17 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_17.place(
-    x=248.0,
-    y=817.0,
-    width=57.1199951171875,
-    height=41.880340576171875
-)
+canvas.create_window(248, 817, anchor="nw", window=button_17)
+
+
 
 image_image_3 = PhotoImage(
     file=("image_3.png"))
@@ -490,12 +441,8 @@ button_18 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_18.place(
-    x=102.43994140625,
-    y=1226.666748046875,
-    width=48.959991455078125,
-    height=35.897430419921875
-)
+canvas.create_window(102, 1226, anchor="nw", window=button_18)
+
 
 canvas.create_text(
     116.719970703125,
@@ -534,12 +481,8 @@ button_19 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_19.place(
-    x=248.0,
-    y=1224.0,
-    width=57.1199951171875,
-    height=41.880340576171875
-)
+canvas.create_window(248, 1224, anchor="nw", window=button_19)
+
 
 image_image_4 = PhotoImage(
     file=("image_4.png"))
@@ -567,12 +510,9 @@ button_20 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_20.place(
-    x=102.43994140625,
-    y=1622.6669921875,
-    width=48.959991455078125,
-    height=35.8974609375
-)
+canvas.create_window(102, 1662, anchor="nw", window=button_20)
+
+
 
 canvas.create_text(
     116.719970703125,
@@ -635,12 +575,9 @@ button_21 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_21.place(
-    x=406.43994140625,
-    y=819.666748046875,
-    width=48.96000671386719,
-    height=35.897430419921875
-)
+canvas.create_window(406, 819, anchor="nw", window=button_21)
+
+
 
 canvas.create_text(
     420.719970703125,
@@ -679,12 +616,7 @@ button_22 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_22.place(
-    x=552.0,
-    y=817.0,
-    width=57.12000274658203,
-    height=41.880340576171875
-)
+canvas.create_window(552, 817, anchor="nw", window=button_22)
 
 image_image_7 = PhotoImage(
     file=("image_7.png"))
@@ -712,12 +644,9 @@ button_23 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_23.place(
-    x=406.43994140625,
-    y=1226.666748046875,
-    width=48.96000671386719,
-    height=35.897430419921875
-)
+canvas.create_window(406, 1226, anchor="nw", window=button_23)
+
+
 
 canvas.create_text(
     420.719970703125,
@@ -756,6 +685,8 @@ button_24 = Button(
     relief="flat",
     cursor="hand2"
 )
+canvas.create_window(552, 1224, anchor="nw", window=button_24)
+
 button_24.place(
     x=552.0,
     y=1224.0,
@@ -789,12 +720,9 @@ button_25 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_25.place(
-    x=406.43994140625,
-    y=1622.6669921875,
-    width=48.96000671386719,
-    height=35.8974609375
-)
+canvas.create_window(406, 1622, anchor="nw", window= button_25)
+
+
 
 canvas.create_text(
     420.719970703125,
@@ -833,12 +761,7 @@ button_26 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_26.place(
-    x=552.0,
-    y=1620.0,
-    width=57.12000274658203,
-    height=41.88037109375
-)
+canvas.create_window(552, 1620, anchor="nw", window=button_26)
 
 image_image_9 = PhotoImage(
     file=("image_9.png"))
@@ -866,12 +789,8 @@ button_27 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_27.place(
-    x=686.43994140625,
-    y=813.666748046875,
-    width=48.96000671386719,
-    height=35.897430419921875
-)
+canvas.create_window(686, 813, anchor="nw", window=button_27)
+
 
 canvas.create_text(
     700.719970703125,
@@ -910,12 +829,9 @@ button_28 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_28.place(
-    x=832.0,
-    y=811.0,
-    width=57.1199951171875,
-    height=41.880340576171875
-)
+canvas.create_window(832, 811, anchor="nw", window=button_28)
+
+
 
 image_image_10 = PhotoImage(
     file=("image_10.png"))
@@ -943,12 +859,8 @@ button_29 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_29.place(
-    x=686.43994140625,
-    y=1220.666748046875,
-    width=48.96000671386719,
-    height=35.897430419921875
-)
+canvas.create_window(686, 1220, anchor="nw", window=button_29)
+
 
 canvas.create_text(
     700.719970703125,
@@ -1011,6 +923,8 @@ button_30 = Button(
     relief="flat",
     cursor="hand2"
 )
+canvas.create_window(686, 1616, anchor="nw", window=button_30)
+
 button_30.place(
     x=686.43994140625,
     y=1616.6669921875,
@@ -1055,12 +969,8 @@ button_31 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_31.place(
-    x=832.0,
-    y=1614.0,
-    width=57.1199951171875,
-    height=41.88037109375
-)
+canvas.create_window(832, 1614, anchor="nw", window=button_31)
+
 
 image_image_13 = PhotoImage(
     file=("image_13.png"))
@@ -1088,12 +998,9 @@ button_32 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_32.place(
-    x=972.43994140625,
-    y=813.666748046875,
-    width=48.959991455078125,
-    height=35.897430419921875
-)
+canvas.create_window(972, 813, anchor="nw", window=button_32)
+
+
 
 canvas.create_text(
     986.719970703125,
@@ -1132,12 +1039,8 @@ button_33 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_33.place(
-    x=1118.0,
-    y=811.0,
-    width=57.1199951171875,
-    height=41.880340576171875
-)
+canvas.create_window(1118, 811, anchor="nw", window=button_33)
+
 
 image_image_14 = PhotoImage(
     file=("image_14.png"))
@@ -1165,12 +1068,7 @@ button_34 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_34.place(
-    x=972.43994140625,
-    y=1220.666748046875,
-    width=48.959991455078125,
-    height=35.897430419921875
-)
+canvas.create_window(972, 1220, anchor="nw", window=button_34)
 
 canvas.create_text(
     986.719970703125,
@@ -1209,12 +1107,8 @@ button_35 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_35.place(
-    x=1118.0,
-    y=1218.0,
-    width=57.1199951171875,
-    height=41.880340576171875
-)
+canvas.create_window(1118, 1218, anchor="nw", window=button_35)
+
 
 image_image_15 = PhotoImage(
     file=("image_15.png"))
@@ -1242,12 +1136,9 @@ button_36 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_36.place(
-    x=972.43994140625,
-    y=1616.6669921875,
-    width=48.959991455078125,
-    height=35.8974609375
-)
+canvas.create_window(972, 1616, anchor="nw", window=button_36)
+
+
 
 canvas.create_text(
     986.719970703125,
@@ -1286,12 +1177,9 @@ button_37 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_37.place(
-    x=1118.0,
-    y=1614.0,
-    width=57.1199951171875,
-    height=41.88037109375
-)
+canvas.create_window(1118, 1614, anchor="nw", window=button_37)
+
+
 
 image_image_16 = PhotoImage(
     file=("image_16.png"))
@@ -1311,12 +1199,9 @@ button_38 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_38.place(
-    x=536.0,
-    y=1895.0,
-    width=88.0,
-    height=21.0
-)
+canvas.create_window(536, 1895, anchor="nw", window=button_38)
+
+
 
 button_image_39 = PhotoImage(
     file=("button_39.png"))
@@ -1328,12 +1213,8 @@ button_39 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_39.place(
-    x=536.0,
-    y=1874.0,
-    width=66.0,
-    height=21.0
-)
+canvas.create_window(536, 1874, anchor="nw", window=button_39)
+
 
 button_image_40 = PhotoImage(
     file=("button_40.png"))
@@ -1345,12 +1226,8 @@ button_40 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_40.place(
-    x=536.0,
-    y=1916.0,
-    width=85.0,
-    height=21.0
-)
+canvas.create_window(536, 1916, anchor="nw", window=button_40)
+
 
 button_image_41 = PhotoImage(
     file=("button_41.png"))
@@ -1362,12 +1239,7 @@ button_41 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_41.place(
-    x=536.0,
-    y=1937.0,
-    width=66.0,
-    height=21.0
-)
+canvas.create_window(536, 1937, anchor="nw", window=button_41)
 
 button_image_42 = PhotoImage(
     file=("button_42.png"))
@@ -1379,12 +1251,9 @@ button_42 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_42.place(
-    x=536.0,
-    y=1958.0,
-    width=81.0,
-    height=21.0
-)
+canvas.create_window(536, 1958, anchor="nw", window=button_42)
+
+
 
 button_image_43 = PhotoImage(
     file=("button_43.png"))
@@ -1396,12 +1265,8 @@ button_43 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_43.place(
-    x=536.0,
-    y=1958.0,
-    width=81.0,
-    height=21.0
-)
+canvas.create_window(536, 1958, anchor="nw", window=button_43)
+
 
 button_image_44 = PhotoImage(
     file=("button_44.png"))
@@ -1413,12 +1278,9 @@ button_44 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_44.place(
-    x=789.0,
-    y=1874.0,
-    width=179.0,
-    height=21.0
-)
+canvas.create_window(789, 1874, anchor="nw", window=button_44)
+
+
 
 button_image_45 = PhotoImage(
     file=("button_45.png"))
@@ -1430,12 +1292,8 @@ button_45 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_45.place(
-    x=789.0,
-    y=1895.0,
-    width=125.0,
-    height=21.0
-)
+canvas.create_window(789, 1895, anchor="nw", window=button_45)
+
 
 button_image_46 = PhotoImage(
     file=("button_46.png"))
@@ -1447,12 +1305,8 @@ button_46 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_46.place(
-    x=796.0,
-    y=1901.0,
-    width=8.0,
-    height=9.0
-)
+canvas.create_window(796, 1901, anchor="nw", window=button_46)
+
 
 button_image_47 = PhotoImage(
     file=("button_47.png"))
@@ -1464,12 +1318,8 @@ button_47 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_47.place(
-    x=789.0,
-    y=1916.0,
-    width=81.0,
-    height=21.0
-)
+canvas.create_window(789, 1916, anchor="nw", window=button_47)
+
 
 button_image_48 = PhotoImage(
     file=("button_48.png"))
@@ -1481,12 +1331,9 @@ button_48 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_48.place(
-    x=1060.0,
-    y=1874.0,
-    width=81.0,
-    height=21.0
-)
+canvas.create_window(1060, 1874, anchor="nw", window=button_48)
+
+
 
 button_image_49 = PhotoImage(
     file=("button_49.png"))
@@ -1498,12 +1345,9 @@ button_49 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_49.place(
-    x=1060.0,
-    y=1895.0,
-    width=81.0,
-    height=21.0
-)
+canvas.create_window(1060, 1895, anchor="nw", window=button_49)
+
+
 
 button_image_50 = PhotoImage(
     file=("button_50.png"))
@@ -1516,12 +1360,7 @@ button_50 = Button(
     cursor="hand2",
     
 )
-button_50.place(
-    x=1060.0,
-    y=1916.0,
-    width=81.0,
-    height=21.0
-)
+canvas.create_window(1060, 1916, anchor="nw", window=button_50)
 
 button_image_51 = PhotoImage(
     file=("button_51.png"))
@@ -1533,12 +1372,9 @@ button_51 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_51.place(
-    x=1060.0,
-    y=1937.0,
-    width=172.0,
-    height=21.0
-)
+canvas.create_window(1060, 1937, anchor="nw", window=button_51)
+
+
 
 button_image_52 = PhotoImage(
     file=("button_52.png"))
@@ -1550,13 +1386,7 @@ button_52 = Button(
     relief="flat",
     cursor="hand2"
 )
-button_52.place(
-    x=788.0,
-    y=1937.0,
-    width=110.0,
-    height=21.0
-)
-
+canvas.create_window(788, 1937, anchor="nw", window=button_52)
 
 
 # Footer
@@ -1620,7 +1450,7 @@ canvas.create_text(
 def Homes():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","homepage"))
+        next_folder = os.path.join(os.getcwd().replace("thirdmainpage(tutor page)","build"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1640,7 +1470,7 @@ button_3 = Button(
     text= "Home",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+  
     
 )
 canvas.create_window(506, 1924, anchor="nw", window=button_3)
@@ -1655,7 +1485,7 @@ canvas.create_window(506, 1924, anchor="nw", window=button_3)
 def home():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","homepage"))
+        next_folder = os.path.join(os.getcwd().replace("thirdmainpage(tutor page)","build"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1678,7 +1508,7 @@ button_112 = Button(
     text= "About Us",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
@@ -1687,7 +1517,7 @@ canvas.create_window(506, 1954, anchor="nw", window=button_112)
 def Courses():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","secondmainpage(courses_page)"))
+        next_folder = os.path.join(os.getcwd().replace("thirdmainpage(tutor page)","homepage"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1708,7 +1538,7 @@ coursesbtn = Button(
     text= "Courses",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
@@ -1727,7 +1557,7 @@ eventbtn = Button(
     text= "Events",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+   
     
 
 )
@@ -1736,7 +1566,7 @@ canvas.create_window(506, 2016, anchor="nw", window=eventbtn)
 def Routines():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","routines"))
+        next_folder = os.path.join(os.getcwd().replace("thirdmainpage(tutor page)","routines"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1754,7 +1584,7 @@ routinebtn = Button(
     text= "Routines",    
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+ 
     
 
 )
@@ -1763,7 +1593,7 @@ canvas.create_window(506, 2044, anchor="nw", window=routinebtn)
 def termsandcondition():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","termsandconditions"))
+        next_folder = os.path.join(os.getcwd().replace("thirdmainpage(tutor page)","termsandconditions"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1781,7 +1611,7 @@ termsandcon = Button(
     text= "Terms and Conditions",  
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
 
     
 
@@ -1802,7 +1632,7 @@ privacy = Button(
     text= "Privacy Policy",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
@@ -1811,7 +1641,7 @@ canvas.create_window(740, 1954, anchor="nw", window=privacy)
 def Support():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","support"))
+        next_folder = os.path.join(os.getcwd().replace("thirdmainpage(tutor page)","support"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1829,7 +1659,7 @@ support = Button(
     text= "Support",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
@@ -1838,7 +1668,7 @@ canvas.create_window(740, 1984, anchor="nw", window=support)
 def Contact():
  
         # Change to the next folder
-        next_folder = os.path.join(os.getcwd().replace("PrivacyPolicy","contact_us"))
+        next_folder = os.path.join(os.getcwd().replace("thirdmainpage(tutor page)","contact_us"))
         os.chdir(next_folder)
 
         # Run the gui.py file
@@ -1856,7 +1686,7 @@ contact = Button(
     text= "Contact Us",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
@@ -1872,8 +1702,7 @@ cden = Button(
     text= "CDEN",
        bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
-    
+
 
 )
 canvas.create_window(1010, 1924, anchor="nw", window=cden)
@@ -1888,7 +1717,7 @@ ioe = Button(
     text= "IOE",
        bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+    
     
 
 )
@@ -1904,7 +1733,7 @@ tu = Button(
     text= "TU",
        bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+  
     
 
 )
@@ -1920,7 +1749,7 @@ cu = Button(
     text= "Coventry University",
     bg="#3532A7",
     fg="#fff",
-    cursor="hand2"
+
     
 
 )
@@ -1934,7 +1763,7 @@ canvas.create_window(1010, 2014, anchor="nw", window=cu)
 #     highlightthickness=0,
 #     command=lambda: print("button_113 clicked"),
 #     relief="flat",
-    cursor="hand2"
+    # cursor="hand2"
 # )
 # canvas.create_window(518, 2665, anchor="nw", window=button_113)
 
@@ -1946,7 +1775,7 @@ canvas.create_window(1010, 2014, anchor="nw", window=cu)
 #     highlightthickness=0,
 #     command=lambda: print("button_14 clicked"),
 #     relief="flat",
-    cursor="hand2"
+    # cursor="hand2"
 # )
 # canvas.create_window(518, 2690, anchor="nw", window=button_114)
 
@@ -1959,7 +1788,7 @@ canvas.create_window(1010, 2014, anchor="nw", window=cu)
 #     highlightthickness=0,
 #     command=lambda: print("button_15 clicked"),
 #     relief="flat",
-    cursor="hand2"
+    # cursor="hand2"
 # )
 # canvas.create_window(518, 2715, anchor="nw", window=button_115)
 
